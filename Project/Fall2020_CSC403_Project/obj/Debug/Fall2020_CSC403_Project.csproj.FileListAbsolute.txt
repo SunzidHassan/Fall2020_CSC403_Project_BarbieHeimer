@@ -54,3 +54,7 @@ C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall
 C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmSettingsVolume.resources
 C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.Volume_control.resources
 C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmSettings.resources
+C:\Users\sunzi\Downloads\Scrum Project\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmSettings.resources
+C:\Users\sunzi\Downloads\Scrum Project\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmSettingsVolume.resources
+C:\Users\sunzi\Downloads\Scrum Project\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.Volume_control.resources
+C:\Users\sunzi\Downloads\Scrum Project\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmLevel1Finish.resources

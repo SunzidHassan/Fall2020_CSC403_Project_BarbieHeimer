@@ -10,6 +10,7 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
+    private Enemy finishFlag;
     private Character[] walls;
 
     private DateTime timeBegin;
@@ -44,17 +45,21 @@ namespace Fall2020_CSC403_Project {
       const int NUM_WALLS = 13;
 
       player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
+      UpdateHeathText();
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+      finishFlag = new Enemy(CreatePosition(picLevel1Finish), CreateCollider(picLevel1Finish, PADDING));
 
       bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+      finishFlag.Img = picLevel1Finish.BackgroundImage;
 
       bossKoolaid.Color = Color.Red;
       enemyPoisonPacket.Color = Color.Green;
       enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+      finishFlag.Color = Color.White;
 
       walls = new Character[NUM_WALLS];
       for (int w = 0; w < NUM_WALLS; w++) {
@@ -79,10 +84,51 @@ namespace Fall2020_CSC403_Project {
       player.ResetMoveSpeed();
     }
 
+    //private void CleanUpDeadCharacter()
+    //{
+    //    if (player.Health == 0)
+    //    {
+    //        this.Close();
+
+    //        // Assuming your default form is named "FrmDefault"
+    //        FrmDeath formDeath = new FrmDeath();
+    //        formDeath.Show();
+
+    //    }
+    //    else if (enemyPoisonPacket.Health == 0)
+    //    {
+    //        Controls.Remove(picEnemyPoisonPacket);
+    //        enemyPoisonPacket = null;
+    //    }
+    //    else if (enemyCheeto.Health == 0)
+    //    {
+    //        Controls.Remove(picEnemyCheeto);
+    //        enemyCheeto = null;
+    //    }
+    //    else if (bossKoolaid.Health == 0)
+    //    {
+    //        Controls.Remove(picBossKoolAid);
+    //        bossKoolaid = null;
+    //    }
+
+    //}
+
     private void tmrUpdateInGameTime_Tick(object sender, EventArgs e) {
       TimeSpan span = DateTime.Now - timeBegin;
       string time = span.ToString(@"hh\:mm\:ss");
       lblInGameTime.Text = "Time: " + time.ToString();
+      //CleanUpDeadCharacter();
+    }
+
+
+    private void timer_Tick(object sender, EventArgs e)
+    {
+
+    }
+
+        private void UpdateHeathText()
+    {
+        playerHealth.Text = "Player Health: " + player.Health.ToString();
     }
 
     private void tmrPlayerMove_Tick(object sender, EventArgs e) {
@@ -116,6 +162,8 @@ namespace Fall2020_CSC403_Project {
         {
             Controls.Remove(picEnemyPoisonPacket);
             enemyPoisonPacket = null;
+            player.AlterHealth(5);
+            UpdateHeathText();
         }
     }
     else if (HitAChar(player, enemyCheeto))
@@ -128,23 +176,34 @@ namespace Fall2020_CSC403_Project {
         {
             Controls.Remove(picEnemyCheeto);
             enemyCheeto = null;
+            player.AlterHealth(5);
+            UpdateHeathText();
         }
     }
-    if (HitAChar(player, bossKoolaid))
+    else if (HitAChar(player, bossKoolaid))
     {
         if (bossKoolaid.Health > 0)
         {
             Fight(bossKoolaid);
         }
+               
         else
         {
             Controls.Remove(picBossKoolAid);
             bossKoolaid = null;
+            player.AlterHealth(5);
+            UpdateHeathText();
         }
     }
+    else if (HitAChar(player, finishFlag))
+    {
+        this.Close();
+        FrmLevel1Finish formCongratulations = new FrmLevel1Finish();
+        formCongratulations.Show(); 
+    }
 
-            // update player's picture box
-            picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+    // update player's picture box
+    picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
     }
 
     private bool HitAWall(Character c) {
@@ -201,10 +260,5 @@ namespace Fall2020_CSC403_Project {
     private void lblInGameTime_Click(object sender, EventArgs e) {
 
     }
-
-        private void picEnemyPoisonPacket_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmLevel1Finish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLevel1Finish.Designer.cs">
+      <DependentUpon>FrmLevel1Finish.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="Volume_control.Designer.cs">
       <DependentUpon>Volume_control.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmLevel1Finish.resx">
+      <DependentUpon>FrmLevel1Finish.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmFAQ.resx">
       <DependentUpon>FrmFAQ.cs</DependentUpon>
     </EmbeddedResource>
