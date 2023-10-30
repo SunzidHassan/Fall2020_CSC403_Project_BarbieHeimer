@@ -205,5 +205,8 @@
   <ItemGroup>
     <None Include="data\volume img\mute_img.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\Level1FinishClap.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
