@@ -51,3 +51,6 @@ C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall
 C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmLevel1.resources
 C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmMainMenu.resources
 C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmPauseMenu.resources
+C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmSettingsVolume.resources
+C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.Volume_control.resources
+C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmSettings.resources

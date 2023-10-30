@@ -79,6 +79,7 @@
             this.Settings.TabIndex = 2;
             this.Settings.Text = "Settings";
             this.Settings.UseVisualStyleBackColor = false;
+            this.Settings.Click += new System.EventHandler(this.Settings_Click);
             // 
             // Faq
             // 
@@ -108,7 +109,7 @@
             this.Exit.UseVisualStyleBackColor = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // MainMenuForm
+            // FrmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,7 +123,7 @@
             this.Controls.Add(this.BarbieHiemer);
             this.Controls.Add(this.Play);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "MainMenuForm";
+            this.Name = "FrmMainMenu";
             this.Text = "MainMenuForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainMenuForm_Load);
