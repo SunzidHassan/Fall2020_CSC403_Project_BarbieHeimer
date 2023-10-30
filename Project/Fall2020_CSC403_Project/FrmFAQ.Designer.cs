@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFAQ));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.Asix = new System.Windows.Forms.RichTextBox();
             this.Qsix = new System.Windows.Forms.Label();
             this.Afive = new System.Windows.Forms.RichTextBox();
@@ -43,13 +44,13 @@
             this.Aone = new System.Windows.Forms.RichTextBox();
             this.Qone = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.Asix);
             this.panel1.Controls.Add(this.Qsix);
@@ -67,11 +68,23 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 515);
+            this.panel1.Size = new System.Drawing.Size(854, 562);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(686, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Home";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Asix
             // 
+            this.Asix.BackColor = System.Drawing.Color.HotPink;
             this.Asix.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Asix.Location = new System.Drawing.Point(19, 447);
             this.Asix.Name = "Asix";
@@ -89,13 +102,14 @@
             this.Qsix.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Qsix.Location = new System.Drawing.Point(16, 428);
             this.Qsix.Name = "Qsix";
-            this.Qsix.Size = new System.Drawing.Size(394, 13);
+            this.Qsix.Size = new System.Drawing.Size(468, 16);
             this.Qsix.TabIndex = 11;
             this.Qsix.Text = "6. Q: How can I adjust the volume of the in-game audio in real-time?";
             this.Qsix.Click += new System.EventHandler(this.Qsix_Click);
             // 
             // Afive
             // 
+            this.Afive.BackColor = System.Drawing.Color.HotPink;
             this.Afive.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Afive.Location = new System.Drawing.Point(19, 392);
             this.Afive.Name = "Afive";
@@ -113,13 +127,14 @@
             this.Qfive.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Qfive.Location = new System.Drawing.Point(16, 374);
             this.Qfive.Name = "Qfive";
-            this.Qfive.Size = new System.Drawing.Size(278, 13);
+            this.Qfive.Size = new System.Drawing.Size(329, 16);
             this.Qfive.TabIndex = 9;
             this.Qfive.Text = "5. Q: How do I move my character in the game?";
             this.Qfive.Click += new System.EventHandler(this.Qfive_Click);
             // 
             // Afour
             // 
+            this.Afour.BackColor = System.Drawing.Color.HotPink;
             this.Afour.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Afour.Location = new System.Drawing.Point(19, 327);
             this.Afour.Name = "Afour";
@@ -136,13 +151,14 @@
             this.Qfour.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Qfour.Location = new System.Drawing.Point(16, 308);
             this.Qfour.Name = "Qfour";
-            this.Qfour.Size = new System.Drawing.Size(316, 13);
+            this.Qfour.Size = new System.Drawing.Size(385, 16);
             this.Qfour.TabIndex = 7;
             this.Qfour.Text = "4. Q: Is there multiplayer or co-op gameplay available?";
             this.Qfour.Click += new System.EventHandler(this.Qfour_Click);
             // 
             // Athree
             // 
+            this.Athree.BackColor = System.Drawing.Color.HotPink;
             this.Athree.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Athree.Location = new System.Drawing.Point(16, 280);
             this.Athree.Name = "Athree";
@@ -159,13 +175,14 @@
             this.Qthree.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Qthree.Location = new System.Drawing.Point(13, 261);
             this.Qthree.Name = "Qthree";
-            this.Qthree.Size = new System.Drawing.Size(365, 13);
+            this.Qthree.Size = new System.Drawing.Size(440, 16);
             this.Qthree.TabIndex = 5;
             this.Qthree.Text = "3. Q: Can I customize my character\'s appearance and abilities?";
             this.Qthree.Click += new System.EventHandler(this.Qthree_Click);
             // 
             // Atwo
             // 
+            this.Atwo.BackColor = System.Drawing.Color.HotPink;
             this.Atwo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Atwo.Location = new System.Drawing.Point(16, 220);
             this.Atwo.Name = "Atwo";
@@ -183,13 +200,14 @@
             this.Qtwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Qtwo.Location = new System.Drawing.Point(13, 201);
             this.Qtwo.Name = "Qtwo";
-            this.Qtwo.Size = new System.Drawing.Size(369, 13);
+            this.Qtwo.Size = new System.Drawing.Size(442, 16);
             this.Qtwo.TabIndex = 3;
             this.Qtwo.Text = "2. Q: Can I play the game on a Mac or other operating systems?";
             this.Qtwo.Click += new System.EventHandler(this.Qtwo_Click);
             // 
             // Aone
             // 
+            this.Aone.BackColor = System.Drawing.Color.HotPink;
             this.Aone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Aone.Location = new System.Drawing.Point(16, 73);
             this.Aone.Name = "Aone";
@@ -206,7 +224,7 @@
             this.Qone.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Qone.Location = new System.Drawing.Point(13, 54);
             this.Qone.Name = "Qone";
-            this.Qone.Size = new System.Drawing.Size(336, 13);
+            this.Qone.Size = new System.Drawing.Size(403, 16);
             this.Qone.TabIndex = 1;
             this.Qone.Text = "1. Q: What are the system requirements to play the game?";
             this.Qone.Click += new System.EventHandler(this.Qone_Click);
@@ -221,30 +239,20 @@
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox1.Size = new System.Drawing.Size(800, 41);
+            this.richTextBox1.Size = new System.Drawing.Size(854, 41);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "                       Frequently Asked Questions\n";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(686, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Home";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // FAQ
+            // FrmFAQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(800, 515);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(854, 562);
             this.Controls.Add(this.panel1);
-            this.Name = "FAQ";
+            this.Name = "FrmFAQ";
             this.Text = "FAQ";
             this.Load += new System.EventHandler(this.FAQ_Load);
             this.panel1.ResumeLayout(false);

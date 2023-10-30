@@ -14,11 +14,13 @@ namespace Fall2020_CSC403_Project
     public partial class FrmMainMenu : Form
     {
 
-        System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();  
+        public static FrmMainMenu Instance;
+        public System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();  
 
         public FrmMainMenu()
         {
             InitializeComponent();
+            Instance = this;
             soundPlayer.SoundLocation = "barbenheimer.wav";
             soundPlayer.Play();
         }
@@ -65,6 +67,12 @@ namespace Fall2020_CSC403_Project
             FrmFAQ faq = new FrmFAQ();
             faq.Show();
 
+        }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
+            FrmSettings settings = new FrmSettings();
+            settings.Show();
         }
     }
 }

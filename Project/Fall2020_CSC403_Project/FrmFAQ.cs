@@ -35,7 +35,7 @@ namespace Fall2020_CSC403_Project
         private void Qone_Click(object sender, EventArgs e)
         {
             Aone.Visible = !Aone.Visible;
-           
+
         }
 
         private void Qtwo_Click(object sender, EventArgs e)
@@ -69,5 +69,5 @@ namespace Fall2020_CSC403_Project
             FrmMainMenu mainMenuForm = new FrmMainMenu();
         }
     }
-    
+
 }
