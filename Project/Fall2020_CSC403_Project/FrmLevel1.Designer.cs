@@ -1,28 +1,33 @@
-﻿namespace Fall2020_CSC403_Project {
-  partial class FrmLevel1 {
-    /// <summary>
-    /// Required designer variable.
-    /// </summary>
-    private System.ComponentModel.IContainer components = null;
+﻿namespace Fall2020_CSC403_Project
+{
+    partial class FrmLevel1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-    /// <summary>
-    /// Clean up any resources being used.
-    /// </summary>
-    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-    protected override void Dispose(bool disposing) {
-      if (disposing && (components != null)) {
-        components.Dispose();
-      }
-      base.Dispose(disposing);
-    }
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-    #region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-    /// <summary>
-    /// Required method for Designer support - do not modify
-    /// the contents of this method with the code editor.
-    /// </summary>
-    private void InitializeComponent() {
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLevel1));
             this.lblInGameTime = new System.Windows.Forms.Label();
@@ -47,6 +52,7 @@
             this.picWall11 = new System.Windows.Forms.PictureBox();
             this.playerHealth = new System.Windows.Forms.Label();
             this.picLevel1Finish = new System.Windows.Forms.PictureBox();
+            this.tmrCleanDeadCharacter = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -301,6 +307,12 @@
             this.picLevel1Finish.TabIndex = 19;
             this.picLevel1Finish.TabStop = false;
             // 
+            // tmrCleanDeadCharacter
+            // 
+            this.tmrCleanDeadCharacter.Enabled = true;
+            this.tmrCleanDeadCharacter.Interval = 10;
+            this.tmrCleanDeadCharacter.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmLevel1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,32 +368,33 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-    }
+        }
 
-    #endregion
+        #endregion
 
-    private System.Windows.Forms.PictureBox picPlayer;
-    private System.Windows.Forms.PictureBox picBossKoolAid;
-    private System.Windows.Forms.Label lblInGameTime;
-    private System.Windows.Forms.Timer tmrUpdateInGameTime;
-    private System.Windows.Forms.Timer tmrPlayerMove;
-    private System.Windows.Forms.PictureBox picWall3;
-    private System.Windows.Forms.PictureBox picEnemyPoisonPacket;
-    private System.Windows.Forms.PictureBox picEnemyCheeto;
-    private System.Windows.Forms.PictureBox picWall5;
-    private System.Windows.Forms.PictureBox picWall4;
-    private System.Windows.Forms.PictureBox picWall12;
-    private System.Windows.Forms.PictureBox picWall6;
-    private System.Windows.Forms.PictureBox picWall9;
-    private System.Windows.Forms.PictureBox picWall10;
-    private System.Windows.Forms.PictureBox picWall0;
-    private System.Windows.Forms.PictureBox picWall7;
-    private System.Windows.Forms.PictureBox picWall8;
-    private System.Windows.Forms.PictureBox picWall1;
-    private System.Windows.Forms.PictureBox picWall2;
-    private System.Windows.Forms.PictureBox picWall11;
+        private System.Windows.Forms.PictureBox picPlayer;
+        private System.Windows.Forms.PictureBox picBossKoolAid;
+        private System.Windows.Forms.Label lblInGameTime;
+        private System.Windows.Forms.Timer tmrUpdateInGameTime;
+        private System.Windows.Forms.Timer tmrPlayerMove;
+        private System.Windows.Forms.PictureBox picWall3;
+        private System.Windows.Forms.PictureBox picEnemyPoisonPacket;
+        private System.Windows.Forms.PictureBox picEnemyCheeto;
+        private System.Windows.Forms.PictureBox picWall5;
+        private System.Windows.Forms.PictureBox picWall4;
+        private System.Windows.Forms.PictureBox picWall12;
+        private System.Windows.Forms.PictureBox picWall6;
+        private System.Windows.Forms.PictureBox picWall9;
+        private System.Windows.Forms.PictureBox picWall10;
+        private System.Windows.Forms.PictureBox picWall0;
+        private System.Windows.Forms.PictureBox picWall7;
+        private System.Windows.Forms.PictureBox picWall8;
+        private System.Windows.Forms.PictureBox picWall1;
+        private System.Windows.Forms.PictureBox picWall2;
+        private System.Windows.Forms.PictureBox picWall11;
         private System.Windows.Forms.Label playerHealth;
         private System.Windows.Forms.PictureBox picLevel1Finish;
+        private System.Windows.Forms.Timer tmrCleanDeadCharacter;
     }
 }
 

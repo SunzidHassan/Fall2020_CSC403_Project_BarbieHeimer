@@ -21,7 +21,7 @@ namespace Fall2020_CSC403_Project
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lbl_volume.Text="Volume : " + volume_control1.Value.ToString() + "%";
+            lbl_volume.Text = "Volume : " + volume_control1.Value.ToString() + "%";
         }
 
         private void gobacktosettings_Click(object sender, EventArgs e)

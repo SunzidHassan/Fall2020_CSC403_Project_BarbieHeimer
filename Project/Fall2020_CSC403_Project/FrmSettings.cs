@@ -24,7 +24,7 @@ namespace Fall2020_CSC403_Project
 
         private void btn_volume_Click(object sender, EventArgs e)
         {
-            FrmSettingsVolume volume= new FrmSettingsVolume(FrmMainMenu.Instance);
+            FrmSettingsVolume volume = new FrmSettingsVolume(FrmMainMenu.Instance);
             volume.Show();
         }
     }
