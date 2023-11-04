@@ -25,6 +25,8 @@ namespace Fall2020_CSC403_Project
             soundPlayer.Play();
         }
 
+
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -50,8 +52,8 @@ namespace Fall2020_CSC403_Project
 
             soundPlayer.Stop();
             this.Hide();
-            FrmLevel1 Play = new FrmLevel1();
-            Play.Show();
+            FrmStatsSelection frmStatsSelection = new FrmStatsSelection();
+            frmStatsSelection.ShowDialog();
           /*  Play.ShowDialog();
             Play = null;
             this.Show();*/
@@ -73,6 +75,11 @@ namespace Fall2020_CSC403_Project
         {
             FrmSettings settings = new FrmSettings();
             settings.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

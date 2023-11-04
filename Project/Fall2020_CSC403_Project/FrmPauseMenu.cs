@@ -24,7 +24,10 @@ namespace Fall2020_CSC403_Project
 
         private void PauseMenu_Load(object sender, EventArgs e)
         {
-            
+
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = false;
         }
 
         private void Settings_Click(object sender, EventArgs e)
