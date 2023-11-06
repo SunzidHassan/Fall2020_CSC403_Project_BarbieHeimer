@@ -73,6 +73,16 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6fb968d062567bde0917bec7d12fe8b41 {
+            get {
+                object obj = ResourceManager.GetObject("6fb968d062567bde0917bec7d12fe8b41", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap amongus {
             get {
                 object obj = ResourceManager.GetObject("amongus", resourceCulture);
@@ -126,6 +136,26 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.Drawing.Bitmap charbarbie {
             get {
                 object obj = ResourceManager.GetObject("charbarbie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap charbarbie1 {
+            get {
+                object obj = ResourceManager.GetObject("charbarbie1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap charbarbie2 {
+            get {
+                object obj = ResourceManager.GetObject("charbarbie2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
