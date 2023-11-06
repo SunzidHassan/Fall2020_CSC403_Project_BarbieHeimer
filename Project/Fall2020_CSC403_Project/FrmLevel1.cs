@@ -45,6 +45,11 @@ namespace Fall2020_CSC403_Project
 
         private void FrmLevel_Load(object sender, EventArgs e)
         {
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = false;
+
+
             const int PADDING = 7;
             const int NUM_WALLS = 13;
 
@@ -285,6 +290,101 @@ namespace Fall2020_CSC403_Project
             //        bossKoolaid = null;
             //    }
             //}
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void picWall0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picPlayer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picEnemyPoisonPacket_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBossKoolAid_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picEnemyCheeto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picLevel1Finish_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

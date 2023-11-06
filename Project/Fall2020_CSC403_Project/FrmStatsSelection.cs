@@ -68,12 +68,7 @@ namespace Fall2020_CSC403_Project
 
         private void panel2_Click(object sender, EventArgs e)
         {
-            soundPlayer.Stop();
-            this.Hide();
-            FrmLevel1 frmLevel1 = new FrmLevel1();
-            frmLevel1.ShowDialog();
-            frmLevel1 = null;
-            this.Show();
+
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
@@ -98,12 +93,7 @@ namespace Fall2020_CSC403_Project
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            soundPlayer.Stop();
-            this.Hide();
-            FrmLevel1 frmLevel1 = new FrmLevel1();
-            frmLevel1.ShowDialog();
-            frmLevel1 = null;
-            this.Show();
+
         }
 
         private void pictureBox16_Click(object sender, EventArgs e)
@@ -118,12 +108,7 @@ namespace Fall2020_CSC403_Project
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            soundPlayer.Stop();
-            this.Hide();
-            FrmLevel1 frmLevel1 = new FrmLevel1();
-            frmLevel1.ShowDialog();
-            frmLevel1 = null;
-            this.Show();
+   
         }
     }
 }
