@@ -41,13 +41,14 @@
             // 
             // Play
             // 
+            this.Play.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Play.AutoSize = true;
             this.Play.BackColor = System.Drawing.Color.MediumVioletRed;
             this.Play.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Play.FlatAppearance.BorderSize = 0;
             this.Play.Font = new System.Drawing.Font("ROG Fonts", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Play.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.Play.Location = new System.Drawing.Point(158, 287);
+            this.Play.Location = new System.Drawing.Point(191, 285);
             this.Play.Margin = new System.Windows.Forms.Padding(2);
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(352, 67);
@@ -58,9 +59,7 @@
             // 
             // BarbieHiemer
             // 
-            this.BarbieHiemer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BarbieHiemer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BarbieHiemer.AutoSize = true;
             this.BarbieHiemer.BackColor = System.Drawing.Color.DarkViolet;
             this.BarbieHiemer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -68,7 +67,7 @@
             this.BarbieHiemer.Font = new System.Drawing.Font("ROG Fonts", 47.99999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BarbieHiemer.ForeColor = System.Drawing.Color.Maroon;
             this.BarbieHiemer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BarbieHiemer.Location = new System.Drawing.Point(639, 149);
+            this.BarbieHiemer.Location = new System.Drawing.Point(609, 145);
             this.BarbieHiemer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BarbieHiemer.Name = "BarbieHiemer";
             this.BarbieHiemer.Size = new System.Drawing.Size(658, 79);
@@ -79,12 +78,13 @@
             // 
             // Settings
             // 
+            this.Settings.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Settings.BackColor = System.Drawing.Color.MediumVioletRed;
             this.Settings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settings.FlatAppearance.BorderSize = 0;
             this.Settings.Font = new System.Drawing.Font("ROG Fonts", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Settings.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.Settings.Location = new System.Drawing.Point(158, 490);
+            this.Settings.Location = new System.Drawing.Point(191, 490);
             this.Settings.Margin = new System.Windows.Forms.Padding(2);
             this.Settings.Name = "Settings";
             this.Settings.Size = new System.Drawing.Size(352, 62);
@@ -95,12 +95,13 @@
             // 
             // Faq
             // 
+            this.Faq.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Faq.BackColor = System.Drawing.Color.MediumVioletRed;
             this.Faq.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Faq.FlatAppearance.BorderSize = 0;
             this.Faq.Font = new System.Drawing.Font("ROG Fonts", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Faq.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.Faq.Location = new System.Drawing.Point(158, 586);
+            this.Faq.Location = new System.Drawing.Point(191, 589);
             this.Faq.Margin = new System.Windows.Forms.Padding(2);
             this.Faq.Name = "Faq";
             this.Faq.Size = new System.Drawing.Size(352, 61);
@@ -111,12 +112,13 @@
             // 
             // Exit
             // 
+            this.Exit.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Exit.BackColor = System.Drawing.Color.MediumVioletRed;
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.FlatAppearance.BorderSize = 0;
             this.Exit.Font = new System.Drawing.Font("ROG Fonts", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.Exit.Location = new System.Drawing.Point(158, 683);
+            this.Exit.Location = new System.Drawing.Point(191, 687);
             this.Exit.Margin = new System.Windows.Forms.Padding(2);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(352, 57);
@@ -127,13 +129,14 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.Color.MediumVioletRed;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("ROG Fonts", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.button1.Location = new System.Drawing.Point(158, 388);
+            this.button1.Location = new System.Drawing.Point(191, 390);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(352, 67);
@@ -149,7 +152,7 @@
             this.pictureBox1.Image = global::Fall2020_CSC403_Project.Properties.Resources.charSelect4;
             this.pictureBox1.Location = new System.Drawing.Point(1, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1940, 1000);
+            this.pictureBox1.Size = new System.Drawing.Size(1904, 957);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;

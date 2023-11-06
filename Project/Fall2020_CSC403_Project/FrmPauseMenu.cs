@@ -32,8 +32,7 @@ namespace Fall2020_CSC403_Project
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            FrmSettings settings = new FrmSettings();
-            settings.Show();
+            
         }
 
         private void Contnue_Click(object sender, EventArgs e)
@@ -51,6 +50,29 @@ namespace Fall2020_CSC403_Project
         {
             FrmFAQ faq = new FrmFAQ();
             faq.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FrmFAQ faq = new FrmFAQ();
+            faq.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmSettings settings = new FrmSettings();
+            settings.Show();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+            soundPlayer.Stop();
         }
     }
 }

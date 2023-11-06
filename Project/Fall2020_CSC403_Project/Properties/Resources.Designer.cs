@@ -63,6 +63,16 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6fb968d062567bde0917bec7d12fe8b4 {
+            get {
+                object obj = ResourceManager.GetObject("6fb968d062567bde0917bec7d12fe8b4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap amongus {
             get {
                 object obj = ResourceManager.GetObject("amongus", resourceCulture);

@@ -247,5 +247,8 @@
   <ItemGroup>
     <None Include="data\raw images\amongus.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\6fb968d062567bde0917bec7d12fe8b4.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
