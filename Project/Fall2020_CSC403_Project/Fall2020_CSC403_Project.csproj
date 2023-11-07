@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmLevel1New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLevel1New.Designer.cs">
+      <DependentUpon>FrmLevel1New.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLevel1Finish.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLevel1.resx">
       <DependentUpon>FrmLevel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLevel1New.resx">
+      <DependentUpon>FrmLevel1New.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainMenu.resx">
       <DependentUpon>FrmMainMenu.cs</DependentUpon>
@@ -249,6 +258,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="data\raw images\6fb968d062567bde0917bec7d12fe8b4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\islandBack1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\islandBack2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\islandBack3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\islandBack4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\islandBack5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\monster2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\monster3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\monster4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\monster5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\monster6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\BackLava.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\raw images\GrassBack.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

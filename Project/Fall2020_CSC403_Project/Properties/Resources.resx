@@ -202,4 +202,40 @@
   <data name="charbarbie2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\charbarbie.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BackLava" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\BackLava.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GrassBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\GrassBack.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="islandBack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\islandBack1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="islandBack2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\islandBack2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="islandBack3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\islandBack3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="islandBack4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\islandBack4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="islandBack5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\islandBack5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monster2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\monster2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monster3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\monster3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monster4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\monster4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monster5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\monster5.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monster6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\monster6.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
