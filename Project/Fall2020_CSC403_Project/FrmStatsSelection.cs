@@ -76,6 +76,7 @@ namespace Fall2020_CSC403_Project
             soundPlayer.Stop();
             this.Hide();
             FrmLevel1 frmLevel1 = new FrmLevel1();
+            frmLevel1.picPlayer.Image = Properties.Resources.Rugal;
             frmLevel1.ShowDialog();
             frmLevel1 = null;
             this.Show();
@@ -86,6 +87,7 @@ namespace Fall2020_CSC403_Project
             soundPlayer.Stop();
             this.Hide();
             FrmLevel1 frmLevel1 = new FrmLevel1();
+            frmLevel1.picPlayer.Image = Properties.Resources.charbarbie;
             frmLevel1.ShowDialog();
             frmLevel1 = null;
             this.Show();
@@ -101,6 +103,7 @@ namespace Fall2020_CSC403_Project
             soundPlayer.Stop();
             this.Hide();
             FrmLevel1 frmLevel1 = new FrmLevel1();
+            frmLevel1.picPlayer.Image = Properties.Resources.amongus;
             frmLevel1.ShowDialog();
             frmLevel1 = null;
             this.Show();

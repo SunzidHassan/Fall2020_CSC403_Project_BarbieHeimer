@@ -82,7 +82,7 @@
             this.pictureBox1.Image = global::Fall2020_CSC403_Project.Properties.Resources.charSelect5;
             this.pictureBox1.Location = new System.Drawing.Point(-2, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(2000, 1200);
+            this.pictureBox1.Size = new System.Drawing.Size(1807, 1100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -100,7 +100,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(785, 566);
+            this.panel1.Location = new System.Drawing.Point(688, 466);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(381, 449);
             this.panel1.TabIndex = 1;
@@ -288,7 +288,7 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.pictureBox16);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel3.Location = new System.Drawing.Point(1318, 127);
+            this.panel3.Location = new System.Drawing.Point(1125, 127);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(354, 436);
             this.panel3.TabIndex = 9;
@@ -375,7 +375,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.charSelect5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1711, 941);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

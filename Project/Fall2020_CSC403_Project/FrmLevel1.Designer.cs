@@ -346,7 +346,6 @@
             // 
             this.picPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.picPlayer.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.charbarbie2;
             this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picPlayer.Image = global::Fall2020_CSC403_Project.Properties.Resources.charbarbie1;
             this.picPlayer.Location = new System.Drawing.Point(103, 696);
@@ -382,6 +381,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmLevel1
             // 
@@ -448,10 +448,10 @@
         private System.Windows.Forms.PictureBox picWall9;
         private System.Windows.Forms.PictureBox picWall6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picWall8;
-        private System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.PictureBox picEnemyCheeto;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox picPlayer;
     }
 }
 
