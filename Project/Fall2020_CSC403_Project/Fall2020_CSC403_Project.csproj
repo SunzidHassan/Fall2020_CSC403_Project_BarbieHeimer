@@ -64,6 +64,12 @@
     <Compile Include="FrmLevel1Finish.Designer.cs">
       <DependentUpon>FrmLevel1Finish.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLevel2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLevel2.Designer.cs">
+      <DependentUpon>FrmLevel2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLevel1New.resx">
       <DependentUpon>FrmLevel1New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLevel2.resx">
+      <DependentUpon>FrmLevel2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainMenu.resx">
       <DependentUpon>FrmMainMenu.cs</DependentUpon>
