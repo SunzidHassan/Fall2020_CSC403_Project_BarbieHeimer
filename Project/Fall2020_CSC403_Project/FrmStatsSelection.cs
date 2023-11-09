@@ -46,72 +46,38 @@ namespace Fall2020_CSC403_Project
             TopMost = false;
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox11_Click(object sender, EventArgs e)
         {
             soundPlayer.Stop();
             this.Hide();
-            FrmLevel1 frmLevel1 = new FrmLevel1();
-            frmLevel1.picPlayer.Image = Properties.Resources.Rugal;
-            frmLevel1.ShowDialog();
-            frmLevel1 = null;
-            this.Show();
+            FrmLevel1New frmLevel1New = new FrmLevel1New();
+            frmLevel1New.picPlayer.Image = Properties.Resources.Rugal;
+            frmLevel1New.picInventory.Image = Properties.Resources.Rugal;
+            frmLevel1New.ShowDialog();
+            this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             soundPlayer.Stop();
             this.Hide();
-            FrmLevel1 frmLevel1 = new FrmLevel1();
-            frmLevel1.picPlayer.Image = Properties.Resources.charbarbie;
-            frmLevel1.ShowDialog();
-            frmLevel1 = null;
-            this.Show();
+            FrmLevel1New frmLevel1New = new FrmLevel1New();
+            frmLevel1New.picPlayer.Image = Properties.Resources.charbarbie;
+            frmLevel1New.picInventory.Image = Properties.Resources.charbarbie;
+            frmLevel1New.ShowDialog();
+            this.Close();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
             soundPlayer.Stop();
             this.Hide();
-            FrmLevel1 frmLevel1 = new FrmLevel1();
-            frmLevel1.picPlayer.Image = Properties.Resources.amongus;
-            frmLevel1.ShowDialog();
-            frmLevel1 = null;
-            this.Show();
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-   
+            FrmLevel1New frmLevel1New = new FrmLevel1New();
+            frmLevel1New.picPlayer.Image = Properties.Resources.amongus;
+            frmLevel1New.picInventory.Image = Properties.Resources.amongus;
+            frmLevel1New.ShowDialog();
+            this.Close();
         }
     }
 }

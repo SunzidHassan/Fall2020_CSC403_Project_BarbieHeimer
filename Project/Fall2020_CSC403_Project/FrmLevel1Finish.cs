@@ -18,8 +18,8 @@ namespace Fall2020_CSC403_Project
         public FrmLevel1Finish()
         {
             InitializeComponent();
-            soundPlayer.SoundLocation = "C:\\Users\\sunzi\\Downloads\\Scrum Project\\Fall2020_CSC403_Project_BarbieHeimer\\Project\\Fall2020_CSC403_Project\\data\\audio\\Level1FinishClap.wav";
-            soundPlayer.Play();
+            SoundPlayer simpleSound = new SoundPlayer(Resources.Level1FinishClap);
+            simpleSound.Play();
         }
 
         private void BtnLevel1FinishMainMenu_Click(object sender, EventArgs e)
@@ -27,7 +27,6 @@ namespace Fall2020_CSC403_Project
             this.Close();
             FrmMainMenu mainMenu = new FrmMainMenu();
             mainMenu.Show();
-
         }
 
         private void BtnLevel1FinishExit_Click(object sender, EventArgs e)

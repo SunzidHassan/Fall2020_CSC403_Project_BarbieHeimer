@@ -104,7 +104,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(381, 449);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox6
             // 
@@ -133,7 +132,6 @@
             this.pictureBox4.Size = new System.Drawing.Size(75, 32);
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox2
             // 
@@ -156,7 +154,6 @@
             this.label2.Size = new System.Drawing.Size(94, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Health";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -197,8 +194,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(354, 436);
             this.panel2.TabIndex = 8;
-            this.panel2.Click += new System.EventHandler(this.panel2_Click);
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox7
             // 
@@ -292,7 +287,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(354, 436);
             this.panel3.TabIndex = 9;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pictureBox12
             // 

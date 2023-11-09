@@ -74,5 +74,12 @@ namespace Fall2020_CSC403_Project
             this.Close();
             soundPlayer.Stop();
         }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmMainMenu mainMenu = new FrmMainMenu();
+            mainMenu.Show();
+        }
     }
 }

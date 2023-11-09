@@ -142,7 +142,7 @@ namespace Fall2020_CSC403_Project
             {
                 if (enemyPoisonPacket.Health > 0)
                 {
-                    Fight(enemyPoisonPacket);
+                    Fight(player, enemyPoisonPacket);
                 }
                 else
                 {
@@ -156,7 +156,7 @@ namespace Fall2020_CSC403_Project
             {
                 if (enemyCheeto.Health > 0)
                 {
-                    Fight(enemyCheeto);
+                    Fight(player, enemyCheeto);
                 }
                 else
                 {
@@ -170,7 +170,7 @@ namespace Fall2020_CSC403_Project
             {
                 if (bossKoolaid.Health > 0)
                 {
-                    Fight(bossKoolaid);
+                    Fight(player, bossKoolaid);
                 }
 
                 else
@@ -212,11 +212,11 @@ namespace Fall2020_CSC403_Project
             return you.Collider.Intersects(other.Collider);
         }
 
-        private void Fight(Enemy enemy)
+        private void Fight(Player player, Enemy enemy)
         {
             player.ResetMoveSpeed();
             player.MoveBack();
-            frmBattle = FrmBattle.GetInstance(enemy);
+            frmBattle = FrmBattle.GetInstance(player, enemy);
             frmBattle.Show();
 
             if (enemy == bossKoolaid)

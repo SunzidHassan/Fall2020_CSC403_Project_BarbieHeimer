@@ -16,11 +16,13 @@ namespace Fall2020_CSC403_Project
         private FrmBattle()
         {
             InitializeComponent();
-            player = Game.player;
+            //player = Game.player;
         }
 
         public void Setup()
         {
+            picPlayer.BackgroundImage = player.Img;
+            picPlayer.Refresh();
             // update for this enemy
             picEnemy.BackgroundImage = enemy.Img;
             picEnemy.Refresh();
@@ -47,11 +49,12 @@ namespace Fall2020_CSC403_Project
             tmrFinalBattle.Enabled = true;
         }
 
-        public static FrmBattle GetInstance(Enemy enemy)
+        public static FrmBattle GetInstance(Player player, Enemy enemy)
         {
             if (instance == null)
             {
                 instance = new FrmBattle();
+                instance.player = player;
                 instance.enemy = enemy;
                 instance.Setup();
             }
@@ -101,6 +104,13 @@ namespace Fall2020_CSC403_Project
         {
             picBossBattle.Visible = false;
             tmrFinalBattle.Enabled = false;
+        }
+
+        private void btnFlee_Click(object sender, EventArgs e)
+        {
+            instance = null;
+            Close();
+
         }
     }
 }

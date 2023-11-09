@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPauseMenu));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BarbieHiemer = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Button();
@@ -37,6 +36,7 @@
             this.LoadGame = new System.Windows.Forms.Button();
             this.NewGame = new System.Windows.Forms.Button();
             this.Continue = new System.Windows.Forms.Button();
+            this.btnMainMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,7 +130,7 @@
             this.LoadGame.FlatAppearance.BorderSize = 0;
             this.LoadGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadGame.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LoadGame.Location = new System.Drawing.Point(204, 395);
+            this.LoadGame.Location = new System.Drawing.Point(204, 324);
             this.LoadGame.Margin = new System.Windows.Forms.Padding(2);
             this.LoadGame.Name = "LoadGame";
             this.LoadGame.Size = new System.Drawing.Size(352, 57);
@@ -146,7 +146,7 @@
             this.NewGame.FlatAppearance.BorderSize = 0;
             this.NewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewGame.ForeColor = System.Drawing.Color.Aquamarine;
-            this.NewGame.Location = new System.Drawing.Point(204, 294);
+            this.NewGame.Location = new System.Drawing.Point(204, 239);
             this.NewGame.Margin = new System.Windows.Forms.Padding(2);
             this.NewGame.Name = "NewGame";
             this.NewGame.Size = new System.Drawing.Size(352, 57);
@@ -162,7 +162,7 @@
             this.Continue.FlatAppearance.BorderSize = 0;
             this.Continue.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Continue.ForeColor = System.Drawing.Color.Aquamarine;
-            this.Continue.Location = new System.Drawing.Point(204, 209);
+            this.Continue.Location = new System.Drawing.Point(204, 154);
             this.Continue.Margin = new System.Windows.Forms.Padding(2);
             this.Continue.Name = "Continue";
             this.Continue.Size = new System.Drawing.Size(352, 57);
@@ -171,13 +171,30 @@
             this.Continue.UseVisualStyleBackColor = false;
             this.Continue.Click += new System.EventHandler(this.button1_Click_2);
             // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnMainMenu.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.btnMainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMainMenu.FlatAppearance.BorderSize = 0;
+            this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainMenu.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnMainMenu.Location = new System.Drawing.Point(204, 400);
+            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(352, 57);
+            this.btnMainMenu.TabIndex = 17;
+            this.btnMainMenu.Text = "Main Menu";
+            this.btnMainMenu.UseVisualStyleBackColor = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            // 
             // FrmPauseMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 947);
+            this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.Continue);
             this.Controls.Add(this.NewGame);
             this.Controls.Add(this.LoadGame);
@@ -205,5 +222,6 @@
         private System.Windows.Forms.Button LoadGame;
         private System.Windows.Forms.Button NewGame;
         private System.Windows.Forms.Button Continue;
+        private System.Windows.Forms.Button btnMainMenu;
     }
 }

@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDeath));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Mistral", 24F, System.Drawing.FontStyle.Italic);
-            this.button1.Location = new System.Drawing.Point(320, 179);
+            this.button1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic);
+            this.button1.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button1.Location = new System.Drawing.Point(240, 145);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 53);
+            this.button1.Size = new System.Drawing.Size(148, 43);
             this.button1.TabIndex = 0;
             this.button1.Text = "Retry";
             this.button1.UseVisualStyleBackColor = false;
@@ -49,50 +50,56 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.Font = new System.Drawing.Font("Mistral", 24F, System.Drawing.FontStyle.Italic);
-            this.button2.Location = new System.Drawing.Point(317, 271);
+            this.button2.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic);
+            this.button2.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button2.Location = new System.Drawing.Point(238, 220);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(197, 52);
+            this.button2.Size = new System.Drawing.Size(148, 42);
             this.button2.TabIndex = 1;
             this.button2.Text = "Main Menu";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnExit
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.Font = new System.Drawing.Font("Mistral", 24F, System.Drawing.FontStyle.Italic);
-            this.button3.Location = new System.Drawing.Point(318, 358);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 51);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Exit";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnExit.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic);
+            this.btnExit.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnExit.Location = new System.Drawing.Point(238, 291);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(148, 41);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Magneto", 36F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(159, 68);
+            this.label1.ForeColor = System.Drawing.Color.MediumVioletRed;
+            this.label1.Location = new System.Drawing.Point(119, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(533, 73);
+            this.label1.Size = new System.Drawing.Size(423, 58);
             this.label1.TabIndex = 3;
             this.label1.Text = "You Are Dead!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FrmDeath
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources._6fb968d062567bde0917bec7d12fe8b4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmDeath";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -104,7 +111,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
     }
 }
