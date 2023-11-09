@@ -60,9 +60,9 @@ namespace Fall2020_CSC403_Project
 
         private void FrmLevel1New_Load(object sender, EventArgs e)
         {
-            FormBorderStyle = FormBorderStyle.None;
-            WindowState = FormWindowState.Maximized;
-            TopMost = false;
+            //FormBorderStyle = FormBorderStyle.None;
+            //WindowState = FormWindowState.Maximized;
+            //TopMost = false;
 
             const int PADDING = 7;
             const int NUM_WALLS = 14;
