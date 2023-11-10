@@ -12,6 +12,8 @@ namespace Fall2020_CSC403_Project.code
     {
         public int Health { get; private set; }
         public int MaxHealth { get; private set; }
+        public int Score { get; private set; }
+        public int MaxScore { get; private set; }
         public float strength { get; private set; }
         public int MaxStrength { get; private set; }
 
@@ -23,6 +25,8 @@ namespace Fall2020_CSC403_Project.code
             MaxStrength = 4;
             strength = 2;
             Health = MaxHealth;
+            MaxScore = 1000;
+            Score = MaxScore;
         }
 
         public void OnAttack(int amount)
@@ -39,5 +43,11 @@ namespace Fall2020_CSC403_Project.code
         {
             strength += amount;
         }
+
+        public void AlterScore(int amount)
+        {
+            Score += amount;
+        }
+
     }
 }

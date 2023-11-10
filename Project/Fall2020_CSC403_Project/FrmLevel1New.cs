@@ -16,10 +16,11 @@ namespace Fall2020_CSC403_Project
         private Enemy enemyLvl1boss;
         
 
-        private Enemy enemyPoisonPacket;
+        private Enemy enemyFinalBoss;
         private Character[] wall;
         private Character[] lava;
         private Character[] bottomLava;
+        private Character[] lavaCircle;
 
         private DateTime timeBegin;
         private FrmBattle frmBattle;
@@ -65,8 +66,9 @@ namespace Fall2020_CSC403_Project
             //TopMost = false;
 
             const int PADDING = 7;
-            const int NUM_WALLS = 14;
+            const int NUM_WALLS = 15;
             const int NUM_LAVA = 3;
+            const int NUM_LAVACIRCLE = 4;
             const int NUM_BOTTOMLAVA = 4;
 
 
@@ -75,9 +77,9 @@ namespace Fall2020_CSC403_Project
             playerStartX = picPlayer.Location.X;
             playerStartY = picPlayer.Location.Y;
 
-            enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
-            enemyPoisonPacket.Img = picEnemyPoisonPacket.Image;
-            enemyPoisonPacket.Color = Color.Green;
+            enemyFinalBoss = new Enemy(CreatePosition(picFinalBoss), CreateCollider(picFinalBoss, PADDING));
+            enemyFinalBoss.Img = picFinalBoss.Image;
+            enemyFinalBoss.Color = Color.Green;
 
             enemyRockMonster1 = new Enemy(CreatePosition(picLvl1EnemyRockMonster1), CreateCollider(picLvl1EnemyRockMonster1, PADDING));
             enemyRockMonster1.Img = picLvl1EnemyRockMonster1.Image;
@@ -108,6 +110,13 @@ namespace Fall2020_CSC403_Project
             {
                 PictureBox pic = Controls.Find("picLava" + l.ToString(), true)[0] as PictureBox;
                 lava[l] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
+            }
+
+            lavaCircle = new Character[NUM_LAVACIRCLE];
+            for (int l = 0; l < NUM_LAVACIRCLE; l++)
+            {
+                PictureBox pic = Controls.Find("picLavaCirc" + l.ToString(), true)[0] as PictureBox;
+                lavaCircle[l] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
             }
 
             lava0StartX = picLava0.Location.X;
@@ -146,7 +155,12 @@ namespace Fall2020_CSC403_Project
             lblInGameTime.Text = "Time: " + time.ToString();
         }
 
-        
+        private void scoreTimer_Tick(object sender, EventArgs e)
+        {
+            player.AlterScore(-1);
+        }
+
+
         private void tmrPlayerMove_Tick(object sender, EventArgs e)
         {
             TimeSpan span = DateTime.Now - timeBegin;
@@ -161,16 +175,16 @@ namespace Fall2020_CSC403_Project
 
             if (player.Health < 1)
             {
-                this.Close();
                 FrmDeath formDeath = new FrmDeath();
                 formDeath.Show();
+                this.Close();
             }
 
             if (remainingTime < 1)
             {
-                this.Close();
                 FrmDeath formDeath = new FrmDeath();
                 formDeath.Show();
+                this.Close();
             }
 
             // check collision with walls
@@ -183,21 +197,14 @@ namespace Fall2020_CSC403_Project
             {
                 player.resetPosition(playerStartX, playerStartY);
                 player.AlterHealth(-5);
+                player.AlterScore(-5);
             }
 
-            // check collision with enemies
-            else if (HitAChar(player, enemyPoisonPacket))
+            else if (HitCircleLava(player))
             {
-                if (enemyPoisonPacket.Health > 0)
-                {
-                    Fight(player, enemyPoisonPacket);
-                }
-                else
-                {
-                    Controls.Remove(picEnemyPoisonPacket);
-                    enemyPoisonPacket = null;
-                    player.AlterHealth(5);
-                }
+                player.resetPosition(playerStartX, playerStartY);
+                player.AlterHealth(-5);
+                player.AlterScore(-5);
             }
 
             // check collision with enemies
@@ -212,6 +219,7 @@ namespace Fall2020_CSC403_Project
                     Controls.Remove(picLvl1EnemyRockMonster1);
                     enemyRockMonster1 = null;
                     player.AlterHealth(5);
+                    player.AlterScore(5);
                 }
             }
             else if (HitAChar(player, enemyPaperMonster1))
@@ -225,6 +233,7 @@ namespace Fall2020_CSC403_Project
                     Controls.Remove(picLvl1EnemyPaperMonster1);
                     enemyPaperMonster1 = null;
                     player.AlterHealth(5);
+                    player.AlterScore(5);
                 }
             }
             else if (HitAChar(player, enemyScissorMonster1))
@@ -238,28 +247,24 @@ namespace Fall2020_CSC403_Project
                     Controls.Remove(picLvl1EnemyScissorMonster1);
                     enemyScissorMonster1 = null;
                     player.AlterHealth(5);
+                    player.AlterScore(5);
                 }
             }
-            //else if (HitAChar(player, enemyLvl1boss))
-            //{
-            //    if (enemyLvl1boss.Health > 0)
-            //    {
-            //        Fight(enemyLvl1boss);
-            //    }
 
-            //    else
-            //    {
-            //        Controls.Remove(picLvl1EnemyFinalBoss);
-            //        enemyLvl1boss = null;
-            //        player.AlterHealth(5);
-            //    }
-            //}
-            //else if (HitAChar(player, finishFlag))
-            //{
-            //    this.Close();
-            //    FrmLevel1Finish formCongratulations = new FrmLevel1Finish();
-            //    formCongratulations.Show();
-            //}
+            // check collision with enemies
+            else if (HitAChar(player, enemyFinalBoss))
+            {
+                if (enemyFinalBoss.Health > 0)
+                {
+                    Fight(player, enemyFinalBoss);
+                }
+                else
+                {
+                    this.Close();
+                    FrmLevel2 frmLevel2 = new FrmLevel2();
+                    frmLevel2.Show();
+                }
+            }
         }
 
 
@@ -296,6 +301,38 @@ namespace Fall2020_CSC403_Project
         {
             if (other == null) return false;
             return you.Collider.Intersects(other.Collider);
+        }
+
+
+        private bool HitBottomLava(Character c)
+        {
+            bool HitBottomLava = false;
+            for (int l = 0; l < bottomLava.Length; l++)
+            {
+                if (c.Collider.Intersects(bottomLava[l].Collider))
+                {
+                    HitBottomLava = true;
+                    break;
+                }
+            }
+            Console.WriteLine(HitBottomLava);
+            return HitBottomLava;
+        }
+
+
+        private bool HitCircleLava(Character c)
+        {
+            bool HitCircleLava = false;
+            for (int l = 0; l < lavaCircle.Length; l++)
+            {
+                if (c.Collider.Intersects(lavaCircle[l].Collider))
+                {
+                    HitCircleLava = true;
+                    break;
+                }
+            }
+            Console.WriteLine(HitCircleLava);
+            return HitCircleLava;
         }
 
         private void Fight(Player player, Enemy enemy)
@@ -337,9 +374,11 @@ namespace Fall2020_CSC403_Project
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+
+        private void tmrUpdateScoreBars_Tick(object sender, EventArgs e)
         {
             UpdateHealthBars();
+
         }
 
         private void UpdateHealthBars()
@@ -363,22 +402,13 @@ namespace Fall2020_CSC403_Project
             lblPlayerTimeFull.Width = (int)(MAX_TIMEBAR_WIDTH * playerTimePer);
             int remainTime = (int)remainingTime;
             lblPlayerTimeFull.Text = remainTime.ToString();
+
+            float playerScorePer = player.Score / (float)player.MaxScore;
+            const int MAX_SCOREBAR_HEIGHT = 140;
+            lblPlayerScoreFull.Height = (int)(MAX_SCOREBAR_HEIGHT * playerScorePer);
+            lblPlayerScoreFull.Text = player.Score.ToString();
         }
 
-        private bool HitBottomLava(Character c)
-        {
-            bool HitBottomLava = false;
-            for (int l = 0; l < bottomLava.Length; l++)
-            {
-                if (c.Collider.Intersects(bottomLava[l].Collider))
-                {
-                    HitBottomLava = true;
-                    break;
-                }
-            }
-            Console.WriteLine(HitBottomLava);
-            return HitBottomLava;
-        }
 
 
         private void lavaMoveTimer1_Tick_1(object sender, EventArgs e)
@@ -410,6 +440,63 @@ namespace Fall2020_CSC403_Project
             if (HitBottomLava(lava[2]))
             {
                 lava[2].resetPosition(lava2StartX, lava2StartY);
+            }
+        }
+
+        private void lavaMoveTimer2_Tick(object sender, EventArgs e)
+        {
+            for (int l = 0; l < lavaCircle.Length; l++)
+            {
+                PictureBox pic = Controls.Find("picLavaCirc" + l.ToString(), true)[0] as PictureBox;
+                if (lavaCircle[l].Position.x > 1525)
+                {
+                    if (lavaCircle[l].Position.y > 325)
+                    {
+                        lavaCircle[l].GoLeft();
+                        lavaCircle[l].Move();
+                        pic.Location = new Point((int)lavaCircle[l].Position.x, (int)lavaCircle[l].Position.y);
+
+                        lavaCircle[l].GoDown();
+                        lavaCircle[l].Move();
+                        pic.Location = new Point((int)lavaCircle[l].Position.x, (int)lavaCircle[l].Position.y);
+
+
+                    }
+                    else
+                    {
+                        lavaCircle[l].GoRight();
+                        lavaCircle[l].Move();
+                        pic.Location = new Point((int)lavaCircle[l].Position.x, (int)lavaCircle[l].Position.y);
+
+                        lavaCircle[l].GoDown();
+                        lavaCircle[l].Move();
+                        pic.Location = new Point((int)lavaCircle[l].Position.x, (int)lavaCircle[l].Position.y);
+                    }
+
+                }
+                else
+                {
+                    if (lavaCircle[l].Position.y > 325)
+                    {
+                        lavaCircle[l].GoLeft();
+                        lavaCircle[l].Move();
+                        pic.Location = new Point((int)lavaCircle[l].Position.x, (int)lavaCircle[l].Position.y);
+
+                        lavaCircle[l].GoUp();
+                        lavaCircle[l].Move();
+                        pic.Location = new Point((int)lavaCircle[l].Position.x, (int)lavaCircle[l].Position.y);
+                    }
+                    else
+                    {
+                        lavaCircle[l].GoRight();
+                        lavaCircle[l].Move();
+                        pic.Location = new Point((int)lavaCircle[l].Position.x, (int)lavaCircle[l].Position.y);
+
+                        lavaCircle[l].GoUp();
+                        lavaCircle[l].Move();
+                        pic.Location = new Point((int)lavaCircle[l].Position.x, (int)lavaCircle[l].Position.y);
+                    }
+                }
             }
         }
     }

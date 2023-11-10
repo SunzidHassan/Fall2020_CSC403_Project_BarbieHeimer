@@ -76,3 +76,4 @@ C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall
 C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmLevel2.resources
 >>>>>>> Stashed changes
 C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmLevel1Backup.resources
+C:\Users\sunzi\Downloads\Scrum Project\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.FrmLevel2.resources
