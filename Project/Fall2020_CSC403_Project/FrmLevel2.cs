@@ -17,8 +17,9 @@ namespace Fall2020_CSC403_Project
         private int horizontalWallDirection = 1; // 1 for right, -1 for left
         private int verticalWallDirection = 1;   // 1 for down, -1 for up
 
-        
 
+        private int playerStartX;
+        private int playerStartY;
         private Enemy enemyPoisonPacket;
         private Enemy bossKoolaid;
         private Enemy enemyCheeto;
@@ -64,9 +65,12 @@ namespace Fall2020_CSC403_Project
 
 
             const int PADDING = 7;
-            const int NUM_WALLS = 18;
+            const int NUM_WALLS = 19;
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
+            playerStartX = picPlayer.Location.X;
+            playerStartY = picPlayer.Location.Y;
+
             UpdateHeathText();
             bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
             enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
@@ -89,6 +93,8 @@ namespace Fall2020_CSC403_Project
                 PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
                 walls[w] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
             }
+
+
 
             Game.player = player;
             timeBegin = DateTime.Now;
@@ -132,7 +138,7 @@ namespace Fall2020_CSC403_Project
             // move player
             player.Move();
 
-            if (player.Health == 0)
+            if (player.Health <= 0)
             {
                 // Close the current form (FrmLevel)
                 this.Close();
@@ -160,7 +166,7 @@ namespace Fall2020_CSC403_Project
                     Controls.Remove(picEnemyPoisonPacket);
                     enemyPoisonPacket = null;
                     player.AlterHealth(5);
-                    UpdateHeathText();
+                    //UpdateHeathText();
                 }
             }
             else if (HitAChar(player, enemyCheeto))
@@ -174,7 +180,7 @@ namespace Fall2020_CSC403_Project
                     Controls.Remove(picEnemyCheeto);
                     enemyCheeto = null;
                     player.AlterHealth(5);
-                    UpdateHeathText();
+                    //UpdateHeathText();
                 }
             }
             else if (HitAChar(player, bossKoolaid))
@@ -189,7 +195,7 @@ namespace Fall2020_CSC403_Project
                     Controls.Remove(picBossKoolAid);
                     bossKoolaid = null;
                     player.AlterHealth(5);
-                    UpdateHeathText();
+                    //UpdateHeathText();
                 }
             }
             else if (HitAChar(player, finishFlag))
@@ -207,6 +213,9 @@ namespace Fall2020_CSC403_Project
                 {
                     // Player cannot pass through the visible picWall15
                     player.MoveBack();
+                    player.resetPosition(playerStartX, playerStartY);
+                    player.AlterHealth(-5);  // Adjust the health change as needed
+                    //UpdateHealthText();      // Update the health display
                 }
                 else
                 {
@@ -221,6 +230,9 @@ namespace Fall2020_CSC403_Project
                 {
                     // Player cannot pass through the visible picWall15
                     player.MoveBack();
+                    player.resetPosition(playerStartX, playerStartY);
+                    player.AlterHealth(-5);
+                    //UpdateHealthText();
                 }
                 else
                 {
@@ -232,8 +244,10 @@ namespace Fall2020_CSC403_Project
             {
                 if (picWall17.Visible)
                 {
-                    // Player cannot pass through the visible picWall15
                     player.MoveBack();
+                    player.resetPosition(playerStartX, playerStartY);
+                    player.AlterHealth(-5);
+                    //UpdateHealthText();
                 }
                 else
                 {
@@ -245,8 +259,10 @@ namespace Fall2020_CSC403_Project
             {
                 if (picWall13.Visible)
                 {
-                    // Player cannot pass through the visible picWall15
                     player.MoveBack();
+                    player.resetPosition(playerStartX, playerStartY);
+                    player.AlterHealth(-5);
+                    //UpdateHealthText();
                 }
                 else
                 {
@@ -258,8 +274,25 @@ namespace Fall2020_CSC403_Project
             {
                 if (picWall14.Visible)
                 {
-                    // Player cannot pass through the visible picWall15
                     player.MoveBack();
+                    player.resetPosition(playerStartX, playerStartY);
+                    player.AlterHealth(-5);
+                    //UpdateHealthText();
+                }
+                else
+                {
+                    // Implement player movement logic when picWall15 is not visible
+                    player.Move();
+                }
+            }
+            if (player.Collider.Intersects(new Collider(picWall18.Bounds)))
+            {
+                if (picWall18.Visible)
+                {
+                    player.MoveBack();
+                    player.resetPosition(playerStartX, playerStartY);
+                    player.AlterHealth(-5);
+                    //UpdateHealthText();
                 }
                 else
                 {
@@ -342,17 +375,43 @@ namespace Fall2020_CSC403_Project
             UpdateHeathText();
         }
 
-        private bool HasCollisionWithOtherWalls(PictureBox wall)
+        /*private bool HasCollisionWithOtherWalls(PictureBox wall)
         {
             foreach (Control control in Controls)
             {
+                
                 if (control is PictureBox otherWall && otherWall != wall && wall.Bounds.IntersectsWith(otherWall.Bounds))
                 {
                     return true; // Collision detected
                 }
             }
             return false; // No collision
+        }*/
+        private bool HasCollisionWithOtherWalls(PictureBox wall)
+        {
+            foreach (Control control in Controls)
+            {
+                // Check if the control is a PictureBox
+                if (control is PictureBox otherWall)
+                {
+                    // Check if the control is the player
+                    if (otherWall.Name == "picPlayer")
+                    {
+                        continue; // Skip the player
+                    }
+
+                    // Check for collision with other walls
+                    if (otherWall != wall && wall.Bounds.IntersectsWith(otherWall.Bounds))
+                    {
+                        return true; // Collision detected
+                    }
+                }
+            }
+
+            return false; // No collision
         }
+
+
 
         private void tmrpicWall13_Tick(object sender, EventArgs e)
         {
@@ -426,6 +485,33 @@ namespace Fall2020_CSC403_Project
         private void tmrpicWall16_Tick(object sender, EventArgs e)
         {
             picWall16.Visible = !picWall16.Visible;
+        }
+
+        private void picWall17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tmrpicWall18_Tick(object sender, EventArgs e)
+        {
+            //picWall17.Visible = !picWall17.Visible;
+
+            int verticalWallSpeed = 50; // Adjust the speed as needed
+
+            // Save the original position
+            int originalTop18 = picWall18.Top;
+
+            // Move picWall17 vertically
+            picWall18.Top += verticalWallDirection * verticalWallSpeed;
+
+            // Check if picWall17 has collided with any other walls
+            if (HasCollisionWithOtherWalls(picWall18))
+            {
+                // Restore the original position
+                picWall18.Top = originalTop18;
+                // Change direction when colliding with other walls
+                verticalWallDirection *= -1;
+            }
         }
     }
 }
