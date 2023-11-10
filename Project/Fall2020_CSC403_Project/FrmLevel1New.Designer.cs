@@ -458,7 +458,7 @@
             // 
             this.picPlayer.BackColor = System.Drawing.Color.Transparent;
             this.picPlayer.Image = global::Fall2020_CSC403_Project.Properties.Resources.charbarbie2;
-            this.picPlayer.Location = new System.Drawing.Point(354, 550);
+            this.picPlayer.Location = new System.Drawing.Point(210, 201);
             this.picPlayer.Name = "picPlayer";
             this.picPlayer.Size = new System.Drawing.Size(70, 100);
             this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
