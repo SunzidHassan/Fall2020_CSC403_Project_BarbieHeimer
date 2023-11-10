@@ -14,7 +14,7 @@ namespace Fall2020_CSC403_Project
         private Enemy enemyScissorMonster1;
         private Enemy enemyPaperMonster1;
         private Enemy enemyLvl1boss;
-        
+
 
         private Enemy enemyFinalBoss;
         private Character[] wall;
@@ -146,13 +146,6 @@ namespace Fall2020_CSC403_Project
         private void FrmLevel1New_KeyUp(object sender, KeyEventArgs e)
         {
             player.ResetMoveSpeed();
-        }
-
-        private void tmrUpdateInGameTime_Tick(object sender, EventArgs e)
-        {
-            TimeSpan span = DateTime.Now - timeBegin;
-            string time = span.ToString(@"hh\:mm\:ss");
-            lblInGameTime.Text = "Time: " + time.ToString();
         }
 
         private void scoreTimer_Tick(object sender, EventArgs e)
@@ -404,7 +397,7 @@ namespace Fall2020_CSC403_Project
             lblPlayerTimeFull.Text = remainTime.ToString();
 
             float playerScorePer = player.Score / (float)player.MaxScore;
-            const int MAX_SCOREBAR_HEIGHT = 140;
+            const int MAX_SCOREBAR_HEIGHT = 80;
             lblPlayerScoreFull.Height = (int)(MAX_SCOREBAR_HEIGHT * playerScorePer);
             lblPlayerScoreFull.Text = player.Score.ToString();
         }
