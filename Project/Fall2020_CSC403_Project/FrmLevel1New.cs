@@ -377,12 +377,12 @@ namespace Fall2020_CSC403_Project
         private void UpdateHealthBars()
         {
             float playerHealthPer = player.Health / (float)player.MaxHealth;
-            const int MAX_HEALTHBAR_WIDTH = 500;
+            const int MAX_HEALTHBAR_WIDTH = 400;
             lblPlayerHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * playerHealthPer);
             lblPlayerHealthFull.Text = player.Health.ToString();
 
             float playerAttackPer = player.strength / (float)player.MaxStrength;
-            const int MAX_ATTACKBAR_WIDTH = 500;
+            const int MAX_ATTACKBAR_WIDTH = 400;
             lblPlayerAttackFull.Width = (int)(MAX_ATTACKBAR_WIDTH * playerAttackPer);
             lblPlayerAttackFull.Text = player.strength.ToString();
 
@@ -391,7 +391,7 @@ namespace Fall2020_CSC403_Project
             float time = (float)span.TotalSeconds;
             float remainingTime = MaxTime - time;
             float playerTimePer = remainingTime / MaxTime;
-            const int MAX_TIMEBAR_WIDTH = 500;
+            const int MAX_TIMEBAR_WIDTH = 400;
             lblPlayerTimeFull.Width = (int)(MAX_TIMEBAR_WIDTH * playerTimePer);
             int remainTime = (int)remainingTime;
             lblPlayerTimeFull.Text = remainTime.ToString();
@@ -441,9 +441,9 @@ namespace Fall2020_CSC403_Project
             for (int l = 0; l < lavaCircle.Length; l++)
             {
                 PictureBox pic = Controls.Find("picLavaCirc" + l.ToString(), true)[0] as PictureBox;
-                if (lavaCircle[l].Position.x > 1525)
+                if (lavaCircle[l].Position.x > 1335)
                 {
-                    if (lavaCircle[l].Position.y > 325)
+                    if (lavaCircle[l].Position.y > 235)
                     {
                         lavaCircle[l].GoLeft();
                         lavaCircle[l].Move();
@@ -469,7 +469,7 @@ namespace Fall2020_CSC403_Project
                 }
                 else
                 {
-                    if (lavaCircle[l].Position.y > 325)
+                    if (lavaCircle[l].Position.y > 235)
                     {
                         lavaCircle[l].GoLeft();
                         lavaCircle[l].Move();
