@@ -58,11 +58,11 @@
     <Compile Include="FrmLevel1Backup.Designer.cs">
       <DependentUpon>FrmLevel1Backup.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLevel1Finish.cs">
+    <Compile Include="FrmLevel2Finish.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLevel1Finish.Designer.cs">
-      <DependentUpon>FrmLevel1Finish.cs</DependentUpon>
+    <Compile Include="FrmLevel2Finish.Designer.cs">
+      <DependentUpon>FrmLevel2Finish.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLevel2.cs">
       <SubType>Form</SubType>
@@ -137,8 +137,8 @@
     <Compile Include="Volume_control.Designer.cs">
       <DependentUpon>Volume_control.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmLevel1Finish.resx">
-      <DependentUpon>FrmLevel1Finish.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLevel2Finish.resx">
+      <DependentUpon>FrmLevel2Finish.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFAQ.resx">
       <DependentUpon>FrmFAQ.cs</DependentUpon>
@@ -354,6 +354,7 @@
     <None Include="data\raw images\backHell2.gif" />
     <None Include="data\raw images\backHell1.gif" />
     <None Include="data\audio\Level1FinishClap.wav" />
+    <None Include="data\audio\audio.wav" />
     <Content Include="data\Level1FinishClap.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,8 @@
 ﻿using Fall2020_CSC403_Project.code;
+using Fall2020_CSC403_Project.Properties;
 using System;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
@@ -9,11 +11,12 @@ namespace Fall2020_CSC403_Project
     public partial class FrmLevel1New : Form
     {
         private Player player;
+        
 
         private Enemy enemyRockMonster1;
         private Enemy enemyScissorMonster1;
         private Enemy enemyPaperMonster1;
-        private Enemy enemyLvl1boss;
+        //private Enemy enemyLvl1boss;
 
 
         private Enemy enemyFinalBoss;
@@ -39,8 +42,7 @@ namespace Fall2020_CSC403_Project
         public FrmLevel1New()
         {
             InitializeComponent();
-            //soundPlayer.SoundLocation = "gamebgm.wav";
-            //soundPlayer.Play();
+
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -61,9 +63,9 @@ namespace Fall2020_CSC403_Project
 
         private void FrmLevel1New_Load(object sender, EventArgs e)
         {
-            //FormBorderStyle = FormBorderStyle.None;
-            //WindowState = FormWindowState.Maximized;
-            //TopMost = false;
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = false;
 
             const int PADDING = 7;
             const int NUM_WALLS = 15;
@@ -71,6 +73,8 @@ namespace Fall2020_CSC403_Project
             const int NUM_LAVACIRCLE = 4;
             const int NUM_BOTTOMLAVA = 4;
 
+            SoundPlayer simpleSound = new SoundPlayer(Resources.level1);
+            simpleSound.Play();
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
             player.Img = picPlayer.Image;
@@ -253,8 +257,10 @@ namespace Fall2020_CSC403_Project
                 }
                 else
                 {
+                    
+                    FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
                     this.Close();
-                    FrmLevel2 frmLevel2 = new FrmLevel2();
+
                     frmLevel2.Show();
                 }
             }
@@ -441,9 +447,9 @@ namespace Fall2020_CSC403_Project
             for (int l = 0; l < lavaCircle.Length; l++)
             {
                 PictureBox pic = Controls.Find("picLavaCirc" + l.ToString(), true)[0] as PictureBox;
-                if (lavaCircle[l].Position.x > 1335)
+                if (lavaCircle[l].Position.x > 1474)
                 {
-                    if (lavaCircle[l].Position.y > 235)
+                    if (lavaCircle[l].Position.y > 374)
                     {
                         lavaCircle[l].GoLeft();
                         lavaCircle[l].Move();
@@ -469,7 +475,7 @@ namespace Fall2020_CSC403_Project
                 }
                 else
                 {
-                    if (lavaCircle[l].Position.y > 235)
+                    if (lavaCircle[l].Position.y > 374)
                     {
                         lavaCircle[l].GoLeft();
                         lavaCircle[l].Move();

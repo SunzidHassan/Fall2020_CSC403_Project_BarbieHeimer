@@ -184,7 +184,7 @@ namespace Fall2020_CSC403_Project
             else if (HitAChar(player, finishFlag))
             {
                 this.Close();
-                FrmLevel1Finish formCongratulations = new FrmLevel1Finish();
+                FrmLevel2Finish formCongratulations = new FrmLevel2Finish();
                 formCongratulations.Show();
             }
 
