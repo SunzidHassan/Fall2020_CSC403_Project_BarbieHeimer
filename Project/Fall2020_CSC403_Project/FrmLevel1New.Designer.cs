@@ -379,7 +379,7 @@
             // 
             this.picLvl1EnemyRockMonster1.BackColor = System.Drawing.Color.Transparent;
             this.picLvl1EnemyRockMonster1.Image = ((System.Drawing.Image)(resources.GetObject("picLvl1EnemyRockMonster1.Image")));
-            this.picLvl1EnemyRockMonster1.Location = new System.Drawing.Point(1368, 541);
+            this.picLvl1EnemyRockMonster1.Location = new System.Drawing.Point(1297, 235);
             this.picLvl1EnemyRockMonster1.Margin = new System.Windows.Forms.Padding(2);
             this.picLvl1EnemyRockMonster1.Name = "picLvl1EnemyRockMonster1";
             this.picLvl1EnemyRockMonster1.Size = new System.Drawing.Size(97, 116);
@@ -392,7 +392,7 @@
             this.picWall5.BackColor = System.Drawing.Color.Transparent;
             this.picWall5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall5.Image = global::Fall2020_CSC403_Project.Properties.Resources.BackLavaLongV;
-            this.picWall5.Location = new System.Drawing.Point(1537, 7);
+            this.picWall5.Location = new System.Drawing.Point(1820, 2);
             this.picWall5.Name = "picWall5";
             this.picWall5.Size = new System.Drawing.Size(82, 848);
             this.picWall5.TabIndex = 15;
@@ -439,7 +439,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(-10, -10);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1640, 900);
+            this.pictureBox1.Size = new System.Drawing.Size(1974, 1052);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 82;
             this.pictureBox1.TabStop = false;
@@ -448,7 +448,7 @@
             // 
             this.picPlayer.BackColor = System.Drawing.Color.Transparent;
             this.picPlayer.Image = global::Fall2020_CSC403_Project.Properties.Resources.charbarbie2;
-            this.picPlayer.Location = new System.Drawing.Point(197, 142);
+            this.picPlayer.Location = new System.Drawing.Point(191, 171);
             this.picPlayer.Margin = new System.Windows.Forms.Padding(2);
             this.picPlayer.Name = "picPlayer";
             this.picPlayer.Size = new System.Drawing.Size(72, 106);
@@ -814,7 +814,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.backHell1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1624, 861);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.lblPlayerScissorFull);
             this.Controls.Add(this.lblPlayerPaperFull);
             this.Controls.Add(this.lblPlayerRockFull);
