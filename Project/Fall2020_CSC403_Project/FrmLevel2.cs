@@ -29,14 +29,18 @@ namespace Fall2020_CSC403_Project
         private DateTime timeBegin;
         private FrmBattle frmBattle;
 
+        private float MaxTime = 300;
+
 
         System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();
-        public FrmLevel2()
+        public FrmLevel2(Image playerImage, Image inventoryImage)
         {
             InitializeComponent();
             soundPlayer.SoundLocation = "gamebgm.wav";
             soundPlayer.Play();
             //picWall13PositionX = picWall13.Left;
+            picPlayer.Image = playerImage;
+            picInventory.Image = inventoryImage;
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -58,8 +62,8 @@ namespace Fall2020_CSC403_Project
         {
             /*FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;*/
-            FormBorderStyle = FormBorderStyle.FixedSingle; // Change to a desired border style
-            WindowState = FormWindowState.Normal; // Change to normal window state
+            /*FormBorderStyle = FormBorderStyle.FixedSingle; // Change to a desired border style
+            WindowState = FormWindowState.Normal; // Change to normal window state*/
 
             TopMost = false;
 
@@ -68,24 +72,25 @@ namespace Fall2020_CSC403_Project
             const int NUM_WALLS = 19;
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
+            //player.Img = picPlayer.Image;
             playerStartX = picPlayer.Location.X;
             playerStartY = picPlayer.Location.Y;
 
-            UpdateHeathText();
+            //UpdateHeathText();
             bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
             enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
             enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
-            finishFlag = new Enemy(CreatePosition(picLevel1Finish), CreateCollider(picLevel1Finish, PADDING));
+            //finishFlag = new Enemy(CreatePosition(picLevel1Finish), CreateCollider(picLevel1Finish, PADDING));
 
             bossKoolaid.Img = picBossKoolAid.BackgroundImage;
             enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
             enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
-            finishFlag.Img = picLevel1Finish.BackgroundImage;
+            //finishFlag.Img = picLevel1Finish.BackgroundImage;
 
             bossKoolaid.Color = Color.Red;
             enemyPoisonPacket.Color = Color.Green;
             enemyCheeto.Color = Color.FromArgb(255, 245, 161);
-            finishFlag.Color = Color.White;
+            //finishFlag.Color = Color.White;
 
             walls = new Character[NUM_WALLS];
             for (int w = 0; w < NUM_WALLS; w++)
@@ -115,18 +120,18 @@ namespace Fall2020_CSC403_Project
             player.ResetMoveSpeed();
         }
 
-        private void tmrUpdateInGameTime_Tick(object sender, EventArgs e)
+        /*private void tmrUpdateInGameTime_Tick(object sender, EventArgs e)
         {
             TimeSpan span = DateTime.Now - timeBegin;
             string time = span.ToString(@"hh\:mm\:ss");
             lblInGameTime.Text = "Time: " + time.ToString();
             //CleanUpDeadCharacter();
-        }
-        private void UpdateHeathText()
+        }*/
+        /*private void UpdateHeathText()
         {
             playerHealth.Text = "Player Health: " + player.Health.ToString();
         }
-
+*/
 
         
 
@@ -135,17 +140,27 @@ namespace Fall2020_CSC403_Project
 
         private void tmrPlayerMove_Tick(object sender, EventArgs e)
         {
-            // move player
+            TimeSpan span = DateTime.Now - timeBegin;
+            float time = (float)span.TotalSeconds;
+            float remainingTime = MaxTime - time;
+
+            //udate player box pposition code needed
+            picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+
             player.Move();
 
-            if (player.Health <= 0)
-            {
-                // Close the current form (FrmLevel)
-                this.Close();
-
-                // Assuming your default form is named "FrmDefault"
+            if (player.Health <= 1)
+            {                
                 FrmDeath formDeath = new FrmDeath();
                 formDeath.Show();
+                this.Close();                               
+            }
+
+            if (remainingTime < 1)
+            {
+                FrmDeath formDeath = new FrmDeath();
+                formDeath.Show();
+                this.Close();
             }
 
             // check collision with walls
@@ -215,6 +230,7 @@ namespace Fall2020_CSC403_Project
                     player.MoveBack();
                     player.resetPosition(playerStartX, playerStartY);
                     player.AlterHealth(-5);  // Adjust the health change as needed
+                    player.AlterScore(-5);
                     //UpdateHealthText();      // Update the health display
                 }
                 else
@@ -232,6 +248,7 @@ namespace Fall2020_CSC403_Project
                     player.MoveBack();
                     player.resetPosition(playerStartX, playerStartY);
                     player.AlterHealth(-5);
+                    player.AlterScore(-5);
                     //UpdateHealthText();
                 }
                 else
@@ -247,6 +264,7 @@ namespace Fall2020_CSC403_Project
                     player.MoveBack();
                     player.resetPosition(playerStartX, playerStartY);
                     player.AlterHealth(-5);
+                    player.AlterScore(-5);
                     //UpdateHealthText();
                 }
                 else
@@ -262,6 +280,7 @@ namespace Fall2020_CSC403_Project
                     player.MoveBack();
                     player.resetPosition(playerStartX, playerStartY);
                     player.AlterHealth(-5);
+                    player.AlterScore(-5);
                     //UpdateHealthText();
                 }
                 else
@@ -277,6 +296,7 @@ namespace Fall2020_CSC403_Project
                     player.MoveBack();
                     player.resetPosition(playerStartX, playerStartY);
                     player.AlterHealth(-5);
+                    player.AlterScore(-5);
                     //UpdateHealthText();
                 }
                 else
@@ -292,6 +312,7 @@ namespace Fall2020_CSC403_Project
                     player.MoveBack();
                     player.resetPosition(playerStartX, playerStartY);
                     player.AlterHealth(-5);
+                    player.AlterScore(-5);
                     //UpdateHealthText();
                 }
                 else
@@ -300,16 +321,22 @@ namespace Fall2020_CSC403_Project
                     player.Move();
                 }
             }
-
-
-
-            // update player's picture box
-            picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
-
-
-
-
-
+            /*if (player.Collider.Intersects(new Collider(picWall19.Bounds)))
+            {
+                if (picWall19.Visible)
+                {
+                    player.MoveBack();
+                    player.resetPosition(playerStartX, playerStartY);
+                    player.AlterHealth(-5);
+                    player.AlterScore(-5);
+                    //UpdateHealthText();
+                }
+                else
+                {
+                    // Implement player movement logic when picWall15 is not visible
+                    player.Move();
+                }
+            }*/
 
         }
         private bool HitAWall(Character c)
@@ -338,10 +365,10 @@ namespace Fall2020_CSC403_Project
             frmBattle = FrmBattle.GetInstance(player,enemy);
             frmBattle.Show();
 
-            if (enemy == bossKoolaid)
+            /*if (enemy == bossKoolaid)
             {
                 frmBattle.SetupForBossBattle();
-            }
+            }*/
         }
         private void FrmLevel_KeyDown(object sender, KeyEventArgs e)
         {
@@ -370,10 +397,7 @@ namespace Fall2020_CSC403_Project
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            UpdateHeathText();
-        }
+        
 
         /*private bool HasCollisionWithOtherWalls(PictureBox wall)
         {
@@ -401,7 +425,7 @@ namespace Fall2020_CSC403_Project
                     }
 
                     // Check for collision with other walls
-                    if (otherWall != wall && wall.Bounds.IntersectsWith(otherWall.Bounds))
+                    else if (otherWall != wall && wall.Bounds.IntersectsWith(otherWall.Bounds))
                     {
                         return true; // Collision detected
                     }
@@ -439,7 +463,7 @@ namespace Fall2020_CSC403_Project
             
             //picWall17.Visible = !picWall17.Visible;
             
-            int verticalWallSpeed = 20; // Adjust the speed as needed
+            int verticalWallSpeed = 10; // Adjust the speed as needed
 
             // Save the original position
             int originalTop17 = picWall17.Top;
@@ -496,7 +520,7 @@ namespace Fall2020_CSC403_Project
         {
             //picWall17.Visible = !picWall17.Visible;
 
-            int verticalWallSpeed = 50; // Adjust the speed as needed
+            int verticalWallSpeed = 25; // Adjust the speed as needed
 
             // Save the original position
             int originalTop18 = picWall18.Top;
@@ -513,5 +537,72 @@ namespace Fall2020_CSC403_Project
                 verticalWallDirection *= -1;
             }
         }
+
+        private void scoreTimer_Tick(object sender, EventArgs e)
+        {
+            player.AlterScore(-1);
+        }
+
+        private void tmrUpdateScoreBars_Tick(object sender, EventArgs e)
+        {
+            UpdateHealthBars();
+        }
+
+        private void UpdateHealthBars()
+        {
+            float playerHealthPer = player.Health / (float)player.MaxHealth;
+            const int MAX_HEALTHBAR_WIDTH = 400;
+            lblPlayerHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * playerHealthPer);
+            lblPlayerHealthFull.Text = player.Health.ToString();
+
+            float playerAttackPer = player.strength / (float)player.MaxStrength;
+            const int MAX_ATTACKBAR_WIDTH = 400;
+            lblPlayerAttackFull.Width = (int)(MAX_ATTACKBAR_WIDTH * playerAttackPer);
+            lblPlayerAttackFull.Text = player.strength.ToString();
+
+
+            TimeSpan span = DateTime.Now - timeBegin;
+            float time = (float)span.TotalSeconds;
+            float remainingTime = MaxTime - time;
+            float playerTimePer = remainingTime / MaxTime;
+            const int MAX_TIMEBAR_WIDTH = 400;
+            lblPlayerTimeFull.Width = (int)(MAX_TIMEBAR_WIDTH * playerTimePer);
+            int remainTime = (int)remainingTime;
+            lblPlayerTimeFull.Text = remainTime.ToString();
+
+            float playerScorePer = player.Score / (float)player.MaxScore;
+            const int MAX_SCOREBAR_HEIGHT = 80;
+            lblPlayerScoreFull.Height = (int)(MAX_SCOREBAR_HEIGHT * playerScorePer);
+            lblPlayerScoreFull.Text = player.Score.ToString();
+        }
+
+        private void picBottomLava2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        /*private void tmrpicWall19_Tick_1(object sender, EventArgs e)
+        {
+            //picWall17.Visible = !picWall17.Visible;
+
+            int verticalWallSpeed = 15; // Adjust the speed as needed
+
+            // Save the original position
+            int originalTop19 = picWall19.Top;
+
+            // Move picWall17 vertically
+            picWall19.Top += verticalWallDirection * verticalWallSpeed;
+
+            // Check if picWall17 has collided with any other walls
+            if (HasCollisionWithOtherWalls(picWall19))
+            {
+                // Restore the original position
+                picWall19.Top = originalTop19;
+                // Change direction when colliding with other walls
+                verticalWallDirection *= -1;
+            }
+        }*/
     }
 }

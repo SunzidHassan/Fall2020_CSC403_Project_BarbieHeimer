@@ -9,6 +9,7 @@ namespace Fall2020_CSC403_Project
     public partial class FrmLevel1New : Form
     {
         private Player player;
+        
 
         private Enemy enemyRockMonster1;
         private Enemy enemyScissorMonster1;
@@ -41,6 +42,7 @@ namespace Fall2020_CSC403_Project
             InitializeComponent();
             //soundPlayer.SoundLocation = "gamebgm.wav";
             //soundPlayer.Play();
+            
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -253,8 +255,10 @@ namespace Fall2020_CSC403_Project
                 }
                 else
                 {
+                    
+                    FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
                     this.Close();
-                    FrmLevel2 frmLevel2 = new FrmLevel2();
+
                     frmLevel2.Show();
                 }
             }
