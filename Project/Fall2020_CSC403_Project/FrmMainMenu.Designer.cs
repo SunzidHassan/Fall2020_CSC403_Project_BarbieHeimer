@@ -47,10 +47,10 @@
             this.Play.FlatAppearance.BorderSize = 0;
             this.Play.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Play.ForeColor = System.Drawing.Color.Aquamarine;
-            this.Play.Location = new System.Drawing.Point(191, 285);
-            this.Play.Margin = new System.Windows.Forms.Padding(2);
+            this.Play.Location = new System.Drawing.Point(255, 351);
+            this.Play.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Play.Name = "Play";
-            this.Play.Size = new System.Drawing.Size(352, 67);
+            this.Play.Size = new System.Drawing.Size(469, 82);
             this.Play.TabIndex = 0;
             this.Play.Text = "New Game";
             this.Play.UseVisualStyleBackColor = false;
@@ -66,10 +66,9 @@
             this.BarbieHiemer.Font = new System.Drawing.Font("Microsoft Sans Serif", 47.99999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BarbieHiemer.ForeColor = System.Drawing.Color.Maroon;
             this.BarbieHiemer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BarbieHiemer.Location = new System.Drawing.Point(609, 145);
-            this.BarbieHiemer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BarbieHiemer.Location = new System.Drawing.Point(812, 178);
             this.BarbieHiemer.Name = "BarbieHiemer";
-            this.BarbieHiemer.Size = new System.Drawing.Size(438, 75);
+            this.BarbieHiemer.Size = new System.Drawing.Size(539, 93);
             this.BarbieHiemer.TabIndex = 1;
             this.BarbieHiemer.Text = "BarbieHiemer";
             this.BarbieHiemer.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -83,10 +82,10 @@
             this.Settings.FlatAppearance.BorderSize = 0;
             this.Settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Settings.ForeColor = System.Drawing.Color.Aquamarine;
-            this.Settings.Location = new System.Drawing.Point(191, 490);
-            this.Settings.Margin = new System.Windows.Forms.Padding(2);
+            this.Settings.Location = new System.Drawing.Point(255, 603);
+            this.Settings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(352, 62);
+            this.Settings.Size = new System.Drawing.Size(469, 76);
             this.Settings.TabIndex = 2;
             this.Settings.Text = "Settings";
             this.Settings.UseVisualStyleBackColor = false;
@@ -100,10 +99,10 @@
             this.Faq.FlatAppearance.BorderSize = 0;
             this.Faq.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Faq.ForeColor = System.Drawing.Color.Aquamarine;
-            this.Faq.Location = new System.Drawing.Point(191, 589);
-            this.Faq.Margin = new System.Windows.Forms.Padding(2);
+            this.Faq.Location = new System.Drawing.Point(255, 725);
+            this.Faq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Faq.Name = "Faq";
-            this.Faq.Size = new System.Drawing.Size(352, 61);
+            this.Faq.Size = new System.Drawing.Size(469, 75);
             this.Faq.TabIndex = 3;
             this.Faq.Text = "Faq";
             this.Faq.UseVisualStyleBackColor = false;
@@ -117,10 +116,10 @@
             this.Exit.FlatAppearance.BorderSize = 0;
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.Aquamarine;
-            this.Exit.Location = new System.Drawing.Point(191, 687);
-            this.Exit.Margin = new System.Windows.Forms.Padding(2);
+            this.Exit.Location = new System.Drawing.Point(255, 846);
+            this.Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(352, 57);
+            this.Exit.Size = new System.Drawing.Size(469, 70);
             this.Exit.TabIndex = 4;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = false;
@@ -135,13 +134,14 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button1.Location = new System.Drawing.Point(191, 390);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(255, 480);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(352, 67);
+            this.button1.Size = new System.Drawing.Size(469, 82);
             this.button1.TabIndex = 5;
             this.button1.Text = "Load Game";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -150,8 +150,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Fall2020_CSC403_Project.Properties.Resources.charSelect4;
             this.pictureBox1.Location = new System.Drawing.Point(1, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1904, 957);
+            this.pictureBox1.Size = new System.Drawing.Size(2539, 1178);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -159,11 +160,11 @@
             // 
             // FrmMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1904, 947);
+            this.ClientSize = new System.Drawing.Size(1924, 1166);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Faq);
@@ -171,7 +172,7 @@
             this.Controls.Add(this.BarbieHiemer);
             this.Controls.Add(this.Play);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenuForm";

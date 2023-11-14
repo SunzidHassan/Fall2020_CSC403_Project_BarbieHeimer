@@ -54,3 +54,4 @@ C:\Users\adhik\OneDrive\Desktop\save\Fall2020_CSC403_Project_BarbieHeimer\Projec
 C:\Users\adhik\OneDrive\Desktop\save\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.csproj.CopyComplete
 C:\Users\adhik\OneDrive\Desktop\save\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.exe
 C:\Users\adhik\OneDrive\Desktop\save\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.pdb
+C:\Users\adhik\OneDrive\Desktop\save\Fall2020_CSC403_Project_BarbieHeimer\Project\Fall2020_CSC403_Project\obj\Debug\Fall2020_CSC403_Project.Form1.resources

@@ -81,5 +81,11 @@ namespace Fall2020_CSC403_Project
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+        }
     }
 }
