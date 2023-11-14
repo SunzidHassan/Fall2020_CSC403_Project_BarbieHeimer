@@ -90,10 +90,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.scoreTimer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxPlayerName = new System.Windows.Forms.TextBox();
-            this.textBoxScore = new System.Windows.Forms.TextBox();
-            this.listBoxScores = new System.Windows.Forms.ListBox();
-            this.btnSaveScore = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBottomLava3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBottomLava2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBottomLava1)).BeginInit();
@@ -817,44 +813,6 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBoxPlayerName
-            // 
-            this.textBoxPlayerName.BackColor = System.Drawing.Color.Red;
-            this.textBoxPlayerName.Location = new System.Drawing.Point(194, 26);
-            this.textBoxPlayerName.Name = "textBoxPlayerName";
-            this.textBoxPlayerName.Size = new System.Drawing.Size(134, 22);
-            this.textBoxPlayerName.TabIndex = 107;
-            this.textBoxPlayerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxPlayerName.TextChanged += new System.EventHandler(this.textBoxPlayerName_TextChanged);
-            // 
-            // textBoxScore
-            // 
-            this.textBoxScore.Location = new System.Drawing.Point(366, 27);
-            this.textBoxScore.Name = "textBoxScore";
-            this.textBoxScore.Size = new System.Drawing.Size(100, 22);
-            this.textBoxScore.TabIndex = 108;
-            // 
-            // listBoxScores
-            // 
-            this.listBoxScores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.listBoxScores.Font = new System.Drawing.Font("Microsoft Uighur", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxScores.FormattingEnabled = true;
-            this.listBoxScores.ItemHeight = 20;
-            this.listBoxScores.Location = new System.Drawing.Point(12, 89);
-            this.listBoxScores.Name = "listBoxScores";
-            this.listBoxScores.Size = new System.Drawing.Size(113, 344);
-            this.listBoxScores.TabIndex = 109;
-            // 
-            // btnSaveScore
-            // 
-            this.btnSaveScore.Location = new System.Drawing.Point(613, 26);
-            this.btnSaveScore.Name = "btnSaveScore";
-            this.btnSaveScore.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveScore.TabIndex = 110;
-            this.btnSaveScore.Text = "SAVE";
-            this.btnSaveScore.UseVisualStyleBackColor = true;
-            this.btnSaveScore.Click += new System.EventHandler(this.btnSaveScore_Click);
-            // 
             // FrmLevel1New
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -863,10 +821,6 @@
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.backHell1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1175);
-            this.Controls.Add(this.btnSaveScore);
-            this.Controls.Add(this.listBoxScores);
-            this.Controls.Add(this.textBoxScore);
-            this.Controls.Add(this.textBoxPlayerName);
             this.Controls.Add(this.lblPlayerScissorFull);
             this.Controls.Add(this.lblPlayerPaperFull);
             this.Controls.Add(this.lblPlayerRockFull);
@@ -1029,10 +983,6 @@
         public System.Windows.Forms.Label label8;
         private System.Windows.Forms.Timer scoreTimer;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxPlayerName;
-        private System.Windows.Forms.TextBox textBoxScore;
-        private System.Windows.Forms.ListBox listBoxScores;
-        private System.Windows.Forms.Button btnSaveScore;
     }
 }
 

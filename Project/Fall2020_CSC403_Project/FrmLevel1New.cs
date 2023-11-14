@@ -16,7 +16,7 @@ namespace Fall2020_CSC403_Project
         
 
         private Player player;
-        private TextBox txtPlayerName;
+        
 
 
         private Enemy enemyRockMonster1;
@@ -45,12 +45,12 @@ namespace Fall2020_CSC403_Project
         private float MaxTime = 300;
 
 
-        private const string ScoresFileName = "scores.txt";
+        
         System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();
         public FrmLevel1New()
         {
             InitializeComponent();
-            LoadScores();
+            
         }
 
         
@@ -517,55 +517,10 @@ namespace Fall2020_CSC403_Project
         {
 
         }
-        private int GenerateScore()
-        {
-            // Replace this with your actual game logic to generate a score
-            Random random = new Random();
-            return random.Next(0, 1000); // Adjust the range based on your game requirements
-        }
-        private void SaveScore(string playerName, int score)
-        {
-            // Save the new score to the file
-            using (StreamWriter writer = new StreamWriter(ScoresFileName, true))
-            {
-                writer.WriteLine($"{playerName}: {score}");
-            }
-        }
+        
 
-        private void LoadScores()
-        {
-            // Clear existing items in the ListBox
-            listBoxScores.Items.Clear();
-
-            // Load existing scores from the file
-            if (File.Exists(ScoresFileName))
-            {
-                List<string> scores = new List<string>(File.ReadAllLines(ScoresFileName));
-
-                // Sort scores in descending order
-                scores.Sort((a, b) =>
-                {
-                    int scoreA = int.Parse(a.Split(':')[1].Trim());
-                    int scoreB = int.Parse(b.Split(':')[1].Trim());
-                    return scoreB.CompareTo(scoreA);
-                });
-
-                // Display sorted scores in the ListBox
-                listBoxScores.Items.Clear();
-                listBoxScores.Items.AddRange(scores.ToArray());
-            }
-        }
-        private void btnSaveScore_Click(object sender, EventArgs e)
-        {
-            string playerName = textBoxPlayerName.Text;
-            int score;
-
-            // Generate a score automatically using your game logic
-            score = GenerateScore();
-
-            SaveScore(playerName, score);
-            LoadScores(); // Reload scores after saving
-        }
+         
+        
 
         private void textBoxPlayerName_TextChanged(object sender, EventArgs e)
         {
