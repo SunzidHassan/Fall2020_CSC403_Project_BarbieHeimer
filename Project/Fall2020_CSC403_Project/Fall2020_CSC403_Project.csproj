@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmIntro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIntro.Designer.cs">
+      <DependentUpon>FrmIntro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLevel1New.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     <Compile Include="FrmPauseMenu.Designer.cs">
       <DependentUpon>FrmPauseMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStartGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStartGame.Designer.cs">
+      <DependentUpon>FrmStartGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStatsSelection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,9 @@
     <Compile Include="Volume_control.Designer.cs">
       <DependentUpon>Volume_control.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmIntro.resx">
+      <DependentUpon>FrmIntro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLevel2Finish.resx">
       <DependentUpon>FrmLevel2Finish.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSettingsVolume.resx">
       <DependentUpon>FrmSettingsVolume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStartGame.resx">
+      <DependentUpon>FrmStartGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStatsSelection.resx">
       <DependentUpon>FrmStatsSelection.cs</DependentUpon>
@@ -351,6 +369,9 @@
     <None Include="data\raw images\lava2.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\raw images\chickbro.gif" />
+    <None Include="data\raw images\logointro.gif" />
+    <None Include="data\raw images\intro.gif" />
     <None Include="data\raw images\backHell2.gif" />
     <None Include="data\raw images\backHell1.gif" />
     <None Include="data\audio\Level1FinishClap.wav" />
