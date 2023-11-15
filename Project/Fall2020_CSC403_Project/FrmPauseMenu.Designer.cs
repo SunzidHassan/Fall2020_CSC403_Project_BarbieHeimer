@@ -48,25 +48,27 @@
             this.pictureBox1.Image = global::Fall2020_CSC403_Project.Properties.Resources.charSelect4;
             this.pictureBox1.Location = new System.Drawing.Point(-5, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1916, 949);
+            this.pictureBox1.Size = new System.Drawing.Size(1273, 702);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // BarbieHiemer
             // 
-            this.BarbieHiemer.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BarbieHiemer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BarbieHiemer.AutoSize = true;
             this.BarbieHiemer.BackColor = System.Drawing.Color.DarkViolet;
             this.BarbieHiemer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BarbieHiemer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BarbieHiemer.Font = new System.Drawing.Font("Microsoft Sans Serif", 47.99999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BarbieHiemer.Font = new System.Drawing.Font("ROG Fonts", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BarbieHiemer.ForeColor = System.Drawing.Color.Maroon;
             this.BarbieHiemer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BarbieHiemer.Location = new System.Drawing.Point(613, 141);
+            this.BarbieHiemer.Location = new System.Drawing.Point(428, 115);
             this.BarbieHiemer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BarbieHiemer.Name = "BarbieHiemer";
-            this.BarbieHiemer.Size = new System.Drawing.Size(438, 75);
+            this.BarbieHiemer.Size = new System.Drawing.Size(658, 79);
             this.BarbieHiemer.TabIndex = 10;
             this.BarbieHiemer.Text = "BarbieHiemer";
             this.BarbieHiemer.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -77,10 +79,10 @@
             this.Exit.BackColor = System.Drawing.Color.MediumVioletRed;
             this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.FlatAppearance.BorderSize = 0;
-            this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.Font = new System.Drawing.Font("ROG Fonts", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.Aquamarine;
-            this.Exit.Location = new System.Drawing.Point(204, 648);
-            this.Exit.Margin = new System.Windows.Forms.Padding(2);
+            this.Exit.Location = new System.Drawing.Point(132, 605);
+            this.Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(352, 57);
             this.Exit.TabIndex = 11;
@@ -94,10 +96,10 @@
             this.Faq.BackColor = System.Drawing.Color.MediumVioletRed;
             this.Faq.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Faq.FlatAppearance.BorderSize = 0;
-            this.Faq.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Faq.Font = new System.Drawing.Font("ROG Fonts", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Faq.ForeColor = System.Drawing.Color.Aquamarine;
-            this.Faq.Location = new System.Drawing.Point(204, 559);
-            this.Faq.Margin = new System.Windows.Forms.Padding(2);
+            this.Faq.Location = new System.Drawing.Point(132, 516);
+            this.Faq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Faq.Name = "Faq";
             this.Faq.Size = new System.Drawing.Size(352, 57);
             this.Faq.TabIndex = 12;
@@ -111,10 +113,10 @@
             this.Settings.BackColor = System.Drawing.Color.MediumVioletRed;
             this.Settings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settings.FlatAppearance.BorderSize = 0;
-            this.Settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Settings.Font = new System.Drawing.Font("ROG Fonts", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Settings.ForeColor = System.Drawing.Color.Aquamarine;
-            this.Settings.Location = new System.Drawing.Point(204, 478);
-            this.Settings.Margin = new System.Windows.Forms.Padding(2);
+            this.Settings.Location = new System.Drawing.Point(132, 434);
+            this.Settings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Settings.Name = "Settings";
             this.Settings.Size = new System.Drawing.Size(352, 57);
             this.Settings.TabIndex = 13;
@@ -128,10 +130,10 @@
             this.LoadGame.BackColor = System.Drawing.Color.MediumVioletRed;
             this.LoadGame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoadGame.FlatAppearance.BorderSize = 0;
-            this.LoadGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadGame.Font = new System.Drawing.Font("ROG Fonts", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadGame.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LoadGame.Location = new System.Drawing.Point(204, 324);
-            this.LoadGame.Margin = new System.Windows.Forms.Padding(2);
+            this.LoadGame.Location = new System.Drawing.Point(132, 280);
+            this.LoadGame.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoadGame.Name = "LoadGame";
             this.LoadGame.Size = new System.Drawing.Size(352, 57);
             this.LoadGame.TabIndex = 14;
@@ -144,10 +146,10 @@
             this.NewGame.BackColor = System.Drawing.Color.MediumVioletRed;
             this.NewGame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NewGame.FlatAppearance.BorderSize = 0;
-            this.NewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewGame.Font = new System.Drawing.Font("ROG Fonts", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewGame.ForeColor = System.Drawing.Color.Aquamarine;
-            this.NewGame.Location = new System.Drawing.Point(204, 239);
-            this.NewGame.Margin = new System.Windows.Forms.Padding(2);
+            this.NewGame.Location = new System.Drawing.Point(132, 196);
+            this.NewGame.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NewGame.Name = "NewGame";
             this.NewGame.Size = new System.Drawing.Size(352, 57);
             this.NewGame.TabIndex = 15;
@@ -160,10 +162,10 @@
             this.Continue.BackColor = System.Drawing.Color.MediumVioletRed;
             this.Continue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Continue.FlatAppearance.BorderSize = 0;
-            this.Continue.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Continue.Font = new System.Drawing.Font("ROG Fonts", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Continue.ForeColor = System.Drawing.Color.Aquamarine;
-            this.Continue.Location = new System.Drawing.Point(204, 154);
-            this.Continue.Margin = new System.Windows.Forms.Padding(2);
+            this.Continue.Location = new System.Drawing.Point(132, 111);
+            this.Continue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Continue.Name = "Continue";
             this.Continue.Size = new System.Drawing.Size(352, 57);
             this.Continue.TabIndex = 16;
@@ -177,10 +179,10 @@
             this.btnMainMenu.BackColor = System.Drawing.Color.MediumVioletRed;
             this.btnMainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMainMenu.FlatAppearance.BorderSize = 0;
-            this.btnMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainMenu.Font = new System.Drawing.Font("ROG Fonts", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMainMenu.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnMainMenu.Location = new System.Drawing.Point(204, 400);
-            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMainMenu.Location = new System.Drawing.Point(132, 356);
+            this.btnMainMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMainMenu.Name = "btnMainMenu";
             this.btnMainMenu.Size = new System.Drawing.Size(352, 57);
             this.btnMainMenu.TabIndex = 17;
@@ -193,7 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1904, 947);
+            this.ClientSize = new System.Drawing.Size(1267, 666);
             this.Controls.Add(this.btnMainMenu);
             this.Controls.Add(this.Continue);
             this.Controls.Add(this.NewGame);
@@ -203,7 +205,7 @@
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.BarbieHiemer);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmPauseMenu";
             this.Text = "PauseMenu";
             this.Load += new System.EventHandler(this.PauseMenu_Load);

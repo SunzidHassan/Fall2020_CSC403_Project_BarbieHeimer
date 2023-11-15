@@ -54,6 +54,7 @@ namespace Fall2020_CSC403_Project
             this.Hide();
             FrmStatsSelection frmStatsSelection = new FrmStatsSelection();
             frmStatsSelection.ShowDialog();
+
           /*  Play.ShowDialog();
             Play = null;
             this.Show();*/
