@@ -46,9 +46,10 @@ namespace Fall2020_CSC403_Project
             this.Hide();
             FrmStatsSelection frmStatsSelection = new FrmStatsSelection();
             frmStatsSelection.ShowDialog();
-            /*  Play.ShowDialog();
-              Play = null;
-              this.Show();*/
+
+          /*  Play.ShowDialog();
+            Play = null;
+            this.Show();*/
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -72,6 +73,12 @@ namespace Fall2020_CSC403_Project
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
         }
     }
 }

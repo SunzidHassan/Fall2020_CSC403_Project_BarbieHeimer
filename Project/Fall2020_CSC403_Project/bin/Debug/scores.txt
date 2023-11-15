@@ -1,0 +1,5 @@
+kabita: 1000
+kabita: 209
+kabita: 904
+yead: 826
+gvyugyu: 557

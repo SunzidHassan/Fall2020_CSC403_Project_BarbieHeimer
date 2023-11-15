@@ -96,6 +96,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -113,20 +114,19 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.picPlayer2);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(785, 566);
+            this.panel1.Location = new System.Drawing.Point(688, 466);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 463);
+            this.panel1.Size = new System.Drawing.Size(381, 449);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox19
             // 
-            this.pictureBox19.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox19.Location = new System.Drawing.Point(180, 419);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(130, 32);
-            this.pictureBox19.TabIndex = 9;
-            this.pictureBox19.TabStop = false;
+            this.pictureBox6.BackColor = System.Drawing.Color.Red;
+            this.pictureBox6.Location = new System.Drawing.Point(207, 375);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(103, 32);
+            this.pictureBox6.TabIndex = 7;
+            this.pictureBox6.TabStop = false;
             // 
             // label9
             // 
@@ -144,19 +144,30 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Location = new System.Drawing.Point(180, 375);
+            this.pictureBox5.Location = new System.Drawing.Point(270, 578);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(130, 32);
+            this.pictureBox5.Size = new System.Drawing.Size(193, 46);
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Red;
+            this.pictureBox4.Location = new System.Drawing.Point(235, 331);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(75, 32);
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(180, 331);
+            this.pictureBox2.Location = new System.Drawing.Point(270, 509);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(130, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(193, 46);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
@@ -166,9 +177,10 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Cyan;
-            this.label2.Location = new System.Drawing.Point(61, 382);
+            this.label2.Location = new System.Drawing.Point(91, 588);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 22);
+            this.label2.Size = new System.Drawing.Size(94, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Health";
             // 
@@ -178,22 +190,23 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Cyan;
-            this.label1.Location = new System.Drawing.Point(40, 339);
+            this.label1.Location = new System.Drawing.Point(60, 521);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 22);
+            this.label1.Size = new System.Drawing.Size(126, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Strength";
             // 
             // picPlayer2
             // 
-            this.picPlayer2.Image = global::Fall2020_CSC403_Project.Properties.Resources.charbarbie;
-            this.picPlayer2.Location = new System.Drawing.Point(65, 22);
-            this.picPlayer2.Name = "picPlayer2";
-            this.picPlayer2.Size = new System.Drawing.Size(245, 303);
-            this.picPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPlayer2.TabIndex = 1;
-            this.picPlayer2.TabStop = false;
-            this.picPlayer2.Click += new System.EventHandler(this.picPlayer2_Click);
+            this.pictureBox3.Image = global::Fall2020_CSC403_Project.Properties.Resources.charbarbie;
+            this.pictureBox3.Location = new System.Drawing.Point(65, 22);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(245, 303);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panel2
             // 
@@ -210,41 +223,49 @@
             this.panel2.Controls.Add(this.picPlayer1);
             this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(236, 127);
+            this.panel2.Location = new System.Drawing.Point(103, 82);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(354, 458);
+            this.panel2.Size = new System.Drawing.Size(354, 436);
             this.panel2.TabIndex = 8;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Magenta;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Cyan;
-            this.label7.Location = new System.Drawing.Point(64, 419);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 22);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Time";
+            this.pictureBox7.BackColor = System.Drawing.Color.Red;
+            this.pictureBox7.Location = new System.Drawing.Point(219, 373);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(84, 32);
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
             // 
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox8.Location = new System.Drawing.Point(173, 373);
+            this.pictureBox8.Location = new System.Drawing.Point(260, 574);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(130, 32);
+            this.pictureBox8.Size = new System.Drawing.Size(193, 46);
             this.pictureBox8.TabIndex = 6;
             this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Red;
+            this.pictureBox9.Location = new System.Drawing.Point(192, 328);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(111, 32);
+            this.pictureBox9.TabIndex = 5;
+            this.pictureBox9.TabStop = false;
             // 
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox10.Location = new System.Drawing.Point(173, 328);
+            this.pictureBox10.Location = new System.Drawing.Point(260, 505);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(130, 32);
+            this.pictureBox10.Size = new System.Drawing.Size(193, 46);
             this.pictureBox10.TabIndex = 4;
             this.pictureBox10.TabStop = false;
             // 
@@ -255,9 +276,10 @@
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Cyan;
-            this.label3.Location = new System.Drawing.Point(52, 373);
+            this.label3.Location = new System.Drawing.Point(78, 574);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 22);
+            this.label3.Size = new System.Drawing.Size(94, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Health";
             // 
@@ -268,9 +290,10 @@
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Cyan;
-            this.label4.Location = new System.Drawing.Point(36, 332);
+            this.label4.Location = new System.Drawing.Point(54, 511);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 22);
+            this.label4.Size = new System.Drawing.Size(126, 21);
             this.label4.TabIndex = 2;
             this.label4.Text = "Strength";
             // 
@@ -287,13 +310,14 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox9.Location = new System.Drawing.Point(173, 419);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(130, 32);
-            this.pictureBox9.TabIndex = 10;
-            this.pictureBox9.TabStop = false;
+            this.pictureBox11.Image = global::Fall2020_CSC403_Project.Properties.Resources.Rugal;
+            this.pictureBox11.Location = new System.Drawing.Point(56, 21);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(263, 291);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 1;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // panel3
             // 
@@ -311,41 +335,48 @@
             this.panel3.Controls.Add(this.picPlayer3);
             this.panel3.Controls.Add(this.pictureBox17);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel3.Location = new System.Drawing.Point(1318, 127);
+            this.panel3.Location = new System.Drawing.Point(1125, 127);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(354, 484);
+            this.panel3.Size = new System.Drawing.Size(354, 436);
             this.panel3.TabIndex = 9;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Magenta;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Cyan;
-            this.label8.Location = new System.Drawing.Point(107, 423);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 22);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Time";
+            this.pictureBox12.BackColor = System.Drawing.Color.Red;
+            this.pictureBox12.Location = new System.Drawing.Point(219, 373);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(84, 32);
+            this.pictureBox12.TabIndex = 7;
+            this.pictureBox12.TabStop = false;
             // 
             // pictureBox13
             // 
             this.pictureBox13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox13.Location = new System.Drawing.Point(173, 373);
+            this.pictureBox13.Location = new System.Drawing.Point(260, 574);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(130, 32);
+            this.pictureBox13.Size = new System.Drawing.Size(193, 46);
             this.pictureBox13.TabIndex = 6;
             this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Red;
+            this.pictureBox14.Location = new System.Drawing.Point(192, 328);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(111, 32);
+            this.pictureBox14.TabIndex = 5;
+            this.pictureBox14.TabStop = false;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox15.Location = new System.Drawing.Point(173, 328);
+            this.pictureBox15.Location = new System.Drawing.Point(260, 505);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(130, 32);
+            this.pictureBox15.Size = new System.Drawing.Size(193, 46);
             this.pictureBox15.TabIndex = 4;
             this.pictureBox15.TabStop = false;
             // 
@@ -356,9 +387,9 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Cyan;
-            this.label5.Location = new System.Drawing.Point(94, 373);
+            this.label5.Location = new System.Drawing.Point(41, 373);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 22);
+            this.label5.Size = new System.Drawing.Size(94, 21);
             this.label5.TabIndex = 3;
             this.label5.Text = "Health";
             // 
@@ -369,9 +400,9 @@
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Cyan;
-            this.label6.Location = new System.Drawing.Point(76, 325);
+            this.label6.Location = new System.Drawing.Point(23, 328);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 22);
+            this.label6.Size = new System.Drawing.Size(126, 21);
             this.label6.TabIndex = 2;
             this.label6.Text = "Strength";
             // 
@@ -478,78 +509,28 @@
             // 
             // lblPlayer2HealthFull
             // 
-            this.lblPlayer2HealthFull.BackColor = System.Drawing.Color.Red;
-            this.lblPlayer2HealthFull.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPlayer2HealthFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer2HealthFull.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPlayer2HealthFull.Location = new System.Drawing.Point(180, 375);
-            this.lblPlayer2HealthFull.Name = "lblPlayer2HealthFull";
-            this.lblPlayer2HealthFull.Size = new System.Drawing.Size(130, 32);
-            this.lblPlayer2HealthFull.TabIndex = 84;
-            this.lblPlayer2HealthFull.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPlayer2TimeFull
-            // 
-            this.lblPlayer2TimeFull.BackColor = System.Drawing.Color.Red;
-            this.lblPlayer2TimeFull.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPlayer2TimeFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer2TimeFull.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPlayer2TimeFull.Location = new System.Drawing.Point(180, 419);
-            this.lblPlayer2TimeFull.Name = "lblPlayer2TimeFull";
-            this.lblPlayer2TimeFull.Size = new System.Drawing.Size(130, 32);
-            this.lblPlayer2TimeFull.TabIndex = 84;
-            this.lblPlayer2TimeFull.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPlayer3StrengthFull
-            // 
-            this.lblPlayer3StrengthFull.BackColor = System.Drawing.Color.Red;
-            this.lblPlayer3StrengthFull.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPlayer3StrengthFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer3StrengthFull.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPlayer3StrengthFull.Location = new System.Drawing.Point(173, 328);
-            this.lblPlayer3StrengthFull.Name = "lblPlayer3StrengthFull";
-            this.lblPlayer3StrengthFull.Size = new System.Drawing.Size(130, 32);
-            this.lblPlayer3StrengthFull.TabIndex = 84;
-            this.lblPlayer3StrengthFull.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPlayer3HealthFull
-            // 
-            this.lblPlayer3HealthFull.BackColor = System.Drawing.Color.Red;
-            this.lblPlayer3HealthFull.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPlayer3HealthFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer3HealthFull.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPlayer3HealthFull.Location = new System.Drawing.Point(173, 373);
-            this.lblPlayer3HealthFull.Name = "lblPlayer3HealthFull";
-            this.lblPlayer3HealthFull.Size = new System.Drawing.Size(130, 32);
-            this.lblPlayer3HealthFull.TabIndex = 84;
-            this.lblPlayer3HealthFull.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPlayer3TimeFull
-            // 
-            this.lblPlayer3TimeFull.BackColor = System.Drawing.Color.Red;
-            this.lblPlayer3TimeFull.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPlayer3TimeFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer3TimeFull.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPlayer3TimeFull.Location = new System.Drawing.Point(173, 426);
-            this.lblPlayer3TimeFull.Name = "lblPlayer3TimeFull";
-            this.lblPlayer3TimeFull.Size = new System.Drawing.Size(130, 32);
-            this.lblPlayer3TimeFull.TabIndex = 84;
-            this.lblPlayer3TimeFull.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox16.Image = global::Fall2020_CSC403_Project.Properties.Resources.amongus;
+            this.pictureBox16.Location = new System.Drawing.Point(3, 104);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(204, 221);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 1;
+            this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
             // 
             // FrmStatsSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.charSelect5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.btnStatSelectHard);
-            this.Controls.Add(this.btnStatSelectEasy);
+            this.ClientSize = new System.Drawing.Size(1711, 941);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmStatsSelection";
             this.Text = "FrmStatsSelection";
             this.Load += new System.EventHandler(this.FrmStatsSelection_Load);

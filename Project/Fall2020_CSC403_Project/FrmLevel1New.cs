@@ -1,7 +1,9 @@
 ﻿using Fall2020_CSC403_Project.code;
 using Fall2020_CSC403_Project.Properties;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Media;
 using System.Windows.Forms;
 
@@ -9,7 +11,11 @@ namespace Fall2020_CSC403_Project
 {
     public partial class FrmLevel1New : Form
     {
+
+        
+
         private Player player;
+
 
 
         private Enemy enemyRockMonster1;
@@ -38,13 +44,16 @@ namespace Fall2020_CSC403_Project
         private float MaxTime = 300;
         private float playerTime;
 
+
+        
         System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();
         public FrmLevel1New()
         {
             InitializeComponent();
-
+            
         }
 
+        
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
 
@@ -75,6 +84,9 @@ namespace Fall2020_CSC403_Project
 
             SoundPlayer simpleSound = new SoundPlayer(Resources.level1);
             simpleSound.PlayLooping();
+
+            
+
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
             player.Img = picPlayer.Image;
@@ -204,6 +216,7 @@ namespace Fall2020_CSC403_Project
             player.AlterScore(-1);
         }
 
+       
 
         private void tmrPlayerMove_Tick(object sender, EventArgs e)
         {
@@ -219,6 +232,7 @@ namespace Fall2020_CSC403_Project
 
             if (player.Health < 1)
             {
+                
                 FrmDeath formDeath = new FrmDeath();
                 formDeath.Show();
                 this.Close();
@@ -305,10 +319,9 @@ namespace Fall2020_CSC403_Project
                 else
                 {
 
-                    FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
-                    this.Close();
-
-                    frmLevel2.Show();
+                    this.Hide();
+               /*     FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
+                    frmLevel2.ShowDialog();*/
                 }
             }
         }
@@ -544,6 +557,25 @@ namespace Fall2020_CSC403_Project
                     }
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+
+         
+        
+
+        private void textBoxPlayerName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

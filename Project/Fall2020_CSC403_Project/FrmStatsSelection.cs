@@ -110,6 +110,8 @@ namespace Fall2020_CSC403_Project
         {
             soundPlayer.Stop();
             this.Hide();
+            
+
             FrmLevel1New frmLevel1New = new FrmLevel1New();
             frmLevel1New.picPlayer.Image = Properties.Resources.Rugal;
             frmLevel1New.picInventory.Image = Properties.Resources.Rugal;

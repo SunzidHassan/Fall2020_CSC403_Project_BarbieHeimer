@@ -263,6 +263,16 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chickbro {
+            get {
+                object obj = ResourceManager.GetObject("chickbro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap down_img {
             get {
                 object obj = ResourceManager.GetObject("down_img", resourceCulture);
@@ -332,6 +342,16 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap intro {
+            get {
+                object obj = ResourceManager.GetObject("intro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lava2 {
             get {
                 object obj = ResourceManager.GetObject("lava2", resourceCulture);
@@ -373,6 +393,16 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.Drawing.Bitmap liquidLavaV {
             get {
                 object obj = ResourceManager.GetObject("liquidLavaV", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logointro {
+            get {
+                object obj = ResourceManager.GetObject("logointro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
