@@ -1,12 +1,8 @@
 ﻿using Fall2020_CSC403_Project.code;
+using Fall2020_CSC403_Project.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Media;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project
@@ -36,8 +32,10 @@ namespace Fall2020_CSC403_Project
         public FrmLevel2(Image playerImage, Image inventoryImage)
         {
             InitializeComponent();
-            soundPlayer.SoundLocation = "gamebgm.wav";
-            soundPlayer.Play();
+            //soundPlayer.SoundLocation = "gamebgm.wav";
+            //soundPlayer.Play();
+            SoundPlayer simpleSound = new SoundPlayer(Resources.level1);
+            simpleSound.PlayLooping();
             //picWall13PositionX = picWall13.Left;
             picPlayer.Image = playerImage;
             picInventory.Image = inventoryImage;
@@ -133,9 +131,9 @@ namespace Fall2020_CSC403_Project
         }
 */
 
-        
 
-       
+
+
 
 
         private void tmrPlayerMove_Tick(object sender, EventArgs e)
@@ -150,10 +148,10 @@ namespace Fall2020_CSC403_Project
             player.Move();
 
             if (player.Health <= 1)
-            {                
+            {
                 FrmDeath formDeath = new FrmDeath();
                 formDeath.Show();
-                this.Close();                               
+                this.Close();
             }
 
             if (remainingTime < 1)
@@ -167,7 +165,7 @@ namespace Fall2020_CSC403_Project
             if (HitAWall(player))
             {
                 player.MoveBack();
-            }    
+            }
 
             // check collision with enemies
             if (HitAChar(player, enemyPoisonPacket))
@@ -362,7 +360,7 @@ namespace Fall2020_CSC403_Project
         {
             player.ResetMoveSpeed();
             player.MoveBack();
-            frmBattle = FrmBattle.GetInstance(player,enemy);
+            frmBattle = FrmBattle.GetInstance(player, enemy);
             frmBattle.Show();
 
             /*if (enemy == bossKoolaid)
@@ -397,7 +395,7 @@ namespace Fall2020_CSC403_Project
 
         }
 
-        
+
 
         /*private bool HasCollisionWithOtherWalls(PictureBox wall)
         {
@@ -460,9 +458,9 @@ namespace Fall2020_CSC403_Project
 
         private void tmrpicWall17_Tick(object sender, EventArgs e)
         {
-            
+
             //picWall17.Visible = !picWall17.Visible;
-            
+
             int verticalWallSpeed = 10; // Adjust the speed as needed
 
             // Save the original position
@@ -581,7 +579,7 @@ namespace Fall2020_CSC403_Project
 
         }
 
-        
+
 
         /*private void tmrpicWall19_Tick_1(object sender, EventArgs e)
         {

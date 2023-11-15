@@ -1,15 +1,3 @@
-C:\Users\Shuvo\OneDrive\Desktop\Advanced Software Engineering\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\bin\Debug\MyGameLibrary.dll
-C:\Users\Shuvo\OneDrive\Desktop\Advanced Software Engineering\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\bin\Debug\MyGameLibrary.pdb
-C:\Users\Shuvo\OneDrive\Desktop\Advanced Software Engineering\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csproj.AssemblyReference.cache
-C:\Users\Shuvo\OneDrive\Desktop\Advanced Software Engineering\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csproj.CoreCompileInputs.cache
-C:\Users\Shuvo\OneDrive\Desktop\Advanced Software Engineering\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\obj\Debug\MyGameLibrary.dll
-C:\Users\Shuvo\OneDrive\Desktop\Advanced Software Engineering\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\obj\Debug\MyGameLibrary.pdb
-C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\bin\Debug\MyGameLibrary.dll
-C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\bin\Debug\MyGameLibrary.pdb
-C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csproj.AssemblyReference.cache
-C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csproj.CoreCompileInputs.cache
-C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\obj\Debug\MyGameLibrary.dll
-C:\Users\asus\Documents\GitHub\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\obj\Debug\MyGameLibrary.pdb
 C:\Users\sunzi\Downloads\Scrum Project\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\bin\Debug\MyGameLibrary.dll
 C:\Users\sunzi\Downloads\Scrum Project\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\bin\Debug\MyGameLibrary.pdb
 C:\Users\sunzi\Downloads\Scrum Project\Fall2020_CSC403_Project_BarbieHeimer\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csproj.AssemblyReference.cache

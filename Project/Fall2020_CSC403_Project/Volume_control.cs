@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project
@@ -21,7 +13,7 @@ namespace Fall2020_CSC403_Project
             DoubleBuffered = true;
         }
 
-        int pb_value = 40, pb_Min= 0, pb_Max = 100;
+        int pb_value = 40, pb_Min = 0, pb_Max = 100;
 
         public int Max { get { return pb_Max; } set { pb_Max = value; Invalidate(); } }
         public int Min { get { return pb_Min; } set { pb_Min = value; Invalidate(); } }
@@ -37,22 +29,22 @@ namespace Fall2020_CSC403_Project
             SolidBrush sb = new SolidBrush(Color.DimGray);
             for (int j = 0; j < (Max * ClientSize.Width / Max - 75) / gap; j++)
             {
-                e.Graphics.FillRectangle(sb,new Rectangle(start_point,0,gap-5,ClientSize.Height));
+                e.Graphics.FillRectangle(sb, new Rectangle(start_point, 0, gap - 5, ClientSize.Height));
                 start_point += gap;
             }
 
             int buffer_point = 40;
             SolidBrush br = new SolidBrush(b_color);
 
-            for (int i = 0; i < (pb_value * ClientSize.Width / Max - pb_value) / gap;i++)
+            for (int i = 0; i < (pb_value * ClientSize.Width / Max - pb_value) / gap; i++)
             {
                 e.Graphics.FillRectangle(br, new Rectangle(buffer_point, 0, gap - 2, ClientSize.Height));
                 buffer_point += gap;
             }
 
             int thum_size = 25;
-            SolidBrush thumb= new SolidBrush(Color.White);
-            e.Graphics.FillRectangle(thumb,new Rectangle(buffer_point, 0, thum_size, ClientSize.Height));
+            SolidBrush thumb = new SolidBrush(Color.White);
+            e.Graphics.FillRectangle(thumb, new Rectangle(buffer_point, 0, thum_size, ClientSize.Height));
 
 
             if (pb_value >= Min)
@@ -60,10 +52,10 @@ namespace Fall2020_CSC403_Project
                 Image left_img = Properties.Resources.down_img;
                 e.Graphics.DrawImage(left_img, 5, 0, ClientSize.Height, ClientSize.Height);
             }
-            if(pb_value <= 50)
+            if (pb_value <= 50)
             {
                 Image right_img = Properties.Resources.mid_img;
-                e.Graphics.DrawImage(right_img, ClientSize.Width-35, 0, ClientSize.Height, ClientSize.Height);
+                e.Graphics.DrawImage(right_img, ClientSize.Width - 35, 0, ClientSize.Height, ClientSize.Height);
             }
             if (pb_value <= Min)
             {

@@ -1,12 +1,4 @@
-﻿using Fall2020_CSC403_Project.code;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project
@@ -15,7 +7,7 @@ namespace Fall2020_CSC403_Project
     {
 
         public static FrmMainMenu Instance;
-        public System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();  
+        public System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();
 
         public FrmMainMenu()
         {
@@ -39,24 +31,24 @@ namespace Fall2020_CSC403_Project
 
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
-           
+
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             TopMost = false;
-            
+
         }
 
         private void Play_Click(object sender, EventArgs e)
         {
-          
+
 
             soundPlayer.Stop();
             this.Hide();
             FrmStatsSelection frmStatsSelection = new FrmStatsSelection();
             frmStatsSelection.ShowDialog();
-          /*  Play.ShowDialog();
-            Play = null;
-            this.Show();*/
+            /*  Play.ShowDialog();
+              Play = null;
+              this.Show();*/
         }
 
         private void Exit_Click(object sender, EventArgs e)

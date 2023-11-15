@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project
@@ -14,7 +7,7 @@ namespace Fall2020_CSC403_Project
     {
 
         System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();
-   
+
         public FrmPauseMenu()
         {
             InitializeComponent();
@@ -32,7 +25,7 @@ namespace Fall2020_CSC403_Project
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Contnue_Click(object sender, EventArgs e)

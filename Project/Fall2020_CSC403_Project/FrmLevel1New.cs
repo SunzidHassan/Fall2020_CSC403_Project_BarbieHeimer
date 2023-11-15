@@ -4,14 +4,13 @@ using System;
 using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Fall2020_CSC403_Project
 {
     public partial class FrmLevel1New : Form
     {
         private Player player;
-        
+
 
         private Enemy enemyRockMonster1;
         private Enemy enemyScissorMonster1;
@@ -37,6 +36,7 @@ namespace Fall2020_CSC403_Project
         private int lava2StartX;
         private int lava2StartY;
         private float MaxTime = 300;
+        private float playerTime;
 
         System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();
         public FrmLevel1New()
@@ -74,7 +74,7 @@ namespace Fall2020_CSC403_Project
             const int NUM_BOTTOMLAVA = 4;
 
             SoundPlayer simpleSound = new SoundPlayer(Resources.level1);
-            simpleSound.Play();
+            simpleSound.PlayLooping();
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
             player.Img = picPlayer.Image;
@@ -134,6 +134,53 @@ namespace Fall2020_CSC403_Project
 
             Game.player = player;
             timeBegin = DateTime.Now;
+
+
+            if(lblPlayer.Text == "Player 1")
+            {
+                if(lblDifficulty.Text == "Easy")
+                {
+                    player.AlterStrength(+2);
+                    player.AlterHealth(-5);
+                    playerTime = 240;
+                }
+                else if(lblDifficulty.Text == "Hard")
+                {
+                    player.AlterStrength(+1);
+                    player.AlterHealth(-10);
+                    playerTime = 180;
+                }
+            }
+            else if(lblPlayer.Text =="Player 2")
+            {
+                if (lblDifficulty.Text == "Easy")
+                {
+                    player.AlterStrength(+1);
+                    player.AlterHealth(0);
+                    playerTime = 240;
+                }
+                else if (lblDifficulty.Text == "Hard")
+                {
+                    player.AlterStrength(0);
+                    player.AlterHealth(-5);
+                    playerTime = 180;
+                }
+            }
+            else if(lblPlayer.Text =="Player 3")
+            {
+                if (lblDifficulty.Text == "Easy")
+                {
+                    player.AlterStrength(+1);
+                    player.AlterHealth(-5);
+                    playerTime = 300;
+                }
+                else if (lblDifficulty.Text == "Hard")
+                {
+                    player.AlterStrength(0);
+                    player.AlterHealth(-10);
+                    playerTime = 240;
+                }
+            }
         }
 
         private Vector2 CreatePosition(PictureBox pic)
@@ -162,7 +209,7 @@ namespace Fall2020_CSC403_Project
         {
             TimeSpan span = DateTime.Now - timeBegin;
             float time = (float)span.TotalSeconds;
-            float remainingTime = MaxTime - time;
+            float remainingTime = playerTime - time;
 
 
             player.Move();
@@ -257,7 +304,7 @@ namespace Fall2020_CSC403_Project
                 }
                 else
                 {
-                    
+
                     FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
                     this.Close();
 
@@ -376,11 +423,11 @@ namespace Fall2020_CSC403_Project
 
         private void tmrUpdateScoreBars_Tick(object sender, EventArgs e)
         {
-            UpdateHealthBars();
+            UpdateTrackBars();
 
         }
 
-        private void UpdateHealthBars()
+        private void UpdateTrackBars()
         {
             float playerHealthPer = player.Health / (float)player.MaxHealth;
             const int MAX_HEALTHBAR_WIDTH = 400;
@@ -395,7 +442,7 @@ namespace Fall2020_CSC403_Project
 
             TimeSpan span = DateTime.Now - timeBegin;
             float time = (float)span.TotalSeconds;
-            float remainingTime = MaxTime - time;
+            float remainingTime = playerTime - time;
             float playerTimePer = remainingTime / MaxTime;
             const int MAX_TIMEBAR_WIDTH = 400;
             lblPlayerTimeFull.Width = (int)(MAX_TIMEBAR_WIDTH * playerTimePer);

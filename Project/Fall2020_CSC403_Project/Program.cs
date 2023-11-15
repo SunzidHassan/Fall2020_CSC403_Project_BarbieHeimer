@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project
@@ -17,8 +14,9 @@ namespace Fall2020_CSC403_Project
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMainMenu());
+            //Application.Run(new FrmStatsSelection());
             //Application.Run(new FrmLevel2());
-            
+
         }
     }
 }
