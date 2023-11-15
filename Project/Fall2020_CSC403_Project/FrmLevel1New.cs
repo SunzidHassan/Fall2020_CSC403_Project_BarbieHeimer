@@ -320,8 +320,8 @@ namespace Fall2020_CSC403_Project
                 {
 
                     this.Hide();
-               /*     FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
-                    frmLevel2.ShowDialog();*/
+                    FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
+                    frmLevel2.ShowDialog();
                 }
             }
         }
