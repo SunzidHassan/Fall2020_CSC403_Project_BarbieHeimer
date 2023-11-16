@@ -13,13 +13,7 @@ namespace Fall2020_CSC403_Project
 {
     public partial class FrmLevel1New : Form
     {
-
-        
-
         private Player player;
-
-
-
         private Enemy enemyRockMonster1;
         private Enemy enemyScissorMonster1;
         private Enemy enemyPaperMonster1;
@@ -50,16 +44,13 @@ namespace Fall2020_CSC403_Project
         private float MaxTime = 300;
         private float playerTime;
 
-
-        
         System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();
         public FrmLevel1New()
         {
             InitializeComponent();
-            
+
         }
 
-        
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
 
@@ -90,9 +81,6 @@ namespace Fall2020_CSC403_Project
 
             SoundPlayer simpleSound = new SoundPlayer(Resources.level1);
             simpleSound.PlayLooping();
-
-            
-
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
             player.Img = picPlayer.Image;
@@ -164,22 +152,22 @@ namespace Fall2020_CSC403_Project
             timeBegin = DateTime.Now;
 
 
-            if(lblPlayer.Text == "Player 1")
+            if (lblPlayer.Text == "Player 1")
             {
-                if(lblDifficulty.Text == "Easy")
+                if (lblDifficulty.Text == "Easy")
                 {
                     player.AlterStrength(+2);
-                    player.AlterHealth(-5);
+                    player.AlterHealth(-2);
                     playerTime = 240;
                 }
-                else if(lblDifficulty.Text == "Hard")
+                else if (lblDifficulty.Text == "Hard")
                 {
                     player.AlterStrength(+1);
-                    player.AlterHealth(-10);
+                    player.AlterHealth(-5);
                     playerTime = 180;
                 }
             }
-            else if(lblPlayer.Text =="Player 2")
+            else if (lblPlayer.Text == "Player 2")
             {
                 if (lblDifficulty.Text == "Easy")
                 {
@@ -190,22 +178,22 @@ namespace Fall2020_CSC403_Project
                 else if (lblDifficulty.Text == "Hard")
                 {
                     player.AlterStrength(0);
-                    player.AlterHealth(-5);
+                    player.AlterHealth(-2);
                     playerTime = 180;
                 }
             }
-            else if(lblPlayer.Text =="Player 3")
+            else if (lblPlayer.Text == "Player 3")
             {
                 if (lblDifficulty.Text == "Easy")
                 {
                     player.AlterStrength(+1);
-                    player.AlterHealth(-5);
+                    player.AlterHealth(-2);
                     playerTime = 300;
                 }
                 else if (lblDifficulty.Text == "Hard")
                 {
                     player.AlterStrength(0);
-                    player.AlterHealth(-10);
+                    player.AlterHealth(-5);
                     playerTime = 240;
                 }
             }
@@ -248,7 +236,7 @@ namespace Fall2020_CSC403_Project
 
             if (player.Health < 1)
             {
-                
+
                 FrmDeath formDeath = new FrmDeath();
                 formDeath.Show();
                 this.Close();
@@ -270,15 +258,15 @@ namespace Fall2020_CSC403_Project
             else if (HitLava(player))
             {
                 player.resetPosition(playerStartX, playerStartY);
-                player.AlterHealth(-5);
-                player.AlterScore(-5);
+                player.AlterHealth(-2);
+                player.AlterScore(-2);
             }
 
             else if (HitCircleLava(player))
             {
                 player.resetPosition(playerStartX, playerStartY);
-                player.AlterHealth(-5);
-                player.AlterScore(-5);
+                player.AlterHealth(-2);
+                player.AlterScore(-2);
             }
 
             // check collision with Collectables
@@ -323,7 +311,7 @@ namespace Fall2020_CSC403_Project
             {
                 if (enemyPaperMonster1.Health > 0)
                 {
-                    Fight(player, enemyPaperMonster1, "Come closer and witness Paper Monster's cunning resilience.") ;
+                    Fight(player, enemyPaperMonster1, "Come closer and witness Paper Monster's cunning resilience.");
                 }
                 else
                 {
@@ -442,7 +430,7 @@ namespace Fall2020_CSC403_Project
             player.ResetMoveSpeed();
             player.MoveBack();
             frmBattle = FrmBattle.GetInstance(player, enemy);
-            
+
             frmBattle.UpdateEnemyInfo(enemyMessage);
             frmBattle.Show();
 
@@ -606,7 +594,7 @@ namespace Fall2020_CSC403_Project
 
         private void lblUseMed_Click(object sender, EventArgs e)
         {
-            if(medkit != null)
+            if (medkit != null)
             {
                 Controls.Remove(picmedkit);
                 medkit = null;
@@ -619,7 +607,7 @@ namespace Fall2020_CSC403_Project
                 else
                 {
                     player.AlterHealth(10);
-                }                
+                }
             }
         }
 
@@ -654,7 +642,7 @@ namespace Fall2020_CSC403_Project
                 else
                 {
                     player.AlterStrength(1);
-                }                
+                }
             }
         }
     }
