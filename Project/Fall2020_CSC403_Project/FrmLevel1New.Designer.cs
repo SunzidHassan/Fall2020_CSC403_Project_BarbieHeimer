@@ -807,7 +807,7 @@
             // 
             this.picweapon.BackColor = System.Drawing.Color.Transparent;
             this.picweapon.Image = global::Fall2020_CSC403_Project.Properties.Resources.wep;
-            this.picweapon.Location = new System.Drawing.Point(1735, 760);
+            this.picweapon.Location = new System.Drawing.Point(1021, 748);
             this.picweapon.Name = "picweapon";
             this.picweapon.Size = new System.Drawing.Size(70, 67);
             this.picweapon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -818,7 +818,7 @@
             // 
             this.picmedkit.BackColor = System.Drawing.Color.Transparent;
             this.picmedkit.Image = global::Fall2020_CSC403_Project.Properties.Resources.kit;
-            this.picmedkit.Location = new System.Drawing.Point(1062, 775);
+            this.picmedkit.Location = new System.Drawing.Point(1757, 763);
             this.picmedkit.Name = "picmedkit";
             this.picmedkit.Size = new System.Drawing.Size(48, 52);
             this.picmedkit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -840,7 +840,7 @@
             // 
             this.lblUseMed.BackColor = System.Drawing.Color.LimeGreen;
             this.lblUseMed.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblUseMed.Font = new System.Drawing.Font("ROG Fonts", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUseMed.Location = new System.Drawing.Point(1281, 989);
             this.lblUseMed.Name = "lblUseMed";
             this.lblUseMed.Size = new System.Drawing.Size(87, 26);
@@ -853,7 +853,7 @@
             // 
             this.lblUsePotion.BackColor = System.Drawing.Color.LimeGreen;
             this.lblUsePotion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblUsePotion.Font = new System.Drawing.Font("ROG Fonts", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsePotion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsePotion.Location = new System.Drawing.Point(1503, 989);
             this.lblUsePotion.Name = "lblUsePotion";
             this.lblUsePotion.Size = new System.Drawing.Size(87, 26);
@@ -866,7 +866,7 @@
             // 
             this.lblUseSkill.BackColor = System.Drawing.Color.LimeGreen;
             this.lblUseSkill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblUseSkill.Font = new System.Drawing.Font("ROG Fonts", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseSkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUseSkill.Location = new System.Drawing.Point(1707, 989);
             this.lblUseSkill.Name = "lblUseSkill";
             this.lblUseSkill.Size = new System.Drawing.Size(87, 26);

@@ -26,6 +26,8 @@ namespace Fall2020_CSC403_Project
         private FrmBattle frmBattle;
 
         private float MaxTime = 300;
+        private float playerTime;
+
 
 
         System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();
@@ -102,12 +104,57 @@ namespace Fall2020_CSC403_Project
             }
 
 
-
             Game.player = player;
             timeBegin = DateTime.Now;
-        }
 
-        private Vector2 CreatePosition(PictureBox pic)
+            if (lblPlayer.Text == "Player 1")
+            {
+                if (lblDifficulty.Text == "Easy")
+                {
+                    player.AlterStrength(+2);
+                    player.AlterHealth(-2);
+                    playerTime = 240;
+                }
+                else if (lblDifficulty.Text == "Hard")
+                {
+                    player.AlterStrength(+1);
+                    player.AlterHealth(-5);
+                    playerTime = 180;
+                }
+            }
+            else if (lblPlayer.Text == "Player 2")
+            {
+                if (lblDifficulty.Text == "Easy")
+                {
+                    player.AlterStrength(+1);
+                    player.AlterHealth(0);
+                    playerTime = 240;
+                }
+                else if (lblDifficulty.Text == "Hard")
+                {
+                    player.AlterStrength(0);
+                    player.AlterHealth(-2);
+                    playerTime = 180;
+                }
+            }
+            else if (lblPlayer.Text == "Player 3")
+            {
+                if (lblDifficulty.Text == "Easy")
+                {
+                    player.AlterStrength(+1);
+                    player.AlterHealth(-2);
+                    playerTime = 300;
+                }
+                else if (lblDifficulty.Text == "Hard")
+                {
+                    player.AlterStrength(0);
+                    player.AlterHealth(-5);
+                    playerTime = 240;
+                }
+            }
+    }
+
+    private Vector2 CreatePosition(PictureBox pic)
         {
             return new Vector2(pic.Location.X, pic.Location.Y);
         }
@@ -144,7 +191,7 @@ namespace Fall2020_CSC403_Project
         {
             TimeSpan span = DateTime.Now - timeBegin;
             float time = (float)span.TotalSeconds;
-            float remainingTime = MaxTime - time;
+            float remainingTime = playerTime - time;
 
             //udate player box pposition code needed
             picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
@@ -568,7 +615,7 @@ namespace Fall2020_CSC403_Project
 
             TimeSpan span = DateTime.Now - timeBegin;
             float time = (float)span.TotalSeconds;
-            float remainingTime = MaxTime - time;
+            float remainingTime = playerTime - time;
             float playerTimePer = remainingTime / MaxTime;
             const int MAX_TIMEBAR_WIDTH = 400;
             lblPlayerTimeFull.Width = (int)(MAX_TIMEBAR_WIDTH * playerTimePer);

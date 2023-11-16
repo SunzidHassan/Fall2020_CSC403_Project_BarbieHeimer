@@ -57,9 +57,9 @@ namespace Fall2020_CSC403_Project
             maxStrength = 4;
             maxTime = 300;
 
-            player1HealthEasy = 15;
+            player1HealthEasy = 18;
             player2HealthEasy = 20;
-            player3HealthEasy = 15;
+            player3HealthEasy = 18;
 
             player1StrengthEasy = 4;
             player2StrengthEasy = 3;
@@ -69,9 +69,9 @@ namespace Fall2020_CSC403_Project
             player2TimeEasy = 240;
             player3TimeEasy = 300;
 
-            player1HealthHard = 10;
-            player2HealthHard = 15;
-            player3HealthHard = 10;
+            player1HealthHard = 15;
+            player2HealthHard = 18;
+            player3HealthHard = 15;
 
             player1StrengthHard = 3;
             player2StrengthHard = 2;
