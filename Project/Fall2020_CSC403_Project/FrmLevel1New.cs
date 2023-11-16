@@ -443,7 +443,7 @@ namespace Fall2020_CSC403_Project
             player.MoveBack();
             frmBattle = FrmBattle.GetInstance(player, enemy);
             
-            //frmBattle.UpdateEnemyInfo(enemyMessage);
+            frmBattle.UpdateEnemyInfo(enemyMessage);
             frmBattle.Show();
 
             //if (enemy == bossKoolaid)
@@ -611,14 +611,14 @@ namespace Fall2020_CSC403_Project
                 Controls.Remove(picmedkit);
                 medkit = null;
                 medbox.Image = null;
-                if (player.Health > (player.MaxHealth - 5))
+                if (player.Health > (player.MaxHealth - 10))
                 {
                     int healthChange = player.MaxHealth - player.Health;
                     player.AlterHealth(healthChange);
                 }
                 else
                 {
-                    player.AlterHealth(5);
+                    player.AlterHealth(10);
                 }                
             }
         }
