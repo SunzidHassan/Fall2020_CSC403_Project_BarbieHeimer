@@ -378,6 +378,10 @@
     <None Include="data\raw images\lava2.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\raw images\potion1.png" />
+    <None Include="data\raw images\potion.png" />
+    <None Include="data\raw images\kit.png" />
+    <None Include="data\raw images\wep.png" />
     <None Include="data\raw images\chickbro.gif" />
     <None Include="data\raw images\logointro.gif" />
     <None Include="data\raw images\intro.gif" />

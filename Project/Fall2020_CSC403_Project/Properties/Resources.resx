@@ -124,9 +124,6 @@
   <data name="BackLava" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\BackLava.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sea" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\data\raw images\sea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="player" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,6 +135,9 @@
   </data>
   <data name="BackLavaLong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\BackLavaLong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="charSelect4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\charSelect4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mute_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\volume img\mute_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +163,9 @@
   <data name="high_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\volume img\high_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="kit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\kit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="monster6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\monster6.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,11 +187,14 @@
   <data name="monster2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\monster2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="down_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\volume img\down_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lava2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\lava2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="down_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\data\volume img\down_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\sea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="charbarbie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\charbarbie.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,8 +214,8 @@
   <data name="mid_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\volume img\mid_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="charSelect4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\data\raw images\charSelect4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chickbro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\chickbro.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="6fb968d062567bde0917bec7d12fe8b4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\6fb968d062567bde0917bec7d12fe8b4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,17 +223,14 @@
   <data name="logointro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\logointro.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="enemy_poisonpacket" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\data\enemy_poisonpacket.fw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\intro.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="charSelect5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\charSelect5.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="enemy_cheetos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\data\enemy_cheetos.fw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="amongus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\amongus.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="monster3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\monster3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,11 +238,20 @@
   <data name="final_battle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\final_battle.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="wep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\wep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="level1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\audio\audio.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="enemy_cheetos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\enemy_cheetos.fw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="monster5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\monster5.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="potion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\potion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BackLavaLongV" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\raw images\BackLavaLongV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,10 +259,10 @@
   <data name="battle_screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\battle_screen.fw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="amongus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\data\raw images\amongus.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="enemy_poisonpacket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\enemy_poisonpacket.fw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chickbro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\data\raw images\chickbro.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="potion1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\data\raw images\potion1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

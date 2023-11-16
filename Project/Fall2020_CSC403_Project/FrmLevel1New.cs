@@ -3,8 +3,10 @@ using Fall2020_CSC403_Project.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Media;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project
@@ -22,6 +24,10 @@ namespace Fall2020_CSC403_Project
         private Enemy enemyScissorMonster1;
         private Enemy enemyPaperMonster1;
         //private Enemy enemyLvl1boss;
+
+        private Enemy potion;
+        private Enemy medkit;
+        private Enemy skill;
 
 
         private Enemy enemyFinalBoss;
@@ -105,6 +111,16 @@ namespace Fall2020_CSC403_Project
 
             enemyScissorMonster1 = new Enemy(CreatePosition(picLvl1EnemyScissorMonster1), CreateCollider(picLvl1EnemyScissorMonster1, PADDING));
             enemyScissorMonster1.Img = picLvl1EnemyScissorMonster1.Image;
+
+
+            potion = new Enemy(CreatePosition(picpotion), CreateCollider(picpotion, PADDING));
+            potion.Img = picpotion.Image;
+            medkit = new Enemy(CreatePosition(picmedkit), CreateCollider(picmedkit, PADDING));
+            medkit.Img = picmedkit.Image;
+            skill = new Enemy(CreatePosition(picweapon), CreateCollider(picweapon, PADDING));
+            skill.Img = picweapon.Image;
+
+
             //enemyLvl1boss = new Enemy(CreatePosition(picLvl1EnemyFinalBoss), CreateCollider(picLvl1EnemyFinalBoss, PADDING));
 
             bottomLava = new Character[NUM_BOTTOMLAVA];
@@ -265,6 +281,29 @@ namespace Fall2020_CSC403_Project
                 player.AlterScore(-5);
             }
 
+            // check collision with Collectables
+
+            else if (HitAChar(player, potion))
+            {
+                potionbox.Image = Properties.Resources.potion1;
+                Controls.Remove(picpotion);
+            }
+
+
+            else if (HitAChar(player, skill))
+            {
+                skillbox.Image = Properties.Resources.wep;
+                Controls.Remove(picweapon);
+            }
+
+
+            else if (HitAChar(player, medkit))
+            {
+                medbox.Image = Properties.Resources.kit;
+                Controls.Remove(picmedkit);
+            }
+
+
             // check collision with enemies
             else if (HitAChar(player, enemyRockMonster1))
             {
@@ -276,7 +315,7 @@ namespace Fall2020_CSC403_Project
                 {
                     Controls.Remove(picLvl1EnemyRockMonster1);
                     enemyRockMonster1 = null;
-                    player.AlterHealth(5);
+                    //player.AlterHealth(5);
                     player.AlterScore(5);
                 }
             }
@@ -290,7 +329,7 @@ namespace Fall2020_CSC403_Project
                 {
                     Controls.Remove(picLvl1EnemyPaperMonster1);
                     enemyPaperMonster1 = null;
-                    player.AlterHealth(5);
+                    //player.AlterHealth(5);
                     player.AlterScore(5);
                 }
             }
@@ -304,7 +343,7 @@ namespace Fall2020_CSC403_Project
                 {
                     Controls.Remove(picLvl1EnemyScissorMonster1);
                     enemyScissorMonster1 = null;
-                    player.AlterHealth(5);
+                    //player.AlterHealth(5);
                     player.AlterScore(5);
                 }
             }
@@ -328,7 +367,6 @@ namespace Fall2020_CSC403_Project
                     frmLevel2.Show();*/
                     Fight(player, enemyFinalBoss);
                 }
-
             }
         }
 
@@ -345,7 +383,6 @@ namespace Fall2020_CSC403_Project
                 }
             }
             return HitLava;
-
         }
 
         private bool HitWalls(Character c)
@@ -565,23 +602,58 @@ namespace Fall2020_CSC403_Project
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void lblUseMed_Click(object sender, EventArgs e)
         {
-
+            if(medkit != null)
+            {
+                Controls.Remove(picmedkit);
+                medkit = null;
+                medbox.Image = null;
+                if (player.Health > (player.MaxHealth - 5))
+                {
+                    int healthChange = player.MaxHealth - player.Health;
+                    player.AlterHealth(healthChange);
+                }
+                else
+                {
+                    player.AlterHealth(5);
+                }                
+            }
         }
-        
 
-         
-        
-
-        private void textBoxPlayerName_TextChanged(object sender, EventArgs e)
+        private void lblUsePotion_Click(object sender, EventArgs e)
         {
-
+            if (potion != null)
+            {
+                Controls.Remove(picpotion);
+                potion = null;
+                potionbox.Image = null;
+                if (playerTime > (MaxTime - 30))
+                {
+                    playerTime = MaxTime;
+                }
+                else
+                {
+                    playerTime = playerTime + 30;
+                }
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void lblUseSkill_Click(object sender, EventArgs e)
         {
-
+            if (skill != null)
+            {
+                Controls.Remove(picweapon);
+                skill = null;
+                skillbox.Image = null;
+                if (player.strength == player.MaxStrength)
+                {
+                }
+                else
+                {
+                    player.AlterStrength(1);
+                }                
+            }
         }
     }
 }
