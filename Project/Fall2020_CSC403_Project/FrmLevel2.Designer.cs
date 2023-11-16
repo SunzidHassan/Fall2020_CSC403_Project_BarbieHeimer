@@ -77,9 +77,9 @@
             this.tmrUpdateScoreBars = new System.Windows.Forms.Timer(this.components);
             this.picWall8 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblPlayer = new System.Windows.Forms.Label();
-            this.lblDifficulty = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picpotion = new System.Windows.Forms.PictureBox();
+            this.picmedkit = new System.Windows.Forms.PictureBox();
+            this.picweapon = new System.Windows.Forms.PictureBox();
             this.skillbox = new System.Windows.Forms.PictureBox();
             this.potionbox = new System.Windows.Forms.PictureBox();
             this.medbox = new System.Windows.Forms.PictureBox();
@@ -92,9 +92,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.picpotion = new System.Windows.Forms.PictureBox();
-            this.picmedkit = new System.Windows.Forms.PictureBox();
-            this.picweapon = new System.Windows.Forms.PictureBox();
+            this.lblPlayer = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblDifficulty = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall0)).BeginInit();
@@ -123,13 +123,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall8)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skillbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.potionbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picpotion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmedkit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picweapon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skillbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.potionbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // picWall1
@@ -688,36 +688,38 @@
             this.panel1.Size = new System.Drawing.Size(1920, 1080);
             this.panel1.TabIndex = 116;
             // 
-            // lblPlayer
+            // picpotion
             // 
-            this.lblPlayer.AutoSize = true;
-            this.lblPlayer.Location = new System.Drawing.Point(1705, 945);
-            this.lblPlayer.Name = "lblPlayer";
-            this.lblPlayer.Size = new System.Drawing.Size(35, 13);
-            this.lblPlayer.TabIndex = 2;
-            this.lblPlayer.Text = "label2";
+            this.picpotion.BackColor = System.Drawing.Color.Transparent;
+            this.picpotion.Image = global::Fall2020_CSC403_Project.Properties.Resources.potion1;
+            this.picpotion.Location = new System.Drawing.Point(706, 40);
+            this.picpotion.Name = "picpotion";
+            this.picpotion.Size = new System.Drawing.Size(48, 52);
+            this.picpotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picpotion.TabIndex = 134;
+            this.picpotion.TabStop = false;
             // 
-            // lblDifficulty
+            // picmedkit
             // 
-            this.lblDifficulty.AutoSize = true;
-            this.lblDifficulty.Location = new System.Drawing.Point(1664, 945);
-            this.lblDifficulty.Name = "lblDifficulty";
-            this.lblDifficulty.Size = new System.Drawing.Size(35, 13);
-            this.lblDifficulty.TabIndex = 1;
-            this.lblDifficulty.Text = "label2";
+            this.picmedkit.BackColor = System.Drawing.Color.Transparent;
+            this.picmedkit.Image = global::Fall2020_CSC403_Project.Properties.Resources.kit;
+            this.picmedkit.Location = new System.Drawing.Point(1807, 608);
+            this.picmedkit.Name = "picmedkit";
+            this.picmedkit.Size = new System.Drawing.Size(48, 52);
+            this.picmedkit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picmedkit.TabIndex = 133;
+            this.picmedkit.TabStop = false;
             // 
-            // pictureBox2
+            // picweapon
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1920, 1080);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.picweapon.BackColor = System.Drawing.Color.Transparent;
+            this.picweapon.Image = global::Fall2020_CSC403_Project.Properties.Resources.wep;
+            this.picweapon.Location = new System.Drawing.Point(1785, 451);
+            this.picweapon.Name = "picweapon";
+            this.picweapon.Size = new System.Drawing.Size(70, 67);
+            this.picweapon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picweapon.TabIndex = 132;
+            this.picweapon.TabStop = false;
             // 
             // skillbox
             // 
@@ -760,6 +762,7 @@
             this.lblUseSkill.TabIndex = 128;
             this.lblUseSkill.Text = "Use";
             this.lblUseSkill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUseSkill.Click += new System.EventHandler(this.lblUseSkill_Click);
             // 
             // lblUsePotion
             // 
@@ -772,6 +775,7 @@
             this.lblUsePotion.TabIndex = 127;
             this.lblUsePotion.Text = "Use";
             this.lblUsePotion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUsePotion.Click += new System.EventHandler(this.lblUsePotion_Click);
             // 
             // lblUseMed
             // 
@@ -784,6 +788,7 @@
             this.lblUseMed.TabIndex = 126;
             this.lblUseMed.Text = "Use";
             this.lblUseMed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUseMed.Click += new System.EventHandler(this.lblUseMed_Click);
             // 
             // label2
             // 
@@ -869,38 +874,36 @@
             this.label7.Text = "Potion";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // picpotion
+            // lblPlayer
             // 
-            this.picpotion.BackColor = System.Drawing.Color.Transparent;
-            this.picpotion.Image = global::Fall2020_CSC403_Project.Properties.Resources.potion1;
-            this.picpotion.Location = new System.Drawing.Point(706, 40);
-            this.picpotion.Name = "picpotion";
-            this.picpotion.Size = new System.Drawing.Size(48, 52);
-            this.picpotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picpotion.TabIndex = 134;
-            this.picpotion.TabStop = false;
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Location = new System.Drawing.Point(1705, 945);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(35, 13);
+            this.lblPlayer.TabIndex = 2;
+            this.lblPlayer.Text = "label2";
             // 
-            // picmedkit
+            // pictureBox2
             // 
-            this.picmedkit.BackColor = System.Drawing.Color.Transparent;
-            this.picmedkit.Image = global::Fall2020_CSC403_Project.Properties.Resources.kit;
-            this.picmedkit.Location = new System.Drawing.Point(1807, 608);
-            this.picmedkit.Name = "picmedkit";
-            this.picmedkit.Size = new System.Drawing.Size(48, 52);
-            this.picmedkit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picmedkit.TabIndex = 133;
-            this.picmedkit.TabStop = false;
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1920, 1080);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
-            // picweapon
+            // lblDifficulty
             // 
-            this.picweapon.BackColor = System.Drawing.Color.Transparent;
-            this.picweapon.Image = global::Fall2020_CSC403_Project.Properties.Resources.wep;
-            this.picweapon.Location = new System.Drawing.Point(1785, 451);
-            this.picweapon.Name = "picweapon";
-            this.picweapon.Size = new System.Drawing.Size(70, 67);
-            this.picweapon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picweapon.TabIndex = 132;
-            this.picweapon.TabStop = false;
+            this.lblDifficulty.AutoSize = true;
+            this.lblDifficulty.Location = new System.Drawing.Point(1664, 945);
+            this.lblDifficulty.Name = "lblDifficulty";
+            this.lblDifficulty.Size = new System.Drawing.Size(35, 13);
+            this.lblDifficulty.TabIndex = 1;
+            this.lblDifficulty.Text = "label2";
             // 
             // FrmLevel2
             // 
@@ -970,13 +973,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall8)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skillbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.potionbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picpotion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmedkit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picweapon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skillbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.potionbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

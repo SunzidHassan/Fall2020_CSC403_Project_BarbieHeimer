@@ -19,6 +19,15 @@ namespace Fall2020_CSC403_Project
         private Enemy enemyPoisonPacket;
         private Enemy bossKoolaid;
         private Enemy enemyCheeto;
+
+
+        private Enemy potion;
+        private Enemy medkit;
+        private Enemy skill;
+
+
+
+
         //private Enemy finishFlag;
         private Character[] walls;
 
@@ -90,6 +99,17 @@ namespace Fall2020_CSC403_Project
             enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
             enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
             //finishFlag.Img = picLevel1Finish.BackgroundImage;
+
+
+
+            potion = new Enemy(CreatePosition(picpotion), CreateCollider(picpotion, PADDING));
+            potion.Img = picpotion.Image;
+            medkit = new Enemy(CreatePosition(picmedkit), CreateCollider(picmedkit, PADDING));
+            medkit.Img = picmedkit.Image;
+            skill = new Enemy(CreatePosition(picweapon), CreateCollider(picweapon, PADDING));
+            skill.Img = picweapon.Image;
+
+
 
             bossKoolaid.Color = Color.Red;
             enemyPoisonPacket.Color = Color.Green;
@@ -217,6 +237,40 @@ namespace Fall2020_CSC403_Project
             {
                 player.MoveBack();
             }
+
+            // check collision with Collectables
+
+            else if (HitAChar(player, potion))
+            {
+                Controls.Remove(picpotion);
+                picpotion.Dispose();
+                picpotion.Image = null;
+                potionbox.Image = Properties.Resources.potion1;
+
+            }
+
+
+            else if (HitAChar(player, skill))
+            {
+                Controls.Remove(picweapon);
+                picweapon.Dispose();
+                picweapon.Image = null;
+                skillbox.Image = Properties.Resources.wep;
+
+            }
+
+
+            else if (HitAChar(player, medkit))
+            {
+                Controls.Remove(picmedkit);
+                picmedkit.Dispose();
+                picmedkit.Image = null;
+                medbox.Image = Properties.Resources.kit;
+
+            }
+
+
+
 
             // check collision with enemies
             if (HitAChar(player, enemyPoisonPacket))
@@ -666,6 +720,60 @@ namespace Fall2020_CSC403_Project
         private void picBottomLava0_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblUseMed_Click(object sender, EventArgs e)
+        {
+            if (medkit != null)
+            {
+                Controls.Remove(picmedkit);
+                medkit = null;
+                medbox.Image = null;
+                if (player.Health > (player.MaxHealth - 5))
+                {
+                    int healthChange = player.MaxHealth - player.Health;
+                    player.AlterHealth(healthChange);
+                }
+                else
+                {
+                    player.AlterHealth(5);
+                }
+            }
+        }
+
+        private void lblUsePotion_Click(object sender, EventArgs e)
+        {
+            if (potion != null)
+            {
+                Controls.Remove(picpotion);
+                potion = null;
+                potionbox.Image = null;
+                if (playerTime > (MaxTime - 30))
+                {
+                    playerTime = MaxTime;
+                }
+                else
+                {
+                    playerTime = playerTime + 30;
+                }
+            }
+        }
+
+        private void lblUseSkill_Click(object sender, EventArgs e)
+        {
+            if (skill != null)
+            {
+                Controls.Remove(picweapon);
+                skill = null;
+                skillbox.Image = null;
+                if (player.strength == player.MaxStrength)
+                {
+                }
+                else
+                {
+                    player.AlterStrength(1);
+                }
+            }
         }
 
 
