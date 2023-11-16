@@ -265,12 +265,12 @@ namespace Fall2020_CSC403_Project
                     formCongratulations.Show();
                 }
             }
-            else if (HitAChar(player, finishFlag))
-            {
-                this.Close();
-                FrmLevel2Finish formCongratulations = new FrmLevel2Finish();
-                formCongratulations.Show();
-            }
+            //else if (HitAChar(player, finishFlag))
+            //{
+            //    this.Close();
+            //    FrmLevel2Finish formCongratulations = new FrmLevel2Finish();
+            //    formCongratulations.Show();
+            //}
 
 
 

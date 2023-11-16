@@ -77,15 +77,24 @@
             this.tmrUpdateScoreBars = new System.Windows.Forms.Timer(this.components);
             this.picWall8 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblDifficulty = new System.Windows.Forms.Label();
             this.lblPlayer = new System.Windows.Forms.Label();
-            this.lblPlayerScissorFull = new System.Windows.Forms.Label();
-            this.lblPlayerPaperFull = new System.Windows.Forms.Label();
-            this.lblPlayerRockFull = new System.Windows.Forms.Label();
-            this.LvlLabelScissor = new System.Windows.Forms.Label();
-            this.LvlLabelPaper = new System.Windows.Forms.Label();
-            this.LvlLabelRock = new System.Windows.Forms.Label();
+            this.lblDifficulty = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.skillbox = new System.Windows.Forms.PictureBox();
+            this.potionbox = new System.Windows.Forms.PictureBox();
+            this.medbox = new System.Windows.Forms.PictureBox();
+            this.lblUseSkill = new System.Windows.Forms.Label();
+            this.lblUsePotion = new System.Windows.Forms.Label();
+            this.lblUseMed = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.picpotion = new System.Windows.Forms.PictureBox();
+            this.picmedkit = new System.Windows.Forms.PictureBox();
+            this.picweapon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall0)).BeginInit();
@@ -115,6 +124,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall8)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skillbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.potionbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picpotion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picmedkit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picweapon)).BeginInit();
             this.SuspendLayout();
             // 
             // picWall1
@@ -574,7 +589,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(750, 837);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(459, 138);
+            this.pictureBox1.Size = new System.Drawing.Size(294, 138);
             this.pictureBox1.TabIndex = 80;
             this.pictureBox1.TabStop = false;
             // 
@@ -622,10 +637,10 @@
             this.picWall8.BackColor = System.Drawing.Color.Transparent;
             this.picWall8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall8.Image = ((System.Drawing.Image)(resources.GetObject("picWall8.Image")));
-            this.picWall8.Location = new System.Drawing.Point(1860, 374);
+            this.picWall8.Location = new System.Drawing.Point(1860, 31);
             this.picWall8.Margin = new System.Windows.Forms.Padding(2);
             this.picWall8.Name = "picWall8";
-            this.picWall8.Size = new System.Drawing.Size(34, 306);
+            this.picWall8.Size = new System.Drawing.Size(34, 649);
             this.picWall8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picWall8.TabIndex = 115;
             this.picWall8.TabStop = false;
@@ -636,12 +651,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.LvlLabelRock);
-            this.panel1.Controls.Add(this.LvlLabelPaper);
-            this.panel1.Controls.Add(this.LvlLabelScissor);
-            this.panel1.Controls.Add(this.lblPlayerRockFull);
-            this.panel1.Controls.Add(this.lblPlayerPaperFull);
-            this.panel1.Controls.Add(this.lblPlayerScissorFull);
+            this.panel1.Controls.Add(this.picpotion);
+            this.panel1.Controls.Add(this.picmedkit);
+            this.panel1.Controls.Add(this.picweapon);
+            this.panel1.Controls.Add(this.skillbox);
+            this.panel1.Controls.Add(this.potionbox);
+            this.panel1.Controls.Add(this.medbox);
+            this.panel1.Controls.Add(this.lblUseSkill);
+            this.panel1.Controls.Add(this.lblUsePotion);
+            this.panel1.Controls.Add(this.lblUseMed);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.LvlLabelHealth);
             this.panel1.Controls.Add(this.LvlLabelAttack);
             this.panel1.Controls.Add(this.LvlLabelTime);
@@ -654,15 +678,33 @@
             this.panel1.Controls.Add(this.lblPlayerAttackFull);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblPlayerTimeFull);
-            this.panel1.Controls.Add(this.lblDifficulty);
             this.panel1.Controls.Add(this.picBossKoolAid);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.picBottomLava0);
             this.panel1.Controls.Add(this.picBottomLava2);
+            this.panel1.Controls.Add(this.lblDifficulty);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1920, 1080);
             this.panel1.TabIndex = 116;
+            // 
+            // lblPlayer
+            // 
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Location = new System.Drawing.Point(1705, 945);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(35, 13);
+            this.lblPlayer.TabIndex = 2;
+            this.lblPlayer.Text = "label2";
+            // 
+            // lblDifficulty
+            // 
+            this.lblDifficulty.AutoSize = true;
+            this.lblDifficulty.Location = new System.Drawing.Point(1664, 945);
+            this.lblDifficulty.Name = "lblDifficulty";
+            this.lblDifficulty.Size = new System.Drawing.Size(35, 13);
+            this.lblDifficulty.TabIndex = 1;
+            this.lblDifficulty.Text = "label2";
             // 
             // pictureBox2
             // 
@@ -677,104 +719,188 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // lblDifficulty
+            // skillbox
             // 
-            this.lblDifficulty.AutoSize = true;
-            this.lblDifficulty.Location = new System.Drawing.Point(1664, 945);
-            this.lblDifficulty.Name = "lblDifficulty";
-            this.lblDifficulty.Size = new System.Drawing.Size(35, 13);
-            this.lblDifficulty.TabIndex = 1;
-            this.lblDifficulty.Text = "label2";
+            this.skillbox.BackColor = System.Drawing.Color.Transparent;
+            this.skillbox.Location = new System.Drawing.Point(1739, 866);
+            this.skillbox.Name = "skillbox";
+            this.skillbox.Size = new System.Drawing.Size(54, 52);
+            this.skillbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.skillbox.TabIndex = 131;
+            this.skillbox.TabStop = false;
             // 
-            // lblPlayer
+            // potionbox
             // 
-            this.lblPlayer.AutoSize = true;
-            this.lblPlayer.Location = new System.Drawing.Point(1705, 945);
-            this.lblPlayer.Name = "lblPlayer";
-            this.lblPlayer.Size = new System.Drawing.Size(35, 13);
-            this.lblPlayer.TabIndex = 2;
-            this.lblPlayer.Text = "label2";
+            this.potionbox.BackColor = System.Drawing.Color.Transparent;
+            this.potionbox.Location = new System.Drawing.Point(1535, 866);
+            this.potionbox.Name = "potionbox";
+            this.potionbox.Size = new System.Drawing.Size(48, 52);
+            this.potionbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.potionbox.TabIndex = 130;
+            this.potionbox.TabStop = false;
             // 
-            // lblPlayerScissorFull
+            // medbox
             // 
-            this.lblPlayerScissorFull.BackColor = System.Drawing.Color.Olive;
-            this.lblPlayerScissorFull.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPlayerScissorFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerScissorFull.ForeColor = System.Drawing.Color.White;
-            this.lblPlayerScissorFull.Location = new System.Drawing.Point(1413, 928);
-            this.lblPlayerScissorFull.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPlayerScissorFull.Name = "lblPlayerScissorFull";
-            this.lblPlayerScissorFull.Size = new System.Drawing.Size(400, 30);
-            this.lblPlayerScissorFull.TabIndex = 114;
-            this.lblPlayerScissorFull.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.medbox.BackColor = System.Drawing.Color.Transparent;
+            this.medbox.Location = new System.Drawing.Point(1312, 866);
+            this.medbox.Name = "medbox";
+            this.medbox.Size = new System.Drawing.Size(48, 52);
+            this.medbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.medbox.TabIndex = 129;
+            this.medbox.TabStop = false;
             // 
-            // lblPlayerPaperFull
+            // lblUseSkill
             // 
-            this.lblPlayerPaperFull.BackColor = System.Drawing.Color.Olive;
-            this.lblPlayerPaperFull.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPlayerPaperFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerPaperFull.ForeColor = System.Drawing.Color.White;
-            this.lblPlayerPaperFull.Location = new System.Drawing.Point(1413, 887);
-            this.lblPlayerPaperFull.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPlayerPaperFull.Name = "lblPlayerPaperFull";
-            this.lblPlayerPaperFull.Size = new System.Drawing.Size(400, 30);
-            this.lblPlayerPaperFull.TabIndex = 113;
-            this.lblPlayerPaperFull.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUseSkill.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblUseSkill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblUseSkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseSkill.Location = new System.Drawing.Point(1720, 924);
+            this.lblUseSkill.Name = "lblUseSkill";
+            this.lblUseSkill.Size = new System.Drawing.Size(87, 26);
+            this.lblUseSkill.TabIndex = 128;
+            this.lblUseSkill.Text = "Use";
+            this.lblUseSkill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblPlayerRockFull
+            // lblUsePotion
             // 
-            this.lblPlayerRockFull.BackColor = System.Drawing.Color.Olive;
-            this.lblPlayerRockFull.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPlayerRockFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerRockFull.ForeColor = System.Drawing.Color.White;
-            this.lblPlayerRockFull.Location = new System.Drawing.Point(1413, 837);
-            this.lblPlayerRockFull.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPlayerRockFull.Name = "lblPlayerRockFull";
-            this.lblPlayerRockFull.Size = new System.Drawing.Size(400, 30);
-            this.lblPlayerRockFull.TabIndex = 112;
-            this.lblPlayerRockFull.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUsePotion.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblUsePotion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblUsePotion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsePotion.Location = new System.Drawing.Point(1516, 924);
+            this.lblUsePotion.Name = "lblUsePotion";
+            this.lblUsePotion.Size = new System.Drawing.Size(87, 26);
+            this.lblUsePotion.TabIndex = 127;
+            this.lblUsePotion.Text = "Use";
+            this.lblUsePotion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LvlLabelScissor
+            // lblUseMed
             // 
-            this.LvlLabelScissor.AutoSize = true;
-            this.LvlLabelScissor.BackColor = System.Drawing.Color.Olive;
-            this.LvlLabelScissor.Font = new System.Drawing.Font("Bernard MT Condensed", 21.75F, System.Drawing.FontStyle.Bold);
-            this.LvlLabelScissor.ForeColor = System.Drawing.SystemColors.Control;
-            this.LvlLabelScissor.Location = new System.Drawing.Point(1305, 928);
-            this.LvlLabelScissor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LvlLabelScissor.Name = "LvlLabelScissor";
-            this.LvlLabelScissor.Size = new System.Drawing.Size(95, 34);
-            this.LvlLabelScissor.TabIndex = 111;
-            this.LvlLabelScissor.Text = "Scissor";
-            this.LvlLabelScissor.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lblUseMed.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblUseMed.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblUseMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUseMed.Location = new System.Drawing.Point(1294, 924);
+            this.lblUseMed.Name = "lblUseMed";
+            this.lblUseMed.Size = new System.Drawing.Size(87, 26);
+            this.lblUseMed.TabIndex = 126;
+            this.lblUseMed.Text = "Use";
+            this.lblUseMed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LvlLabelPaper
+            // label2
             // 
-            this.LvlLabelPaper.AutoSize = true;
-            this.LvlLabelPaper.BackColor = System.Drawing.Color.Olive;
-            this.LvlLabelPaper.Font = new System.Drawing.Font("Bernard MT Condensed", 21.75F, System.Drawing.FontStyle.Bold);
-            this.LvlLabelPaper.ForeColor = System.Drawing.SystemColors.Control;
-            this.LvlLabelPaper.Location = new System.Drawing.Point(1305, 887);
-            this.LvlLabelPaper.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LvlLabelPaper.Name = "LvlLabelPaper";
-            this.LvlLabelPaper.Size = new System.Drawing.Size(87, 34);
-            this.LvlLabelPaper.TabIndex = 110;
-            this.LvlLabelPaper.Text = "Paper";
-            this.LvlLabelPaper.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.BackColor = System.Drawing.Color.Firebrick;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(1708, 842);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 114);
+            this.label2.TabIndex = 125;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LvlLabelRock
+            // label3
             // 
-            this.LvlLabelRock.AutoSize = true;
-            this.LvlLabelRock.BackColor = System.Drawing.Color.Olive;
-            this.LvlLabelRock.Font = new System.Drawing.Font("Bernard MT Condensed", 21.75F, System.Drawing.FontStyle.Bold);
-            this.LvlLabelRock.ForeColor = System.Drawing.SystemColors.Control;
-            this.LvlLabelRock.Location = new System.Drawing.Point(1305, 839);
-            this.LvlLabelRock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LvlLabelRock.Name = "LvlLabelRock";
-            this.LvlLabelRock.Size = new System.Drawing.Size(75, 34);
-            this.LvlLabelRock.TabIndex = 109;
-            this.LvlLabelRock.Text = "Rock";
-            this.LvlLabelRock.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.BackColor = System.Drawing.Color.Goldenrod;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1506, 842);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 114);
+            this.label3.TabIndex = 124;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.OrangeRed;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(1281, 844);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 111);
+            this.label4.TabIndex = 123;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Firebrick;
+            this.label5.Font = new System.Drawing.Font("Bernard MT Condensed", 21.75F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(1215, 846);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 34);
+            this.label5.TabIndex = 122;
+            this.label5.Text = "Med";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Firebrick;
+            this.label6.Font = new System.Drawing.Font("Bernard MT Condensed", 21.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(1637, 846);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 34);
+            this.label6.TabIndex = 121;
+            this.label6.Text = "Skill";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Firebrick;
+            this.label7.Font = new System.Drawing.Font("Bernard MT Condensed", 21.75F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(1408, 844);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(94, 34);
+            this.label7.TabIndex = 120;
+            this.label7.Text = "Potion";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // picpotion
+            // 
+            this.picpotion.BackColor = System.Drawing.Color.Transparent;
+            this.picpotion.Image = global::Fall2020_CSC403_Project.Properties.Resources.potion1;
+            this.picpotion.Location = new System.Drawing.Point(706, 40);
+            this.picpotion.Name = "picpotion";
+            this.picpotion.Size = new System.Drawing.Size(48, 52);
+            this.picpotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picpotion.TabIndex = 134;
+            this.picpotion.TabStop = false;
+            // 
+            // picmedkit
+            // 
+            this.picmedkit.BackColor = System.Drawing.Color.Transparent;
+            this.picmedkit.Image = global::Fall2020_CSC403_Project.Properties.Resources.kit;
+            this.picmedkit.Location = new System.Drawing.Point(1807, 608);
+            this.picmedkit.Name = "picmedkit";
+            this.picmedkit.Size = new System.Drawing.Size(48, 52);
+            this.picmedkit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picmedkit.TabIndex = 133;
+            this.picmedkit.TabStop = false;
+            // 
+            // picweapon
+            // 
+            this.picweapon.BackColor = System.Drawing.Color.Transparent;
+            this.picweapon.Image = global::Fall2020_CSC403_Project.Properties.Resources.wep;
+            this.picweapon.Location = new System.Drawing.Point(1785, 451);
+            this.picweapon.Name = "picweapon";
+            this.picweapon.Size = new System.Drawing.Size(70, 67);
+            this.picweapon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picweapon.TabIndex = 132;
+            this.picweapon.TabStop = false;
             // 
             // FrmLevel2
             // 
@@ -845,6 +971,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skillbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.potionbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picpotion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picmedkit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picweapon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -902,11 +1034,20 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label lblPlayer;
         public System.Windows.Forms.Label lblDifficulty;
-        private System.Windows.Forms.Label lblPlayerScissorFull;
-        private System.Windows.Forms.Label lblPlayerPaperFull;
-        private System.Windows.Forms.Label lblPlayerRockFull;
-        private System.Windows.Forms.Label LvlLabelScissor;
-        private System.Windows.Forms.Label LvlLabelPaper;
-        private System.Windows.Forms.Label LvlLabelRock;
+        private System.Windows.Forms.PictureBox skillbox;
+        private System.Windows.Forms.PictureBox potionbox;
+        private System.Windows.Forms.PictureBox medbox;
+        private System.Windows.Forms.Label lblUseSkill;
+        private System.Windows.Forms.Label lblUsePotion;
+        private System.Windows.Forms.Label lblUseMed;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox picpotion;
+        private System.Windows.Forms.PictureBox picmedkit;
+        private System.Windows.Forms.PictureBox picweapon;
     }
 }
