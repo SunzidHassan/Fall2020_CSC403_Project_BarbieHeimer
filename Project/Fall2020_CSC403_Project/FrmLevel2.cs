@@ -151,7 +151,7 @@ namespace Fall2020_CSC403_Project
 
             player.Move();
 
-            if (player.Health <= 1)
+            if (player.Health < 1)
             {
                 FrmDeath formDeath = new FrmDeath();
                 formDeath.Show();
@@ -176,7 +176,7 @@ namespace Fall2020_CSC403_Project
             {
                 if (enemyPoisonPacket.Health > 0)
                 {
-                    Fight(player, enemyPoisonPacket);
+                    Fight(player, enemyPoisonPacket, "Tempting, isn't it? The toxic embrace of Dungeaon's crawl.");
                 }
                 else
                 {
@@ -190,7 +190,7 @@ namespace Fall2020_CSC403_Project
             {
                 if (enemyCheeto.Health > 0)
                 {
-                    Fight(player, enemyCheeto);
+                    Fight(player, enemyCheeto, "Step into the web of confusion spun by my maneuvers.");
                 }
                 else
                 {
@@ -204,7 +204,7 @@ namespace Fall2020_CSC403_Project
             {
                 if (bossKoolaid.Health > 0)
                 {
-                    Fight(player, bossKoolaid);
+                    Fight(player, bossKoolaid, "Feel the allure of the dragon's majestic flames.");
                 }
 
                 else
@@ -213,6 +213,9 @@ namespace Fall2020_CSC403_Project
                     bossKoolaid = null;
                     player.AlterHealth(5);
                     //UpdateHeathText();
+                    this.Close();
+                    FrmLevel2Finish formCongratulations = new FrmLevel2Finish();
+                    formCongratulations.Show();
                 }
             }
             else if (HitAChar(player, finishFlag))
@@ -359,11 +362,12 @@ namespace Fall2020_CSC403_Project
             return you.Collider.Intersects(other.Collider);
         }
 
-        private void Fight(Player player, Enemy enemy)
+        private void Fight(Player player, Enemy enemy, string enemyMessage)
         {
             player.ResetMoveSpeed();
             player.MoveBack();
             frmBattle = FrmBattle.GetInstance(player, enemy);
+            frmBattle.UpdateEnemyInfo(enemyMessage);
             frmBattle.Show();
 
             /*if (enemy == bossKoolaid)

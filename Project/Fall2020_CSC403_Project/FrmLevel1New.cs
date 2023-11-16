@@ -309,7 +309,7 @@ namespace Fall2020_CSC403_Project
             {
                 if (enemyRockMonster1.Health > 0)
                 {
-                    Fight(player, enemyRockMonster1);
+                    Fight(player, enemyRockMonster1, "A challenge awaits within Rock Monster's solid fortress.");
                 }
                 else
                 {
@@ -323,7 +323,7 @@ namespace Fall2020_CSC403_Project
             {
                 if (enemyPaperMonster1.Health > 0)
                 {
-                    Fight(player, enemyPaperMonster1);
+                    Fight(player, enemyPaperMonster1, "Come closer and witness Paper Monster's cunning resilience.") ;
                 }
                 else
                 {
@@ -337,7 +337,7 @@ namespace Fall2020_CSC403_Project
             {
                 if (enemyScissorMonster1.Health > 0)
                 {
-                    Fight(player, enemyScissorMonster1);
+                    Fight(player, enemyScissorMonster1, "Dance with danger in the grasp of Scissor Monster's precision.");
                 }
                 else
                 {
@@ -365,7 +365,7 @@ namespace Fall2020_CSC403_Project
                     /*this.Close();
                     FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
                     frmLevel2.Show();*/
-                    Fight(player, enemyFinalBoss);
+                    Fight(player, enemyFinalBoss, "Enticed by the power that the Final Boss wields?");
                 }
             }
         }
@@ -437,11 +437,13 @@ namespace Fall2020_CSC403_Project
             return HitCircleLava;
         }
 
-        private void Fight(Player player, Enemy enemy)
+        private void Fight(Player player, Enemy enemy, string enemyMessage)
         {
             player.ResetMoveSpeed();
             player.MoveBack();
             frmBattle = FrmBattle.GetInstance(player, enemy);
+            
+            frmBattle.UpdateEnemyInfo(enemyMessage);
             frmBattle.Show();
 
             //if (enemy == bossKoolaid)

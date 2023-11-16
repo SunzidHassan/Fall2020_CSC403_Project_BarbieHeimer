@@ -26,8 +26,10 @@ namespace Fall2020_CSC403_Project
             // update for this enemy
             picEnemy.BackgroundImage = enemy.Img;
             picEnemy.Refresh();
-            BackColor = enemy.Color;
+            //BackColor = enemy.Color;
             picBossBattle.Visible = false;
+
+            
 
             // Observer pattern
             enemy.AttackEvent += PlayerDamage;
@@ -35,6 +37,10 @@ namespace Fall2020_CSC403_Project
 
             // show health
             UpdateHealthBars();
+        }
+        public void UpdateEnemyInfo(string enemyMessage)
+        {
+            lblMessage.Text = enemyMessage;
         }
 
         public void SetupForBossBattle()
