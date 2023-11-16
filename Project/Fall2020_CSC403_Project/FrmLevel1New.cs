@@ -216,7 +216,7 @@ namespace Fall2020_CSC403_Project
             player.AlterScore(-1);
         }
 
-       
+        private bool level2Transitioned = false;
 
         private void tmrPlayerMove_Tick(object sender, EventArgs e)
         {
@@ -312,17 +312,23 @@ namespace Fall2020_CSC403_Project
             // check collision with enemies
             else if (HitAChar(player, enemyFinalBoss))
             {
-                if (enemyFinalBoss.Health > 0)
+                if (enemyFinalBoss.Health <= 0 && !level2Transitioned)
                 {
+                    /*Fight(player, enemyFinalBoss);*/
+                    level2Transitioned = true;
+                    this.Close();
+                    FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
+                    frmLevel2.Show();
+                    return;
+                }
+                else if (!level2Transitioned)
+                {
+                    /*this.Close();
+                    FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
+                    frmLevel2.Show();*/
                     Fight(player, enemyFinalBoss);
                 }
-                else
-                {
 
-                    this.Hide();
-                    FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
-                    frmLevel2.ShowDialog();
-                }
             }
         }
 

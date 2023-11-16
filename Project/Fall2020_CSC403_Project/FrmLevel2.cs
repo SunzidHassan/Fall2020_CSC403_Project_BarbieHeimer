@@ -63,7 +63,11 @@ namespace Fall2020_CSC403_Project
             /*FormBorderStyle = FormBorderStyle.FixedSingle; // Change to a desired border style
             WindowState = FormWindowState.Normal; // Change to normal window state*/
 
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
             TopMost = false;
+
+
 
 
             const int PADDING = 7;
