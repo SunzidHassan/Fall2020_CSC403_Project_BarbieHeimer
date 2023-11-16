@@ -151,7 +151,7 @@ namespace Fall2020_CSC403_Project
 
             player.Move();
 
-            if (player.Health <= 1)
+            if (player.Health < 1)
             {
                 FrmDeath formDeath = new FrmDeath();
                 formDeath.Show();
@@ -213,6 +213,9 @@ namespace Fall2020_CSC403_Project
                     bossKoolaid = null;
                     player.AlterHealth(5);
                     //UpdateHeathText();
+                    this.Close();
+                    FrmLevel2Finish formCongratulations = new FrmLevel2Finish();
+                    formCongratulations.Show();
                 }
             }
             else if (HitAChar(player, finishFlag))

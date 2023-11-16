@@ -54,7 +54,6 @@
             this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
             this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
             this.tmrCleanDeadCharacter = new System.Windows.Forms.Timer(this.components);
-            this.picLevel1Finish = new System.Windows.Forms.PictureBox();
             this.tmrpicWall13 = new System.Windows.Forms.Timer(this.components);
             this.tmrpicWall17 = new System.Windows.Forms.Timer(this.components);
             this.tmrpicWall14 = new System.Windows.Forms.Timer(this.components);
@@ -104,7 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLevel1Finish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBottomLava0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBottomLava2)).BeginInit();
@@ -397,17 +395,6 @@
             // 
             this.tmrCleanDeadCharacter.Enabled = true;
             this.tmrCleanDeadCharacter.Interval = 10;
-            // 
-            // picLevel1Finish
-            // 
-            this.picLevel1Finish.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLevel1Finish.BackgroundImage")));
-            this.picLevel1Finish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLevel1Finish.Location = new System.Drawing.Point(1799, -1);
-            this.picLevel1Finish.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picLevel1Finish.Name = "picLevel1Finish";
-            this.picLevel1Finish.Size = new System.Drawing.Size(100, 50);
-            this.picLevel1Finish.TabIndex = 26;
-            this.picLevel1Finish.TabStop = false;
             // 
             // tmrpicWall13
             // 
@@ -737,7 +724,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picBottomLava0);
             this.Controls.Add(this.picWall18);
-            this.Controls.Add(this.picLevel1Finish);
             this.Controls.Add(this.picBossKoolAid);
             this.Controls.Add(this.picEnemyPoisonPacket);
             this.Controls.Add(this.picEnemyCheeto);
@@ -791,7 +777,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLevel1Finish)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBottomLava0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBottomLava2)).EndInit();
@@ -828,7 +813,6 @@
         private System.Windows.Forms.Timer tmrUpdateInGameTime;
         private System.Windows.Forms.Timer tmrPlayerMove;
         private System.Windows.Forms.Timer tmrCleanDeadCharacter;
-        private System.Windows.Forms.PictureBox picLevel1Finish;
         private System.Windows.Forms.Timer tmrpicWall13;
         private System.Windows.Forms.Timer tmrpicWall17;
         private System.Windows.Forms.Timer tmrpicWall14;
