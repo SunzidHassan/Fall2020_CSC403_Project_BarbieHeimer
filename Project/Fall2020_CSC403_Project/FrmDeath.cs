@@ -21,13 +21,26 @@ namespace Fall2020_CSC403_Project
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmLevel1 Play = new FrmLevel1();
-            Play.Show();
+            FrmStatsSelection frmStatsSelection = new FrmStatsSelection();
+            frmStatsSelection.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
+        }
+
+        private void FrmDeath_Load(object sender, EventArgs e)
+        {
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = false;
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

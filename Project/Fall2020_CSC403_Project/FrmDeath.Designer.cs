@@ -32,6 +32,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -39,7 +41,7 @@
             this.button1.BackColor = System.Drawing.Color.MediumVioletRed;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic);
             this.button1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button1.Location = new System.Drawing.Point(240, 145);
+            this.button1.Location = new System.Drawing.Point(843, 457);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 43);
@@ -53,7 +55,7 @@
             this.button2.BackColor = System.Drawing.Color.MediumVioletRed;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic);
             this.button2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button2.Location = new System.Drawing.Point(238, 220);
+            this.button2.Location = new System.Drawing.Point(841, 532);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 42);
@@ -67,7 +69,7 @@
             this.btnExit.BackColor = System.Drawing.Color.MediumVioletRed;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic);
             this.btnExit.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnExit.Location = new System.Drawing.Point(238, 291);
+            this.btnExit.Location = new System.Drawing.Point(841, 603);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(148, 41);
@@ -81,29 +83,43 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Magneto", 36F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.label1.Location = new System.Drawing.Point(119, 55);
+            this.label1.Location = new System.Drawing.Point(719, 313);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(423, 58);
             this.label1.TabIndex = 3;
             this.label1.Text = "You Are Dead!";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Location = new System.Drawing.Point(0, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1920, 1080);
+            this.panel1.TabIndex = 4;
+            // 
             // FrmDeath
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources._6fb968d062567bde0917bec7d12fe8b4;
+            this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.CharSelect11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmDeath";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmDeath_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -113,5 +129,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

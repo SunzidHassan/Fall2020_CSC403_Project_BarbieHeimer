@@ -65,7 +65,6 @@ namespace Fall2020_CSC403_Project
 
             if (keyData == Keys.Escape)
             {
-                soundPlayer.Dispose();
                 this.Hide();
                 FrmPauseMenu pause = new FrmPauseMenu();
                 pause.ShowDialog();
@@ -443,7 +442,7 @@ namespace Fall2020_CSC403_Project
             player.MoveBack();
             frmBattle = FrmBattle.GetInstance(player, enemy);
             
-            //frmBattle.UpdateEnemyInfo(enemyMessage);
+            frmBattle.UpdateEnemyInfo(enemyMessage);
             frmBattle.Show();
 
             //if (enemy == bossKoolaid)
