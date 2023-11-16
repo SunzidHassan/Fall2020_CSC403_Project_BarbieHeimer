@@ -443,7 +443,7 @@ namespace Fall2020_CSC403_Project
             player.MoveBack();
             frmBattle = FrmBattle.GetInstance(player, enemy);
             
-            frmBattle.UpdateEnemyInfo(enemyMessage);
+            //frmBattle.UpdateEnemyInfo(enemyMessage);
             frmBattle.Show();
 
             //if (enemy == bossKoolaid)
