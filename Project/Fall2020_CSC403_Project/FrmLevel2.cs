@@ -19,7 +19,7 @@ namespace Fall2020_CSC403_Project
         private Enemy enemyPoisonPacket;
         private Enemy bossKoolaid;
         private Enemy enemyCheeto;
-        private Enemy finishFlag;
+        //private Enemy finishFlag;
         private Character[] walls;
 
         private DateTime timeBegin;
@@ -629,6 +629,41 @@ namespace Fall2020_CSC403_Project
         }
 
         private void picBottomLava2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LvlLabelHealth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LvlLabelAttack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LvlLabelTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPlayerHealthFull_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPlayerAttackFull_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPlayerTimeFull_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBottomLava0_Click(object sender, EventArgs e)
         {
 
         }
