@@ -229,13 +229,13 @@ namespace Fall2020_CSC403_Project
                 if (picWall15.Visible)
                 {
                     // Player cannot pass through the visible picWall15
-                    player.MoveBack();
-                    player.resetPosition(playerStartX, playerStartY);
-                    player.AlterHealth(-5);  // Adjust the health change as needed
-                    player.AlterScore(-5);
+                    //player.MoveBack();
+                   player.resetPosition(playerStartX, playerStartY);
+                   player.AlterHealth(-5);  // Adjust the health change as needed
+                   player.AlterScore(-5);
                     //UpdateHealthText();      // Update the health display
                 }
-                else
+                else 
                 {
                     // Implement player movement logic when picWall15 is not visible
                     player.Move();
@@ -247,7 +247,7 @@ namespace Fall2020_CSC403_Project
                 if (picWall16.Visible)
                 {
                     // Player cannot pass through the visible picWall15
-                    player.MoveBack();
+                    //player.MoveBack();
                     player.resetPosition(playerStartX, playerStartY);
                     player.AlterHealth(-5);
                     player.AlterScore(-5);
@@ -259,17 +259,16 @@ namespace Fall2020_CSC403_Project
                     player.Move();
                 }
             }
-            if (player.Collider.Intersects(new Collider(picWall17.Bounds)))
+            
+            if (player.Collider.Intersects(new Collider(picWall17.Bounds)))           
             {
-                if (picWall17.Visible)
-                {
-                    player.MoveBack();
-                    player.resetPosition(playerStartX, playerStartY);
-                    player.AlterHealth(-5);
-                    player.AlterScore(-5);
-                    //UpdateHealthText();
-                }
-                else
+                //if (picWall17.Visible)
+                //{
+                player.resetPosition(playerStartX, playerStartY);
+                player.AlterHealth(-5);
+                player.AlterScore(-5);
+                //}
+                if (!picWall17.Visible)
                 {
                     // Implement player movement logic when picWall15 is not visible
                     player.Move();
@@ -277,15 +276,15 @@ namespace Fall2020_CSC403_Project
             }
             if (player.Collider.Intersects(new Collider(picWall13.Bounds)))
             {
-                if (picWall13.Visible)
-                {
-                    player.MoveBack();
-                    player.resetPosition(playerStartX, playerStartY);
-                    player.AlterHealth(-5);
-                    player.AlterScore(-5);
+                //if (picWall13.Visible)
+                //{
+                    //player.MoveBack();
+                 player.resetPosition(playerStartX, playerStartY);
+                 player.AlterHealth(-5);
+                 player.AlterScore(-5);
                     //UpdateHealthText();
-                }
-                else
+                //}
+                if (!picWall13.Visible)
                 {
                     // Implement player movement logic when picWall15 is not visible
                     player.Move();
@@ -293,15 +292,15 @@ namespace Fall2020_CSC403_Project
             }
             if (player.Collider.Intersects(new Collider(picWall14.Bounds)))
             {
-                if (picWall14.Visible)
-                {
-                    player.MoveBack();
-                    player.resetPosition(playerStartX, playerStartY);
-                    player.AlterHealth(-5);
-                    player.AlterScore(-5);
+                //if (picWall14.Visible)
+                //{
+                    //player.MoveBack();
+                 player.resetPosition(playerStartX, playerStartY);
+                 player.AlterHealth(-5);
+                 player.AlterScore(-5);
                     //UpdateHealthText();
-                }
-                else
+                //}
+                if (!picWall14.Visible)
                 {
                     // Implement player movement logic when picWall15 is not visible
                     player.Move();
@@ -309,15 +308,15 @@ namespace Fall2020_CSC403_Project
             }
             if (player.Collider.Intersects(new Collider(picWall18.Bounds)))
             {
-                if (picWall18.Visible)
-                {
-                    player.MoveBack();
-                    player.resetPosition(playerStartX, playerStartY);
-                    player.AlterHealth(-5);
-                    player.AlterScore(-5);
+                //if (picWall18.Visible)
+                //{
+                    //player.MoveBack();
+                 player.resetPosition(playerStartX, playerStartY);
+                 player.AlterHealth(-5);
+                 player.AlterScore(-5);
                     //UpdateHealthText();
-                }
-                else
+                //}
+                if (!picWall18.Visible)
                 {
                     // Implement player movement logic when picWall15 is not visible
                     player.Move();

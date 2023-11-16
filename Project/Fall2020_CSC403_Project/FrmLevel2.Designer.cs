@@ -281,7 +281,6 @@
             this.picWall15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picWall15.TabIndex = 14;
             this.picWall15.TabStop = false;
-            this.picWall15.Visible = false;
             // 
             // picWall16
             // 
@@ -295,7 +294,6 @@
             this.picWall16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picWall16.TabIndex = 15;
             this.picWall16.TabStop = false;
-            this.picWall16.Visible = false;
             // 
             // picWall10
             // 
@@ -315,7 +313,7 @@
             this.picWall17.BackColor = System.Drawing.Color.Transparent;
             this.picWall17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picWall17.Image = ((System.Drawing.Image)(resources.GetObject("picWall17.Image")));
-            this.picWall17.Location = new System.Drawing.Point(755, 296);
+            this.picWall17.Location = new System.Drawing.Point(801, 255);
             this.picWall17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picWall17.Name = "picWall17";
             this.picWall17.Size = new System.Drawing.Size(73, 76);
