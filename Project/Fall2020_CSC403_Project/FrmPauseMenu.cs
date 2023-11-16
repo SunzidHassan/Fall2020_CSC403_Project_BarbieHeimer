@@ -74,5 +74,13 @@ namespace Fall2020_CSC403_Project
             FrmMainMenu mainMenu = new FrmMainMenu();
             mainMenu.Show();
         }
+
+        private void NewGame_Click(object sender, EventArgs e)
+        {
+            soundPlayer.Stop();
+            this.Hide();
+            FrmStatsSelection frmStatsSelection = new FrmStatsSelection();
+            frmStatsSelection.ShowDialog();
+        }
     }
 }
