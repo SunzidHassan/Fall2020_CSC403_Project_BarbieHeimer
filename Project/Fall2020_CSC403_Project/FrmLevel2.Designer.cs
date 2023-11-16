@@ -84,6 +84,8 @@
             this.picWall8 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblDifficulty = new System.Windows.Forms.Label();
+            this.lblPlayer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall0)).BeginInit();
@@ -121,7 +123,7 @@
             this.picWall1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall1.Image = ((System.Drawing.Image)(resources.GetObject("picWall1.Image")));
             this.picWall1.Location = new System.Drawing.Point(31, 0);
-            this.picWall1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall1.Margin = new System.Windows.Forms.Padding(2);
             this.picWall1.Name = "picWall1";
             this.picWall1.Size = new System.Drawing.Size(614, 32);
             this.picWall1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +136,7 @@
             this.picWall2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall2.Image = ((System.Drawing.Image)(resources.GetObject("picWall2.Image")));
             this.picWall2.Location = new System.Drawing.Point(644, 0);
-            this.picWall2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall2.Margin = new System.Windows.Forms.Padding(2);
             this.picWall2.Name = "picWall2";
             this.picWall2.Size = new System.Drawing.Size(651, 32);
             this.picWall2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -147,7 +149,7 @@
             this.picWall0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall0.Image = ((System.Drawing.Image)(resources.GetObject("picWall0.Image")));
             this.picWall0.Location = new System.Drawing.Point(-1, -1);
-            this.picWall0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall0.Margin = new System.Windows.Forms.Padding(2);
             this.picWall0.Name = "picWall0";
             this.picWall0.Size = new System.Drawing.Size(34, 398);
             this.picWall0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +162,7 @@
             this.picWall4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall4.Image = ((System.Drawing.Image)(resources.GetObject("picWall4.Image")));
             this.picWall4.Location = new System.Drawing.Point(-1, 396);
-            this.picWall4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall4.Margin = new System.Windows.Forms.Padding(2);
             this.picWall4.Name = "picWall4";
             this.picWall4.Size = new System.Drawing.Size(34, 315);
             this.picWall4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -173,7 +175,7 @@
             this.picWall5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall5.Image = ((System.Drawing.Image)(resources.GetObject("picWall5.Image")));
             this.picWall5.Location = new System.Drawing.Point(31, 679);
-            this.picWall5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall5.Margin = new System.Windows.Forms.Padding(2);
             this.picWall5.Name = "picWall5";
             this.picWall5.Size = new System.Drawing.Size(430, 32);
             this.picWall5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -186,7 +188,7 @@
             this.picWall6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall6.Image = ((System.Drawing.Image)(resources.GetObject("picWall6.Image")));
             this.picWall6.Location = new System.Drawing.Point(451, 679);
-            this.picWall6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall6.Margin = new System.Windows.Forms.Padding(2);
             this.picWall6.Name = "picWall6";
             this.picWall6.Size = new System.Drawing.Size(492, 32);
             this.picWall6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -199,7 +201,7 @@
             this.picWall7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall7.Image = ((System.Drawing.Image)(resources.GetObject("picWall7.Image")));
             this.picWall7.Location = new System.Drawing.Point(942, 679);
-            this.picWall7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall7.Margin = new System.Windows.Forms.Padding(2);
             this.picWall7.Name = "picWall7";
             this.picWall7.Size = new System.Drawing.Size(501, 32);
             this.picWall7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -212,7 +214,7 @@
             this.picWall11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picWall11.Image = ((System.Drawing.Image)(resources.GetObject("picWall11.Image")));
             this.picWall11.Location = new System.Drawing.Point(541, 374);
-            this.picWall11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall11.Margin = new System.Windows.Forms.Padding(2);
             this.picWall11.Name = "picWall11";
             this.picWall11.Size = new System.Drawing.Size(115, 306);
             this.picWall11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -225,7 +227,7 @@
             this.picWall13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picWall13.Image = ((System.Drawing.Image)(resources.GetObject("picWall13.Image")));
             this.picWall13.Location = new System.Drawing.Point(380, 396);
-            this.picWall13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall13.Margin = new System.Windows.Forms.Padding(2);
             this.picWall13.Name = "picWall13";
             this.picWall13.Size = new System.Drawing.Size(58, 29);
             this.picWall13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -238,7 +240,7 @@
             this.picWall9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picWall9.Image = ((System.Drawing.Image)(resources.GetObject("picWall9.Image")));
             this.picWall9.Location = new System.Drawing.Point(212, 124);
-            this.picWall9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall9.Margin = new System.Windows.Forms.Padding(2);
             this.picWall9.Name = "picWall9";
             this.picWall9.Size = new System.Drawing.Size(177, 159);
             this.picWall9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,7 +253,7 @@
             this.picWall3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picWall3.Image = ((System.Drawing.Image)(resources.GetObject("picWall3.Image")));
             this.picWall3.Location = new System.Drawing.Point(31, 390);
-            this.picWall3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall3.Margin = new System.Windows.Forms.Padding(2);
             this.picWall3.Name = "picWall3";
             this.picWall3.Size = new System.Drawing.Size(238, 52);
             this.picWall3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,7 +266,7 @@
             this.picWall12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picWall12.Image = ((System.Drawing.Image)(resources.GetObject("picWall12.Image")));
             this.picWall12.Location = new System.Drawing.Point(930, 418);
-            this.picWall12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall12.Margin = new System.Windows.Forms.Padding(2);
             this.picWall12.Name = "picWall12";
             this.picWall12.Size = new System.Drawing.Size(480, 28);
             this.picWall12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -277,7 +279,7 @@
             this.picWall15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall15.Image = ((System.Drawing.Image)(resources.GetObject("picWall15.Image")));
             this.picWall15.Location = new System.Drawing.Point(224, 284);
-            this.picWall15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall15.Margin = new System.Windows.Forms.Padding(2);
             this.picWall15.Name = "picWall15";
             this.picWall15.Size = new System.Drawing.Size(22, 104);
             this.picWall15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -290,7 +292,7 @@
             this.picWall16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall16.Image = ((System.Drawing.Image)(resources.GetObject("picWall16.Image")));
             this.picWall16.Location = new System.Drawing.Point(285, 37);
-            this.picWall16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall16.Margin = new System.Windows.Forms.Padding(2);
             this.picWall16.Name = "picWall16";
             this.picWall16.Size = new System.Drawing.Size(23, 81);
             this.picWall16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -303,7 +305,7 @@
             this.picWall10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picWall10.Image = ((System.Drawing.Image)(resources.GetObject("picWall10.Image")));
             this.picWall10.Location = new System.Drawing.Point(508, 31);
-            this.picWall10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall10.Margin = new System.Windows.Forms.Padding(2);
             this.picWall10.Name = "picWall10";
             this.picWall10.Size = new System.Drawing.Size(177, 61);
             this.picWall10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -316,7 +318,7 @@
             this.picWall17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picWall17.Image = ((System.Drawing.Image)(resources.GetObject("picWall17.Image")));
             this.picWall17.Location = new System.Drawing.Point(601, 207);
-            this.picWall17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall17.Margin = new System.Windows.Forms.Padding(2);
             this.picWall17.Name = "picWall17";
             this.picWall17.Size = new System.Drawing.Size(55, 62);
             this.picWall17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -330,7 +332,7 @@
             this.picWall14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picWall14.Image = ((System.Drawing.Image)(resources.GetObject("picWall14.Image")));
             this.picWall14.Location = new System.Drawing.Point(767, 418);
-            this.picWall14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall14.Margin = new System.Windows.Forms.Padding(2);
             this.picWall14.Name = "picWall14";
             this.picWall14.Size = new System.Drawing.Size(73, 28);
             this.picWall14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -432,7 +434,7 @@
             this.picWall18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picWall18.Image = ((System.Drawing.Image)(resources.GetObject("picWall18.Image")));
             this.picWall18.Location = new System.Drawing.Point(947, 197);
-            this.picWall18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall18.Margin = new System.Windows.Forms.Padding(2);
             this.picWall18.Name = "picWall18";
             this.picWall18.Size = new System.Drawing.Size(96, 72);
             this.picWall18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -552,7 +554,7 @@
             this.picInventory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picInventory.BackgroundImage")));
             this.picInventory.Image = global::Fall2020_CSC403_Project.Properties.Resources.charbarbie2;
             this.picInventory.Location = new System.Drawing.Point(541, 733);
-            this.picInventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picInventory.Margin = new System.Windows.Forms.Padding(2);
             this.picInventory.Name = "picInventory";
             this.picInventory.Size = new System.Drawing.Size(80, 104);
             this.picInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -695,7 +697,7 @@
             this.picWall8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picWall8.Image = ((System.Drawing.Image)(resources.GetObject("picWall8.Image")));
             this.picWall8.Location = new System.Drawing.Point(1409, 374);
-            this.picWall8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picWall8.Margin = new System.Windows.Forms.Padding(2);
             this.picWall8.Name = "picWall8";
             this.picWall8.Size = new System.Drawing.Size(34, 306);
             this.picWall8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -708,6 +710,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.lblPlayer);
+            this.panel1.Controls.Add(this.lblDifficulty);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
@@ -726,6 +730,24 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // lblDifficulty
+            // 
+            this.lblDifficulty.AutoSize = true;
+            this.lblDifficulty.Location = new System.Drawing.Point(1664, 945);
+            this.lblDifficulty.Name = "lblDifficulty";
+            this.lblDifficulty.Size = new System.Drawing.Size(35, 13);
+            this.lblDifficulty.TabIndex = 1;
+            this.lblDifficulty.Text = "label2";
+            // 
+            // lblPlayer
+            // 
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Location = new System.Drawing.Point(1705, 945);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(35, 13);
+            this.lblPlayer.TabIndex = 2;
+            this.lblPlayer.Text = "label2";
             // 
             // FrmLevel2
             // 
@@ -778,7 +800,7 @@
             this.Controls.Add(this.picBottomLava2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmLevel2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmLevel2";
@@ -814,6 +836,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall8)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -877,5 +900,7 @@
         public System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label lblPlayer;
+        public System.Windows.Forms.Label lblDifficulty;
     }
 }

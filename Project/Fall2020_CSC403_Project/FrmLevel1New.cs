@@ -14,7 +14,7 @@ namespace Fall2020_CSC403_Project
     public partial class FrmLevel1New : Form
     {
 
-        
+
 
         private Player player;
 
@@ -51,15 +51,15 @@ namespace Fall2020_CSC403_Project
         private float playerTime;
 
 
-        
+
         System.Media.SoundPlayer soundPlayer = new System.Media.SoundPlayer();
         public FrmLevel1New()
         {
             InitializeComponent();
-            
+
         }
 
-        
+
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
 
@@ -90,7 +90,7 @@ namespace Fall2020_CSC403_Project
             SoundPlayer simpleSound = new SoundPlayer(Resources.level1);
             simpleSound.PlayLooping();
 
-            
+
 
 
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
@@ -163,22 +163,22 @@ namespace Fall2020_CSC403_Project
             timeBegin = DateTime.Now;
 
 
-            if(lblPlayer.Text == "Player 1")
+            if (lblPlayer.Text == "Player 1")
             {
-                if(lblDifficulty.Text == "Easy")
+                if (lblDifficulty.Text == "Easy")
                 {
                     player.AlterStrength(+2);
-                    player.AlterHealth(-5);
+                    player.AlterHealth(-2);
                     playerTime = 240;
                 }
-                else if(lblDifficulty.Text == "Hard")
+                else if (lblDifficulty.Text == "Hard")
                 {
                     player.AlterStrength(+1);
-                    player.AlterHealth(-10);
+                    player.AlterHealth(-5);
                     playerTime = 180;
                 }
             }
-            else if(lblPlayer.Text =="Player 2")
+            else if (lblPlayer.Text == "Player 2")
             {
                 if (lblDifficulty.Text == "Easy")
                 {
@@ -193,18 +193,18 @@ namespace Fall2020_CSC403_Project
                     playerTime = 180;
                 }
             }
-            else if(lblPlayer.Text =="Player 3")
+            else if (lblPlayer.Text == "Player 3")
             {
                 if (lblDifficulty.Text == "Easy")
                 {
                     player.AlterStrength(+1);
-                    player.AlterHealth(-5);
+                    player.AlterHealth(-2);
                     playerTime = 300;
                 }
                 else if (lblDifficulty.Text == "Hard")
                 {
                     player.AlterStrength(0);
-                    player.AlterHealth(-10);
+                    player.AlterHealth(-5);
                     playerTime = 240;
                 }
             }
@@ -247,7 +247,7 @@ namespace Fall2020_CSC403_Project
 
             if (player.Health < 1)
             {
-                
+
                 FrmDeath formDeath = new FrmDeath();
                 formDeath.Show();
                 this.Close();
@@ -269,14 +269,14 @@ namespace Fall2020_CSC403_Project
             else if (HitLava(player))
             {
                 player.resetPosition(playerStartX, playerStartY);
-                player.AlterHealth(-5);
+                player.AlterHealth(-2);
                 player.AlterScore(-5);
             }
 
             else if (HitCircleLava(player))
             {
                 player.resetPosition(playerStartX, playerStartY);
-                player.AlterHealth(-5);
+                player.AlterHealth(-2);
                 player.AlterScore(-5);
             }
 
@@ -284,22 +284,25 @@ namespace Fall2020_CSC403_Project
 
             else if (HitAChar(player, potion))
             {
-                potionbox.Image = Properties.Resources.potion1;
                 Controls.Remove(picpotion);
+                potionbox.Image = Properties.Resources.potion1;
+
             }
 
 
             else if (HitAChar(player, skill))
             {
-                skillbox.Image = Properties.Resources.wep;
                 Controls.Remove(picweapon);
+                skillbox.Image = Properties.Resources.wep;
+
             }
 
 
             else if (HitAChar(player, medkit))
             {
-                medbox.Image = Properties.Resources.kit;
                 Controls.Remove(picmedkit);
+                medbox.Image = Properties.Resources.kit;
+
             }
 
 
@@ -322,7 +325,7 @@ namespace Fall2020_CSC403_Project
             {
                 if (enemyPaperMonster1.Health > 0)
                 {
-                    Fight(player, enemyPaperMonster1, "Come closer and witness Paper Monster's cunning resilience.") ;
+                    Fight(player, enemyPaperMonster1, "Come closer and witness Paper Monster's cunning resilience.");
                 }
                 else
                 {
@@ -352,10 +355,51 @@ namespace Fall2020_CSC403_Project
             {
                 if (enemyFinalBoss.Health <= 0 && !level2Transitioned)
                 {
-                    /*Fight(player, enemyFinalBoss);*/
                     level2Transitioned = true;
                     this.Close();
+
                     FrmLevel2 frmLevel2 = new FrmLevel2(picPlayer.Image, picInventory.Image);
+
+                    if (lblPlayer.Text == "Player 1")
+                    {
+                        frmLevel2.lblPlayer.Text = "Player 1";
+
+                        if (lblDifficulty.Text == "Easy")
+                        {
+                            frmLevel2.lblDifficulty.Text = "Easy";
+                        }
+                        else if (lblDifficulty.Text == "Hard")
+                        {
+                            frmLevel2.lblDifficulty.Text = "Hard";
+                        }
+                    }
+                    if (lblPlayer.Text == "Player 2")
+                    {
+                        frmLevel2.lblPlayer.Text = "Player 2";
+
+                        if (lblDifficulty.Text == "Easy")
+                        {
+                            frmLevel2.lblDifficulty.Text = "Easy";
+                        }
+                        else if (lblDifficulty.Text == "Hard")
+                        {
+                            frmLevel2.lblDifficulty.Text = "Hard";
+                        }
+                    }
+                    if (lblPlayer.Text == "Player 3")
+                    {
+                        frmLevel2.lblPlayer.Text = "Player 3";
+
+                        if (lblDifficulty.Text == "Easy")
+                        {
+                            frmLevel2.lblDifficulty.Text = "Easy";
+                        }
+                        else if (lblDifficulty.Text == "Hard")
+                        {
+                            frmLevel2.lblDifficulty.Text = "Hard";
+                        }
+                    }
+                    /*Fight(player, enemyFinalBoss);*/
                     frmLevel2.Show();
                     return;
                 }
@@ -441,7 +485,7 @@ namespace Fall2020_CSC403_Project
             player.ResetMoveSpeed();
             player.MoveBack();
             frmBattle = FrmBattle.GetInstance(player, enemy);
-            
+
             frmBattle.UpdateEnemyInfo(enemyMessage);
             frmBattle.Show();
 
@@ -605,7 +649,7 @@ namespace Fall2020_CSC403_Project
 
         private void lblUseMed_Click(object sender, EventArgs e)
         {
-            if(medkit != null)
+            if (medkit != null)
             {
                 Controls.Remove(picmedkit);
                 medkit = null;
@@ -618,7 +662,7 @@ namespace Fall2020_CSC403_Project
                 else
                 {
                     player.AlterHealth(5);
-                }                
+                }
             }
         }
 
@@ -653,7 +697,7 @@ namespace Fall2020_CSC403_Project
                 else
                 {
                     player.AlterStrength(1);
-                }                
+                }
             }
         }
     }
